@@ -189,13 +189,16 @@
     var actualCls = "obj__actual obj__actual--" + (o.result === "met" ? "met" : o.result === "missed" ? "missed" : "context");
 
     // Summary row (always visible)
+    // Primary label: abbreviated DIP goal text; subtitle: student group if not "all"
+    var rowLabel = o.short_label || plainLabel(o);
+    var grpSubtitle = (o.group && o.group !== "all") ? (GROUP_LABEL[o.group] || o.group) : null;
     var summary = document.createElement("summary");
     summary.innerHTML =
       '<div class="obj__summary-left">' +
         '<span class="status-dot status-dot--' + esc(o.result) + '" aria-hidden="true"></span>' +
         '<div>' +
-          '<div class="obj__label">' + esc(plainLabel(o)) + '</div>' +
-          (goalDesc(o) ? '<div class="obj__plain">' + esc(goalDesc(o)) + '</div>' : '') +
+          '<div class="obj__label">' + esc(rowLabel) + '</div>' +
+          (grpSubtitle ? '<div class="obj__plain">' + esc(grpSubtitle) + '</div>' : '') +
         '</div>' +
       '</div>' +
       '<div class="obj__summary-right">' +
