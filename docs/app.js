@@ -192,7 +192,7 @@
     var summary = document.createElement("summary");
     summary.innerHTML =
       '<div class="obj__summary-left">' +
-        '<span class="badge badge--' + esc(o.result) + '">' + esc(RESULT_BADGE[o.result] || o.result) + '</span>' +
+        '<span class="status-dot status-dot--' + esc(o.result) + '" aria-hidden="true"></span>' +
         '<div>' +
           '<div class="obj__label">' + esc(plainLabel(o)) + '</div>' +
           (goalDesc(o) ? '<div class="obj__plain">' + esc(goalDesc(o)) + '</div>' : '') +
