@@ -1,7 +1,7 @@
 {
   "district": "Conroe ISD",
   "district_cdn": "170902",
-  "generated_at": "2026-06-04T18:56:02.934404+00:00",
+  "generated_at": "2026-06-04T19:21:55.371184+00:00",
   "latest_year": "2024-25",
   "data_as_of": {
     "dip": "December 2024",
@@ -14,8 +14,9 @@
       "summary": {
         "met": 2,
         "missed": 4,
-        "no_data": 9,
-        "internal": 3
+        "no_data": 5,
+        "internal": 3,
+        "context": 4
       },
       "objectives": [
         {
@@ -187,7 +188,7 @@
           "claimed": "Some progress",
           "claimed_code": "some",
           "actual": 62.0,
-          "result": "no_data",
+          "result": "context",
           "divergence": false,
           "match_quality": "defaulted_meets",
           "source_pdf": "2024-25_District_Improvement_Plan.pdf",
@@ -237,7 +238,7 @@
           "claimed": "Some progress",
           "claimed_code": "some",
           "actual": 28.0,
-          "result": "no_data",
+          "result": "context",
           "divergence": false,
           "match_quality": "defaulted_meets",
           "source_pdf": "2024-25_District_Improvement_Plan.pdf",
@@ -362,7 +363,7 @@
           "claimed": "Significant progress",
           "claimed_code": "significant",
           "actual": 22.0,
-          "result": "no_data",
+          "result": "context",
           "divergence": false,
           "match_quality": "strong",
           "source_pdf": "2024-25_District_Improvement_Plan.pdf",
@@ -387,7 +388,7 @@
           "claimed": "Significant progress",
           "claimed_code": "significant",
           "actual": 24.0,
-          "result": "no_data",
+          "result": "context",
           "divergence": false,
           "match_quality": "strong",
           "source_pdf": "2024-25_District_Improvement_Plan.pdf",
@@ -476,8 +477,9 @@
       "summary": {
         "met": 0,
         "missed": 2,
-        "no_data": 7,
-        "internal": 4
+        "no_data": 4,
+        "internal": 4,
+        "context": 3
       },
       "objectives": [
         {
@@ -624,7 +626,7 @@
           "claimed": "Not stated",
           "claimed_code": "not_found",
           "actual": 27.0,
-          "result": "no_data",
+          "result": "context",
           "divergence": false,
           "match_quality": "strong",
           "source_pdf": "2023-24_District_Improvement_Plan.pdf",
@@ -649,7 +651,7 @@
           "claimed": "Not stated",
           "claimed_code": "not_found",
           "actual": 30.0,
-          "result": "no_data",
+          "result": "context",
           "divergence": false,
           "match_quality": "strong",
           "source_pdf": "2023-24_District_Improvement_Plan.pdf",
@@ -674,7 +676,7 @@
           "claimed": "Not stated",
           "claimed_code": "not_found",
           "actual": 19.0,
-          "result": "no_data",
+          "result": "context",
           "divergence": false,
           "match_quality": "strong",
           "source_pdf": "2023-24_District_Improvement_Plan.pdf",

@@ -1,4 +1,4 @@
-/* CISD Student Performance — renders docs/data/outcomes.json. Vanilla JS. */
+/* CISD Performance Review — renders docs/data/outcomes.json. Vanilla JS. */
 (function () {
   "use strict";
 
@@ -16,24 +16,30 @@
   function pct(n) { return (n == null || isNaN(n)) ? "—" : Math.round(n) + "%"; }
 
   var RESULT_BADGE = {
-    met: "Met", missed: "Missed", no_data: "No state data", internal: "Internal"
+    met:      "Met",
+    missed:   "Missed",
+    context:  "Has Data",
+    no_data:  "No state data",
+    internal: "District-measured"
   };
-  // Order objectives within a group: problems first, then wins, then pending.
-  var RESULT_RANK = { missed: 0, met: 1, no_data: 2, internal: 3 };
+  // Sort order within a section: problems first, then wins, then pending
+  var RESULT_RANK = { missed: 0, met: 1, context: 2, no_data: 3, internal: 4 };
 
-  // Reader-friendly top-level sections, in display order.
+  // Reader-friendly sections, in display order
   var SECTIONS = [
     { key: "standardized_testing", title: "Standardized Testing", bySubject: true,
-      desc: "How students score on the state's STAAR and end-of-course exams, by subject." },
+      desc: "How students score on the state's STAAR and end-of-course exams, by subject. Note: STAAR is transitioning — this section covers testing through the current available school year." },
     { key: "attendance_graduation", title: "Attendance & Graduation",
       desc: "Whether students stay enrolled, graduate on time, and avoid dropping out." },
     { key: "postsecondary", title: "Postsecondary Readiness",
-      desc: "College, career, and military readiness — including AP/IB and career & technical programs." },
+      desc: "College, career, and military readiness — including AP/IB and career & technical education programs." },
     { key: "other", title: "Other District Goals",
-      desc: "Goals CISD measures with its own assessments, which have no direct state-data equivalent." }
+      desc: "Goals CISD measures with its own internal assessments. No direct state-data equivalent is available for these." }
   ];
 
-  // Describe the "promised" target in words
+  // Active filter state
+  var activeFilter = null;
+
   function promisedText(p) {
     if (!p) return "—";
     if (p.type === "range" && p.target != null)
@@ -41,84 +47,142 @@
     if (p.type === "threshold" && p.target != null)
       return (p.threshold_dir === "max" ? "≤ " : "≥ ") + p.target + "%";
     if (p.type === "delta" && p.delta != null)
-      return "+" + p.delta + "%" + (p.baseline != null ? " (from " + p.baseline + "%)" : "");
+      return "+" + p.delta + "%" + (p.baseline != null ? " from " + p.baseline + "%" : "");
     if (p.type === "target_only" && p.target != null)
       return "≥ " + p.target + "%";
     return "Not quantified";
   }
 
   function renderStatStrip(year) {
+    var objs = year.objectives || [];
     var s = year.summary || {};
-    var diverge = (year.objectives || []).filter(function (o) { return o.divergence; }).length;
+    var diverge = objs.filter(function (o) { return o.divergence; }).length;
     var strip = document.getElementById("statstrip");
     strip.innerHTML = "";
-    var stats = [
-      { cls: "stat--met",     val: s.met || 0,    label: "Goals met" },
-      { cls: "stat--missed",  val: s.missed || 0, label: "Goals missed" },
-      { cls: "stat--diverge", val: diverge,       label: "Claim vs. data gaps" },
-      { cls: "stat--nodata",  val: s.no_data || 0,label: "Awaiting state data" }
+
+    var STATS = [
+      { key: "met",     cls: "stat--met",     val: s.met || 0,
+        label: "Goals Met",     hint: "Click to filter" },
+      { key: "missed",  cls: "stat--missed",  val: s.missed || 0,
+        label: "Goals Missed",  hint: "Click to filter" },
+      { key: "diverge", cls: "stat--diverge", val: diverge,
+        label: "Claim vs. Data Gaps", hint: "CISD claimed progress, state data shows miss" },
+      { key: "no_data", cls: "stat--nodata",  val: (s.no_data || 0),
+        label: "Awaiting State Data", hint: "Click to filter" }
     ];
-    stats.forEach(function (st) {
-      var d = el("div", "stat " + st.cls);
-      d.appendChild(el("div", "stat__val", String(st.val)));
-      d.appendChild(el("div", "stat__label", esc(st.label)));
-      strip.appendChild(d);
+
+    STATS.forEach(function (st) {
+      var btn = el("button", "stat " + st.cls);
+      btn.setAttribute("aria-pressed", "false");
+      btn.setAttribute("data-filter", st.key);
+      btn.innerHTML =
+        '<span class="stat__val">' + st.val + '</span>' +
+        '<span class="stat__label">' + esc(st.label) + '</span>' +
+        '<span class="stat__hint">' + esc(st.hint) + '</span>';
+      btn.addEventListener("click", function () {
+        var isActive = activeFilter === st.key;
+        // toggle off if same filter clicked again
+        activeFilter = isActive ? null : st.key;
+        applyFilter(strip, year);
+      });
+      strip.appendChild(btn);
+    });
+  }
+
+  function applyFilter(strip, year) {
+    // Update button pressed states
+    [].forEach.call(strip.querySelectorAll(".stat"), function (btn) {
+      btn.setAttribute("aria-pressed", btn.dataset.filter === activeFilter ? "true" : "false");
+    });
+
+    // Show/hide objective cards based on filter
+    var cards = document.querySelectorAll(".obj");
+    cards.forEach(function (card) {
+      var res = card.dataset.result;
+      var diverges = card.dataset.diverge === "true";
+      var show = true;
+      if (activeFilter === "met")      show = (res === "met");
+      if (activeFilter === "missed")   show = (res === "missed");
+      if (activeFilter === "diverge")  show = diverges;
+      if (activeFilter === "no_data")  show = (res === "no_data" || res === "context");
+      card.hidden = !show;
+    });
+
+    // Show/hide empty section details
+    document.querySelectorAll("details.section").forEach(function (sec) {
+      var visible = sec.querySelectorAll(".obj:not([hidden])").length;
+      sec.hidden = (visible === 0 && activeFilter !== null);
     });
   }
 
   function renderObjective(o) {
     var card = el("div", "obj");
-    card.setAttribute("data-result", o.result);
+    card.dataset.result = o.result;
+    card.dataset.diverge = o.divergence ? "true" : "false";
 
+    // Header row: label + badge
     var top = el("div", "obj__top");
     var labelWrap = el("div", "obj__label");
-    labelWrap.innerHTML = esc(o.metric_label) +
+    labelWrap.innerHTML =
+      esc(o.metric_label) +
       '<div class="obj__cat">Objective ' + esc(o.objective) +
-      (o.category ? " · " + esc(o.category.toUpperCase()) : "") + '</div>';
+      (o.category && o.category !== "staar" ? " · " + esc(o.category.toUpperCase()) : "") +
+      '</div>';
     top.appendChild(labelWrap);
     top.appendChild(el("span", "badge badge--" + o.result, RESULT_BADGE[o.result] || o.result));
     card.appendChild(top);
 
-    // Triplet: promised / claimed / actual
+    // Three-column triplet
     var trip = el("div", "triplet");
 
+    // Promised
     var c1 = el("div", "cell");
-    c1.innerHTML = '<div class="cell__k">CISD Promised</div>' +
+    c1.innerHTML =
+      '<div class="cell__k">CISD Goal</div>' +
       '<div class="cell__v">' + esc(promisedText(o.promised)) + '</div>';
     trip.appendChild(c1);
 
+    // Claimed — explain the qualitative scale
     var c2 = el("div", "cell");
-    c2.innerHTML = '<div class="cell__k">CISD Claims</div>' +
-      '<div class="cell__v cell__v--muted">' + esc(o.claimed || "—") + '</div>';
+    c2.innerHTML =
+      '<div class="cell__k">CISD Claims</div>' +
+      '<div class="cell__v cell__v--muted">' + esc(o.claimed || "—") + '</div>' +
+      '<div class="cell__note">CISD self-rating (qualitative — no number)</div>';
     trip.appendChild(c2);
 
-    var c3 = el("div", "cell cell--actual" +
-      (o.result === "met" ? " is-met" : o.result === "missed" ? " is-missed" : ""));
-    var actualStr = o.actual != null ? pct(o.actual)
-      : (o.tapr_mappable ? "Pending" : "n/a");
-    c3.innerHTML = '<div class="cell__k">State Data (TAPR)</div>' +
-      '<div class="cell__v">' + esc(actualStr) + '</div>';
+    // Actual
+    var actualStr = o.actual != null ? pct(o.actual) : (o.tapr_mappable ? "Pending" : "n/a");
+    var actualCls = "cell cell--actual" +
+      (o.result === "met" ? " is-met" : o.result === "missed" ? " is-missed" : "");
+    var c3 = el("div", actualCls);
+    c3.innerHTML =
+      '<div class="cell__k">State Data (TEA)</div>' +
+      '<div class="cell__v">' + esc(actualStr) + '</div>' +
+      (o.result === "context" ? '<div class="cell__note">No target set — for reference</div>' : '');
     trip.appendChild(c3);
 
     card.appendChild(trip);
 
+    // Divergence callout
     if (o.divergence) {
       var d = el("div", "diverge");
-      d.innerHTML = '<span aria-hidden="true">⚠</span><span>CISD self-reports <strong>' +
-        esc(o.claimed) + '</strong>, but state data shows this target was <strong>missed</strong>.</span>';
+      d.innerHTML =
+        '<span aria-hidden="true">⚠️</span><span>CISD self-reports <strong>' +
+        esc(o.claimed) + '</strong>, but state data shows the goal was <strong>missed</strong>.</span>';
       card.appendChild(d);
     }
 
     if (o.source_pdf) {
       card.appendChild(el("div", "obj__prov",
-        "Source: " + esc(o.source_pdf) + (o.source_page ? ", p. " + esc(o.source_page) : "")));
+        "Source: " + esc(o.source_pdf) + (o.source_page ? ", p. " + esc(o.source_page) : "")));
     }
     return card;
   }
 
   function sortObjectives(list) {
     list.sort(function (a, b) {
-      var ra = RESULT_RANK[a.result], rb = RESULT_RANK[b.result];
+      var ra = RESULT_RANK[a.result] != null ? RESULT_RANK[a.result] : 99;
+      var rb = RESULT_RANK[b.result] != null ? RESULT_RANK[b.result] : 99;
       if (ra !== rb) return ra - rb;
       return a.objective - b.objective;
     });
@@ -126,6 +190,8 @@
   }
 
   function renderYear(year) {
+    var strip = document.getElementById("statstrip");
+    activeFilter = null;
     renderStatStrip(year);
     document.getElementById("legend").hidden = false;
 
@@ -142,28 +208,40 @@
       var list = bySection[sec.key];
       if (!list || !list.length) return;
 
-      var secEl = el("section", "section");
-      secEl.appendChild(el("h2", "section__head", esc(sec.title)));
-      secEl.appendChild(el("p", "section__desc", esc(sec.desc)));
+      var details = document.createElement("details");
+      details.className = "section";
+      details.setAttribute("open", "");
+
+      var summary = document.createElement("summary");
+      summary.innerHTML =
+        '<span class="section__head">' + esc(sec.title) + '</span>' +
+        '<span class="section__count">' + list.length + ' goal' + (list.length !== 1 ? 's' : '') + '</span>' +
+        '<span class="section__chev" aria-hidden="true">&#9660;</span>';
+      details.appendChild(summary);
+
+      // Description paragraph (outside summary, inside details)
+      var desc = el("p", "section__desc", esc(sec.desc));
+      details.appendChild(desc);
 
       if (sec.bySubject) {
-        // sub-group by subject_group, preserving a sensible subject order
-        var bySubj = {};
-        var order = [];
+        var bySubj = {}, subjOrder = [];
         sortObjectives(list).forEach(function (o) {
           var sg = o.subject_group || "Other";
-          if (!bySubj[sg]) { bySubj[sg] = []; order.push(sg); }
+          if (!bySubj[sg]) { bySubj[sg] = []; subjOrder.push(sg); }
           bySubj[sg].push(o);
         });
-        order.forEach(function (sg) {
-          secEl.appendChild(el("h3", "subject__head", esc(sg)));
-          bySubj[sg].forEach(function (o) { secEl.appendChild(renderObjective(o)); });
+        subjOrder.forEach(function (sg) {
+          details.appendChild(el("h3", "subject__head", esc(sg)));
+          bySubj[sg].forEach(function (o) { details.appendChild(renderObjective(o)); });
         });
       } else {
-        sortObjectives(list).forEach(function (o) { secEl.appendChild(renderObjective(o)); });
+        sortObjectives(list).forEach(function (o) { details.appendChild(renderObjective(o)); });
       }
-      container.appendChild(secEl);
+      container.appendChild(details);
     });
+
+    // Wire up filter after all cards are in the DOM
+    applyFilter(strip, year);
   }
 
   function renderTabs(data, onPick) {
@@ -186,10 +264,10 @@
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (data) {
       if (!data.years || !data.years.length) {
-        document.getElementById("statstrip").innerHTML =
-          '<p class="err">No outcome data available yet.</p>';
+        document.getElementById("statstrip").innerHTML = '<p class="err">No outcome data available yet.</p>';
         return;
       }
+
       // Data freshness bar
       if (data.data_as_of) {
         document.getElementById("fresh-dip").textContent = data.data_as_of.dip || "—";

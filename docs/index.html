@@ -4,9 +4,14 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>CISD Performance Review</title>
-  <meta name="description" content="Does Conroe ISD meet the student-outcome goals in its own District Improvement Plan? An independent comparison of what CISD promised, what CISD claims, and what the state's TAPR data actually shows." />
+  <meta name="description" content="Does Conroe ISD meet the student-outcome goals in its own District Improvement Plan? An independent comparison of what CISD set as goals, what is documented as achieved, and what the state's official testing data actually shows." />
   <meta name="color-scheme" content="light" />
   <meta name="theme-color" content="#2c6e5d" />
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+  <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+  <link rel="manifest" href="site.webmanifest">
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
@@ -14,12 +19,15 @@
 
   <header class="hero">
     <div class="wrap">
+      <a class="home-btn" href="https://cisd.boardmonitor.app" aria-label="Back to CISD Board Monitor home">
+        ← boardmonitor.app
+      </a>
       <p class="eyebrow">Conroe ISD · Constituent Resource</p>
       <h1>CISD Performance Review</h1>
       <p class="lede">
         Every year Conroe ISD sets measurable student goals in its
         <strong>District Improvement Plan</strong>. This site compares what the district
-        <em>promised</em>, what it <em>claims</em> it achieved, and what the state's
+        <em>set as goals</em>, what is <em>documented as achieved</em>, and what the state's
         official testing data actually shows — in plain language.
       </p>
     </div>
@@ -28,28 +36,30 @@
   <main id="content" class="wrap">
     <!-- Data freshness -->
     <div class="freshness" id="freshness" hidden>
-      <span class="freshness__item"><span class="freshness__k">Conroe ISD plan</span> <span id="fresh-dip">—</span></span>
+      <span class="freshness__heading">Latest Available Data</span>
+      <span class="freshness__item"><span class="freshness__k">Conroe ISD District Plan</span> <span id="fresh-dip">—</span></span>
       <span class="freshness__item"><span class="freshness__k">State (TEA) data</span> <span id="fresh-tea">—</span></span>
     </div>
 
-    <!-- Stat strip -->
-    <section class="statstrip" id="statstrip" aria-label="Summary">
-      <p class="loading">Loading outcomes…</p>
-    </section>
-
     <!-- Year selector -->
     <div class="yeartabs" id="yeartabs" role="tablist" aria-label="School year"></div>
+
+    <!-- Stat strip / filters -->
+    <section class="statstrip" id="statstrip" aria-label="Filter by outcome">
+      <p class="loading">Loading outcomes…</p>
+    </section>
 
     <!-- Legend -->
     <div class="legend" id="legend" hidden>
       <span class="legend__item"><span class="dot dot--met"></span> Met target</span>
       <span class="legend__item"><span class="dot dot--missed"></span> Missed target</span>
-      <span class="legend__item"><span class="dot dot--nodata"></span> No state data yet</span>
-      <span class="legend__item"><span class="dot dot--internal"></span> District-internal measure</span>
+      <span class="legend__item"><span class="dot dot--context"></span> State data, no target set</span>
+      <span class="legend__item"><span class="dot dot--nodata"></span> Awaiting state data</span>
+      <span class="legend__item"><span class="dot dot--internal"></span> District-measured only</span>
     </div>
 
     <!-- Objectives -->
-    <section id="objectives" aria-live="polite"></section>
+    <div id="objectives" aria-live="polite"></div>
   </main>
 
   <footer class="foot">
