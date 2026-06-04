@@ -34,11 +34,22 @@
   </header>
 
   <main id="content" class="wrap">
+    <!-- District grade -->
+    <div class="district-grade" id="district-grade" hidden></div>
+
     <!-- Data freshness -->
     <div class="freshness" id="freshness" hidden>
       <span class="freshness__heading">Latest Available Data</span>
-      <span class="freshness__item"><span class="freshness__k">Conroe ISD District Plan</span> <span id="fresh-dip">—</span></span>
-      <span class="freshness__item"><span class="freshness__k">State (TEA) data</span> <span id="fresh-tea">—</span></span>
+      <div class="freshness__cols">
+        <div class="freshness__item">
+          <span class="freshness__k">Conroe ISD District Plan</span>
+          <span class="freshness__v" id="fresh-dip">—</span>
+        </div>
+        <div class="freshness__item">
+          <span class="freshness__k">State (TEA) data</span>
+          <span class="freshness__v" id="fresh-tea">—</span>
+        </div>
+      </div>
     </div>
 
     <!-- Year selector -->

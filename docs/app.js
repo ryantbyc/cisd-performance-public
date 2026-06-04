@@ -22,23 +22,74 @@
     no_data:  "No state data",
     internal: "District-measured"
   };
-  // Sort order within a section: problems first, then wins, then pending
+
+  var GRADE_SORT = {
+    "3": 1, "4": 2, "5": 3, "6": 4, "7": 5, "8": 6,
+    "EOC-English1": 7, "EOC-English2": 8, "EOC-Algebra": 9,
+    "EOC-Biology": 10, "EOC-USHistory": 11
+  };
+  var GROUP_SORT = { all: 1, econ_disadv: 2, emergent_bilingual: 3, special_ed: 4, dyslexia: 5, gifted: 6 };
+
+  // Sort order for filters: missed first
   var RESULT_RANK = { missed: 0, met: 1, context: 2, no_data: 3, internal: 4 };
 
-  // Reader-friendly sections, in display order
   var SECTIONS = [
     { key: "standardized_testing", title: "Standardized Testing", bySubject: true,
-      desc: "How students score on the state's STAAR and end-of-course exams, by subject. Note: STAAR is transitioning — this section covers testing through the current available school year." },
+      desc: "How students score on state-administered STAAR and end-of-course exams by subject. Goals are set each year in the District Improvement Plan." },
     { key: "attendance_graduation", title: "Attendance & Graduation",
-      desc: "Whether students stay enrolled, graduate on time, and avoid dropping out." },
+      desc: "Whether students stay enrolled, graduate on time, and avoid dropping out of school." },
     { key: "postsecondary", title: "Postsecondary Readiness",
-      desc: "College, career, and military readiness — including AP/IB and career & technical education programs." },
+      desc: "Are students ready for college, careers, or the military after graduation? Includes AP/IB exams and career & technical education (CTE) programs." },
     { key: "other", title: "Other District Goals",
-      desc: "Goals CISD measures with its own internal assessments. No direct state-data equivalent is available for these." }
+      desc: "These goals are measured by CISD using their own internal assessments — not state-administered tests. The state does not separately track these metrics, so no TEA comparison is available." }
   ];
 
-  // Active filter state
   var activeFilter = null;
+
+  // ── Plain-language summary for the row label ──────────────────────────────
+  var GRADE_LABEL = {
+    "3":"3rd Grade", "4":"4th Grade", "5":"5th Grade", "6":"6th Grade",
+    "7":"7th Grade", "8":"8th Grade",
+    "EOC-Algebra":"Algebra I (EOC)", "EOC-English1":"English I (EOC)",
+    "EOC-English2":"English II (EOC)", "EOC-Biology":"Biology (EOC)",
+    "EOC-USHistory":"US History (EOC)"
+  };
+  var GROUP_LABEL = {
+    all:"All Students", econ_disadv:"Economically Disadvantaged",
+    emergent_bilingual:"Emergent Bilingual / ELL", special_ed:"Special Education",
+    dyslexia:"Dyslexia Services", gifted:"Gifted & Talented"
+  };
+  var PERF_LABEL = { Approaches:"Approaching grade level", Meets:"Meeting grade level", Masters:"Mastering grade level" };
+
+  function plainLabel(o) {
+    // For STAAR: "3rd Grade — Reading — All Students"
+    if (o.category === "staar") {
+      var subj = (o.subject_group || "").replace(" (English)", "");
+      var parts = [];
+      if (o.grade) parts.push(GRADE_LABEL[o.grade] || ("Grade " + o.grade));
+      if (subj)   parts.push(subj);
+      if (o.group && o.group !== "all") parts.push(GROUP_LABEL[o.group] || o.group);
+      return parts.join(" — ");
+    }
+    if (o.category === "ccmr")       return "College, Career, or Military Readiness (CCMR)";
+    if (o.category === "graduation") return "Graduation Rate";
+    if (o.category === "dropout")    return "Annual Dropout Rate";
+    if (o.category === "ap")         return "AP / IB Exam Participation";
+    if (o.category === "cte")        return "CTE Program Completers";
+    return o.metric_label || "District Goal";
+  }
+
+  // Short plain-English description of what the goal is asking
+  function goalDesc(o) {
+    if (o.category === "staar") {
+      var perf = o.promised && o.promised.level ? PERF_LABEL[o.promised.level] || o.promised.level : "performing";
+      var grp = (o.group && o.group !== "all") ? (GROUP_LABEL[o.group] || o.group) + " students" : "students";
+      var subj = (o.subject_group || "").replace(" (English)", "").toLowerCase();
+      var grd = o.grade ? (GRADE_LABEL[o.grade] || ("grade " + o.grade)).toLowerCase() : "";
+      return "Goal: " + grp + " in " + [grd, subj].filter(Boolean).join(" ") + " should be " + perf + " on the state exam.";
+    }
+    return "";
+  }
 
   function promisedText(p) {
     if (!p) return "—";
@@ -53,6 +104,26 @@
     return "Not quantified";
   }
 
+  // ── District grade widget ─────────────────────────────────────────────────
+  function renderDistrictGrade(data) {
+    var widget = document.getElementById("district-grade");
+    if (!widget) return;
+    var dg = data.district_grade;
+    if (!dg || !dg.grade) { widget.hidden = true; return; }
+    var g = dg.grade;
+    var schoolYear = dg.year ? (parseInt(dg.year) - 1) + "–" + dg.year.slice(-2) : "";
+    widget.innerHTML =
+      '<div class="grade-letter grade-letter--' + esc(g) + '">' + esc(g) + '</div>' +
+      '<div class="grade-info">' +
+        '<div class="grade-info__label">TEA Accountability Rating</div>' +
+        '<div class="grade-info__title">Conroe ISD received a <strong>' + esc(g) + '</strong> from the Texas Education Agency</div>' +
+        '<div class="grade-info__note">Based on student achievement, school progress, and closing performance gaps' +
+          (schoolYear ? ' · ' + schoolYear + ' school year' : '') + '</div>' +
+      '</div>';
+    widget.hidden = false;
+  }
+
+  // ── Stat strip / filter buttons ──────────────────────────────────────────
   function renderStatStrip(year) {
     var objs = year.objectives || [];
     var s = year.summary || {};
@@ -61,136 +132,176 @@
     strip.innerHTML = "";
 
     var STATS = [
-      { key: "met",     cls: "stat--met",     val: s.met || 0,
-        label: "Goals Met",     hint: "Click to filter" },
-      { key: "missed",  cls: "stat--missed",  val: s.missed || 0,
-        label: "Goals Missed",  hint: "Click to filter" },
-      { key: "diverge", cls: "stat--diverge", val: diverge,
-        label: "Claim vs. Data Gaps", hint: "CISD claimed progress, state data shows miss" },
-      { key: "no_data", cls: "stat--nodata",  val: (s.no_data || 0),
-        label: "Awaiting State Data", hint: "Click to filter" }
+      { key:"met",     cls:"stat--met",    val:s.met||0,
+        label:"Goals Met",          hint:"State data confirms goal was reached" },
+      { key:"missed",  cls:"stat--missed", val:s.missed||0,
+        label:"Goals Missed",       hint:"State data shows goal was not reached" },
+      { key:"diverge", cls:"stat--diverge",val:diverge,
+        label:"Claim vs. Data Gaps",hint:"CISD reported progress but state data shows a miss" },
+      { key:"no_data", cls:"stat--nodata", val:(s.no_data||0),
+        label:"Awaiting State Data", hint:"No TEA data available yet for this goal" }
     ];
 
     STATS.forEach(function (st) {
       var btn = el("button", "stat " + st.cls);
       btn.setAttribute("aria-pressed", "false");
-      btn.setAttribute("data-filter", st.key);
+      btn.dataset.filter = st.key;
       btn.innerHTML =
         '<span class="stat__val">' + st.val + '</span>' +
         '<span class="stat__label">' + esc(st.label) + '</span>' +
         '<span class="stat__hint">' + esc(st.hint) + '</span>';
       btn.addEventListener("click", function () {
-        var isActive = activeFilter === st.key;
-        // toggle off if same filter clicked again
-        activeFilter = isActive ? null : st.key;
-        applyFilter(strip, year);
+        activeFilter = activeFilter === st.key ? null : st.key;
+        applyFilter();
       });
       strip.appendChild(btn);
     });
   }
 
-  function applyFilter(strip, year) {
-    // Update button pressed states
+  function applyFilter() {
+    var strip = document.getElementById("statstrip");
     [].forEach.call(strip.querySelectorAll(".stat"), function (btn) {
       btn.setAttribute("aria-pressed", btn.dataset.filter === activeFilter ? "true" : "false");
     });
-
-    // Show/hide objective cards based on filter
-    var cards = document.querySelectorAll(".obj");
-    cards.forEach(function (card) {
-      var res = card.dataset.result;
-      var diverges = card.dataset.diverge === "true";
+    document.querySelectorAll("details.obj").forEach(function (card) {
+      var res  = card.dataset.result;
+      var div  = card.dataset.diverge === "true";
       var show = true;
-      if (activeFilter === "met")      show = (res === "met");
-      if (activeFilter === "missed")   show = (res === "missed");
-      if (activeFilter === "diverge")  show = diverges;
-      if (activeFilter === "no_data")  show = (res === "no_data" || res === "context");
+      if (activeFilter === "met")     show = res === "met";
+      if (activeFilter === "missed")  show = res === "missed";
+      if (activeFilter === "diverge") show = div;
+      if (activeFilter === "no_data") show = (res === "no_data" || res === "context");
       card.hidden = !show;
     });
-
-    // Show/hide empty section details
     document.querySelectorAll("details.section").forEach(function (sec) {
-      var visible = sec.querySelectorAll(".obj:not([hidden])").length;
-      sec.hidden = (visible === 0 && activeFilter !== null);
+      sec.hidden = (activeFilter !== null && !sec.querySelectorAll("details.obj:not([hidden])").length);
     });
   }
 
+  // ── Individual objective row ──────────────────────────────────────────────
   function renderObjective(o) {
-    var card = el("div", "obj");
-    card.dataset.result = o.result;
-    card.dataset.diverge = o.divergence ? "true" : "false";
+    var row = document.createElement("details");
+    row.className = "obj";
+    row.dataset.result  = o.result;
+    row.dataset.diverge = o.divergence ? "true" : "false";
 
-    // Header row: label + badge
-    var top = el("div", "obj__top");
-    var labelWrap = el("div", "obj__label");
-    labelWrap.innerHTML =
-      esc(o.metric_label) +
-      '<div class="obj__cat">Objective ' + esc(o.objective) +
-      (o.category && o.category !== "staar" ? " · " + esc(o.category.toUpperCase()) : "") +
+    var actualStr = o.actual != null ? pct(o.actual) : (o.tapr_mappable ? "—" : "n/a");
+    var actualCls = "obj__actual obj__actual--" + (o.result === "met" ? "met" : o.result === "missed" ? "missed" : "context");
+
+    // Summary row (always visible)
+    var summary = document.createElement("summary");
+    summary.innerHTML =
+      '<div class="obj__summary-left">' +
+        '<span class="badge badge--' + esc(o.result) + '">' + esc(RESULT_BADGE[o.result] || o.result) + '</span>' +
+        '<div>' +
+          '<div class="obj__label">' + esc(plainLabel(o)) + '</div>' +
+          (goalDesc(o) ? '<div class="obj__plain">' + esc(goalDesc(o)) + '</div>' : '') +
+        '</div>' +
+      '</div>' +
+      '<div class="obj__summary-right">' +
+        (o.actual != null ? '<span class="' + actualCls + '">' + esc(pct(o.actual)) + '</span>' : '') +
+        '<span class="obj__chev" aria-hidden="true">&#9660;</span>' +
       '</div>';
-    top.appendChild(labelWrap);
-    top.appendChild(el("span", "badge badge--" + o.result, RESULT_BADGE[o.result] || o.result));
-    card.appendChild(top);
+    row.appendChild(summary);
 
-    // Three-column triplet
+    // Expanded body
+    var body = el("div", "obj__body");
+
+    // Full DIP text
+    var rawText = o.text || "";
+    // Strip "Performance Objective N: " prefix for cleaner display
+    var cleanText = rawText.replace(/^Performance Objective \d+:\s*/i, "");
+    body.innerHTML =
+      '<div class="obj__diptext">' +
+        '<span class="obj__diptext-label">From the District Improvement Plan</span>' +
+        esc(cleanText) +
+      '</div>';
+
+    // Triplet
     var trip = el("div", "triplet");
 
-    // Promised
     var c1 = el("div", "cell");
     c1.innerHTML =
       '<div class="cell__k">CISD Goal</div>' +
       '<div class="cell__v">' + esc(promisedText(o.promised)) + '</div>';
     trip.appendChild(c1);
 
-    // Claimed — explain the qualitative scale
     var c2 = el("div", "cell");
     c2.innerHTML =
       '<div class="cell__k">CISD Claims</div>' +
       '<div class="cell__v cell__v--muted">' + esc(o.claimed || "—") + '</div>' +
-      '<div class="cell__note">CISD self-rating (qualitative — no number)</div>';
+      '<div class="cell__note">Self-reported by CISD at year-end (qualitative — no percentage)</div>';
     trip.appendChild(c2);
 
-    // Actual
-    var actualStr = o.actual != null ? pct(o.actual) : (o.tapr_mappable ? "Pending" : "n/a");
-    var actualCls = "cell cell--actual" +
-      (o.result === "met" ? " is-met" : o.result === "missed" ? " is-missed" : "");
-    var c3 = el("div", actualCls);
+    var c3 = el("div", "cell cell--actual" + (o.result==="met"?" is-met":o.result==="missed"?" is-missed":""));
     c3.innerHTML =
       '<div class="cell__k">State Data (TEA)</div>' +
       '<div class="cell__v">' + esc(actualStr) + '</div>' +
-      (o.result === "context" ? '<div class="cell__note">No target set — for reference</div>' : '');
+      (o.result === "context" ? '<div class="cell__note">State data available — no numeric target was set for comparison</div>' :
+       !o.tapr_mappable ? '<div class="cell__note">Not tracked by the state; CISD uses its own assessment for this goal</div>' :
+       o.result === "no_data" ? '<div class="cell__note">State report for this goal not yet available</div>' : '');
     trip.appendChild(c3);
-
-    card.appendChild(trip);
+    body.appendChild(trip);
 
     // Divergence callout
     if (o.divergence) {
       var d = el("div", "diverge");
       d.innerHTML =
-        '<span aria-hidden="true">⚠️</span><span>CISD self-reports <strong>' +
-        esc(o.claimed) + '</strong>, but state data shows the goal was <strong>missed</strong>.</span>';
-      card.appendChild(d);
+        '<span aria-hidden="true">⚠️</span>' +
+        '<span>CISD self-reports <strong>' + esc(o.claimed) + '</strong> for this goal, ' +
+        'but state data shows the target was <strong>missed</strong> by ' +
+        (o.actual != null && o.promised && o.promised.target != null ?
+          Math.abs(Math.round(o.promised.target - o.actual)) + ' percentage points' : 'a significant margin') +
+        '.</span>';
+      body.appendChild(d);
     }
 
     if (o.source_pdf) {
-      card.appendChild(el("div", "obj__prov",
-        "Source: " + esc(o.source_pdf) + (o.source_page ? ", p. " + esc(o.source_page) : "")));
+      body.appendChild(el("div", "obj__prov",
+        "Source: " + esc(o.source_pdf) + (o.source_page ? ", p. " + esc(o.source_page) : "")));
     }
-    return card;
+    row.appendChild(body);
+    return row;
+  }
+
+  // ── Sort helpers ─────────────────────────────────────────────────────────
+  function getGroup(o) {
+    // Try to extract from metric_label or metric data
+    if (o.metric_label) {
+      if (/emergent bilingual|ELL/i.test(o.metric_label)) return "emergent_bilingual";
+      if (/special ed/i.test(o.metric_label)) return "special_ed";
+      if (/econ/i.test(o.metric_label)) return "econ_disadv";
+      if (/dyslexia/i.test(o.metric_label)) return "dyslexia";
+      if (/gifted/i.test(o.metric_label)) return "gifted";
+    }
+    return "all";
+  }
+  function getGrade(o) {
+    // Extract from metric_label: "Grade 3", "3rd Grade", "Algebra I (EOC)"
+    var m;
+    if ((m = /Grade (\d+)/i.exec(o.metric_label))) return m[1];
+    if ((m = /(\d+)(?:st|nd|rd|th) Grade/i.exec(o.metric_label))) return m[1];
+    if (/Algebra I/i.test(o.metric_label)) return "EOC-Algebra";
+    if (/English I (?:EOC|\()/i.test(o.metric_label)) return "EOC-English1";
+    if (/English II/i.test(o.metric_label)) return "EOC-English2";
+    if (/Biology/i.test(o.metric_label)) return "EOC-Biology";
+    if (/US History/i.test(o.metric_label)) return "EOC-USHistory";
+    return null;
   }
 
   function sortObjectives(list) {
     list.sort(function (a, b) {
-      var ra = RESULT_RANK[a.result] != null ? RESULT_RANK[a.result] : 99;
-      var rb = RESULT_RANK[b.result] != null ? RESULT_RANK[b.result] : 99;
-      if (ra !== rb) return ra - rb;
-      return a.objective - b.objective;
+      var ga = GRADE_SORT[getGrade(a)] || 99, gb = GRADE_SORT[getGrade(b)] || 99;
+      if (ga !== gb) return ga - gb;
+      var groupA = GROUP_SORT[getGroup(a)] || 99, groupB = GROUP_SORT[getGroup(b)] || 99;
+      if (groupA !== groupB) return groupA - groupB;
+      return (RESULT_RANK[a.result]||99) - (RESULT_RANK[b.result]||99);
     });
     return list;
   }
 
+  // ── Year renderer ─────────────────────────────────────────────────────────
   function renderYear(year) {
-    var strip = document.getElementById("statstrip");
     activeFilter = null;
     renderStatStrip(year);
     document.getElementById("legend").hidden = false;
@@ -219,17 +330,19 @@
         '<span class="section__chev" aria-hidden="true">&#9660;</span>';
       details.appendChild(summary);
 
-      // Description paragraph (outside summary, inside details)
-      var desc = el("p", "section__desc", esc(sec.desc));
-      details.appendChild(desc);
+      details.appendChild(el("p", "section__desc", esc(sec.desc)));
 
       if (sec.bySubject) {
         var bySubj = {}, subjOrder = [];
+        // Sort the full list first (grade then group)
         sortObjectives(list).forEach(function (o) {
           var sg = o.subject_group || "Other";
           if (!bySubj[sg]) { bySubj[sg] = []; subjOrder.push(sg); }
           bySubj[sg].push(o);
         });
+        // Subject display order
+        var SUBJ_ORDER = ["Reading & Writing (English)", "Mathematics", "Science", "Social Studies", "Other"];
+        subjOrder.sort(function(a,b){ return (SUBJ_ORDER.indexOf(a)||99) - (SUBJ_ORDER.indexOf(b)||99); });
         subjOrder.forEach(function (sg) {
           details.appendChild(el("h3", "subject__head", esc(sg)));
           bySubj[sg].forEach(function (o) { details.appendChild(renderObjective(o)); });
@@ -240,10 +353,10 @@
       container.appendChild(details);
     });
 
-    // Wire up filter after all cards are in the DOM
-    applyFilter(strip, year);
+    applyFilter();
   }
 
+  // ── Year tabs ────────────────────────────────────────────────────────────
   function renderTabs(data, onPick) {
     var tabs = document.getElementById("yeartabs");
     tabs.innerHTML = "";
@@ -260,6 +373,7 @@
     });
   }
 
+  // ── Boot ─────────────────────────────────────────────────────────────────
   fetch("data/outcomes.json", { cache: "no-store" })
     .then(function (r) { if (!r.ok) throw new Error(r.status); return r.json(); })
     .then(function (data) {
@@ -268,7 +382,8 @@
         return;
       }
 
-      // Data freshness bar
+      renderDistrictGrade(data);
+
       if (data.data_as_of) {
         document.getElementById("fresh-dip").textContent = data.data_as_of.dip || "—";
         document.getElementById("fresh-tea").textContent = data.data_as_of.tea || "—";
@@ -283,7 +398,7 @@
       if (data.generated_at) {
         document.getElementById("foot-gen").textContent =
           "Last updated " + new Date(data.generated_at).toLocaleDateString("en-US",
-            { year: "numeric", month: "long", day: "numeric" });
+            { year:"numeric", month:"long", day:"numeric" });
       }
     })
     .catch(function (e) {

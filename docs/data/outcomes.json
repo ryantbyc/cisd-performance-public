@@ -1,11 +1,15 @@
 {
   "district": "Conroe ISD",
   "district_cdn": "170902",
-  "generated_at": "2026-06-04T19:21:55.371184+00:00",
+  "generated_at": "2026-06-04T19:43:08.200768+00:00",
   "latest_year": "2024-25",
   "data_as_of": {
     "dip": "December 2024",
     "tea": "Spring 2025"
+  },
+  "district_grade": {
+    "grade": "B",
+    "year": "2025"
   },
   "years": [
     {
