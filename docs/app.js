@@ -210,16 +210,6 @@
     // Expanded body
     var body = el("div", "obj__body");
 
-    // Full DIP text
-    var rawText = o.text || "";
-    // Strip "Performance Objective N: " prefix for cleaner display
-    var cleanText = rawText.replace(/^Performance Objective \d+:\s*/i, "");
-    body.innerHTML =
-      '<div class="obj__diptext">' +
-        '<span class="obj__diptext-label">From the District Improvement Plan</span>' +
-        esc(cleanText) +
-      '</div>';
-
     // Triplet
     var trip = el("div", "triplet");
 

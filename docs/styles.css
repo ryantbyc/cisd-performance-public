@@ -243,16 +243,6 @@ details.obj[open] > summary .obj__chev { transform:rotate(180deg); }
   padding:var(--sp-4);
 }
 
-/* DIP full text */
-.obj__diptext {
-  font-size:14px; color:var(--ink-2); line-height:1.6;
-  margin:0 0 var(--sp-4); padding:var(--sp-3) var(--sp-4);
-  background:rgba(0,0,0,.03); border-radius:var(--r-sm); border-left:3px solid var(--line-2);
-}
-.obj__diptext-label {
-  font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
-  color:var(--ink-3); display:block; margin-bottom:var(--sp-2);
-}
 
 /* Status dot — small colored indicator in each row summary */
 .status-dot {
