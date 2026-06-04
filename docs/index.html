@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>CISD Student Performance</title>
+  <meta name="description" content="Does Conroe ISD meet the student-outcome goals in its own District Improvement Plan? An independent comparison of what CISD promised, what CISD claims, and what the state's TAPR data actually shows." />
+  <meta name="color-scheme" content="light" />
+  <meta name="theme-color" content="#1f3a5f" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <a class="skip-link" href="#content">Skip to content</a>
+
+  <header class="hero">
+    <div class="wrap">
+      <p class="eyebrow">Conroe ISD · Constituent Resource</p>
+      <h1>Are CISD students meeting the district's goals?</h1>
+      <p class="lede">
+        Every year Conroe ISD sets measurable student-outcome targets in its
+        <strong>District Improvement Plan</strong>. This site compares what the district
+        <em>promised</em>, what it <em>claims</em> it achieved, and what the state's
+        official <strong>TAPR</strong> data actually shows — goal by goal.
+      </p>
+    </div>
+  </header>
+
+  <main id="content" class="wrap">
+    <!-- Stat strip -->
+    <section class="statstrip" id="statstrip" aria-label="Summary">
+      <p class="loading">Loading outcomes…</p>
+    </section>
+
+    <!-- Year selector -->
+    <div class="yeartabs" id="yeartabs" role="tablist" aria-label="School year"></div>
+
+    <!-- Legend -->
+    <div class="legend" id="legend" hidden>
+      <span class="legend__item"><span class="dot dot--met"></span> Met target</span>
+      <span class="legend__item"><span class="dot dot--missed"></span> Missed target</span>
+      <span class="legend__item"><span class="dot dot--nodata"></span> No state data yet</span>
+      <span class="legend__item"><span class="dot dot--internal"></span> District-internal measure</span>
+    </div>
+
+    <!-- Objectives -->
+    <section id="objectives" aria-live="polite"></section>
+  </main>
+
+  <footer class="foot">
+    <div class="wrap">
+      <p class="foot__note" id="foot-prov">An independent project — not affiliated with Conroe ISD.</p>
+      <p class="foot__note" id="foot-gen"></p>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
