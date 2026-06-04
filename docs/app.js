@@ -18,6 +18,7 @@
   var RESULT_BADGE = {
     met:      "Met",
     missed:   "Missed",
+    partial:  "Some Progress",
     context:  "Has Data",
     no_data:  "No state data",
     internal: "District-measured"
@@ -31,7 +32,7 @@
   var GROUP_SORT = { all: 1, econ_disadv: 2, emergent_bilingual: 3, special_ed: 4, dyslexia: 5, gifted: 6 };
 
   // Sort order for filters: missed first
-  var RESULT_RANK = { missed: 0, met: 1, context: 2, no_data: 3, internal: 4 };
+  var RESULT_RANK = { missed: 0, met: 1, partial: 2, context: 3, no_data: 4, internal: 5 };
 
   // SECTIONS is built dynamically from the goals metadata in outcomes.json
   // (see buildSections() below)
@@ -159,19 +160,22 @@
   // ── Stat strip / filter buttons ──────────────────────────────────────────
   function renderStatStrip(year) {
     var objs = year.objectives || [];
-    var s = year.summary || {};
-    var diverge = objs.filter(function (o) { return o.divergence; }).length;
+    // Stat strip only reflects state-verified results (tapr_mappable === true)
+    var statMet    = objs.filter(function(o){ return o.result === "met"    && o.tapr_mappable; }).length;
+    var statMissed = objs.filter(function(o){ return o.result === "missed" && o.tapr_mappable; }).length;
+    var diverge    = objs.filter(function(o){ return o.divergence; }).length;
+    var statNoData = objs.filter(function(o){ return o.result === "no_data"; }).length;
     var strip = document.getElementById("statstrip");
     strip.innerHTML = "";
 
     var STATS = [
-      { key:"met",     cls:"stat--met",    val:s.met||0,
+      { key:"met",     cls:"stat--met",    val:statMet,
         label:"Goals Met",          hint:"State data confirms goal was reached" },
-      { key:"missed",  cls:"stat--missed", val:s.missed||0,
+      { key:"missed",  cls:"stat--missed", val:statMissed,
         label:"Goals Missed",       hint:"State data shows goal was not reached" },
       { key:"diverge", cls:"stat--diverge",val:diverge,
         label:"Claim vs. Data Gaps",hint:"CISD reported progress but state data shows a miss" },
-      { key:"no_data", cls:"stat--nodata", val:(s.no_data||0),
+      { key:"no_data", cls:"stat--nodata", val:statNoData,
         label:"Awaiting State Data", hint:"No TEA data available yet for this goal" }
     ];
 
@@ -197,11 +201,13 @@
       btn.setAttribute("aria-pressed", btn.dataset.filter === activeFilter ? "true" : "false");
     });
     document.querySelectorAll("details.obj").forEach(function (card) {
-      var res  = card.dataset.result;
-      var div  = card.dataset.diverge === "true";
-      var show = true;
-      if (activeFilter === "met")     show = res === "met";
-      if (activeFilter === "missed")  show = res === "missed";
+      var res   = card.dataset.result;
+      var basis = card.dataset.basis;
+      var div   = card.dataset.diverge === "true";
+      var show  = true;
+      // Filters operate on state-verified results only
+      if (activeFilter === "met")     show = res === "met"    && basis === "state";
+      if (activeFilter === "missed")  show = res === "missed" && basis === "state";
       if (activeFilter === "diverge") show = div;
       if (activeFilter === "no_data") show = (res === "no_data" || res === "context");
       card.hidden = !show;
@@ -216,9 +222,10 @@
     var row = document.createElement("details");
     row.className = "obj";
     row.dataset.result  = o.result;
+    row.dataset.basis   = o.result_basis || (o.tapr_mappable ? "state" : "district");
     row.dataset.diverge = o.divergence ? "true" : "false";
 
-    var actualStr = o.actual != null ? pct(o.actual) : (o.tapr_mappable ? "—" : "n/a");
+    var actualStr = o.actual != null ? pct(o.actual) : (o.tapr_mappable ? "—" : "N/A");
     var actualCls = "obj__actual obj__actual--" + (o.result === "met" ? "met" : o.result === "missed" ? "missed" : "context");
 
     // Summary row (always visible)
@@ -242,7 +249,11 @@
         '</div>' +
       '</div>' +
       '<div class="obj__summary-right">' +
-        (o.actual != null ? '<span class="' + actualCls + '">' + esc(pct(o.actual)) + '</span>' : '') +
+        (o.actual != null
+          ? '<span class="' + actualCls + '">' + esc(pct(o.actual)) + '</span>'
+          : (!o.tapr_mappable
+             ? '<span class="obj__actual obj__actual--na">N/A</span>'
+             : '')) +
         '<span class="obj__chev" aria-hidden="true">&#9660;</span>' +
       '</div>';
     row.appendChild(summary);
@@ -337,7 +348,6 @@
   function renderYear(year) {
     activeFilter = null;
     renderStatStrip(year);
-    document.getElementById("legend").hidden = false;
 
     var container = document.getElementById("objectives");
     container.innerHTML = "";
@@ -373,9 +383,17 @@
           if (!bySubj[sg]) { bySubj[sg] = []; subjOrder.push(sg); }
           bySubj[sg].push(o);
         });
-        // Subject display order
-        var SUBJ_ORDER = ["Reading & Writing (English)", "Mathematics", "Science", "Social Studies", "Other"];
-        subjOrder.sort(function(a,b){ return (SUBJ_ORDER.indexOf(a)||99) - (SUBJ_ORDER.indexOf(b)||99); });
+        // Subject display order (indexOf returns -1 for unknown → sort last via 99)
+        var SUBJ_ORDER = [
+          "Reading & Writing (English)", "Mathematics", "Science", "Social Studies",
+          "Graduation & Post-Secondary", "Postsecondary Readiness", "Academic Standards",
+          "Other Goals", "Other"
+        ];
+        subjOrder.sort(function(a, b) {
+          var ai = SUBJ_ORDER.indexOf(a); if (ai < 0) ai = 99;
+          var bi = SUBJ_ORDER.indexOf(b); if (bi < 0) bi = 99;
+          return ai - bi;
+        });
         subjOrder.forEach(function (sg) {
           details.appendChild(el("h3", "subject__head", esc(sg)));
           bySubj[sg].forEach(function (o) { details.appendChild(renderObjective(o)); });
