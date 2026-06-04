@@ -239,10 +239,12 @@
       : null;
     var claimCls = "obj__claim " + (CLAIM_CLS[claimCode] || "claim--neutral");
     var summary = document.createElement("summary");
+    var objRef = 'Goal ' + (o.goal || 1) + ', Performance Objective ' + o.objective;
     summary.innerHTML =
       '<div class="obj__summary-left">' +
         '<span class="status-dot status-dot--' + esc(o.result) + '" aria-hidden="true"></span>' +
         '<div>' +
+          '<div class="obj__ref">' + esc(objRef) + '</div>' +
           '<div class="obj__label">' + esc(rowLabel) + '</div>' +
           (grpSubtitle ? '<div class="obj__plain">' + esc(grpSubtitle) + '</div>' : '') +
           (claimText ? '<div class="' + claimCls + '">' + claimText + '</div>' : '') +
@@ -334,12 +336,9 @@
   }
 
   function sortObjectives(list) {
+    // Preserve DIP order: objectives numbered within each goal as they appear in the plan
     list.sort(function (a, b) {
-      var ga = GRADE_SORT[getGrade(a)] || 99, gb = GRADE_SORT[getGrade(b)] || 99;
-      if (ga !== gb) return ga - gb;
-      var groupA = GROUP_SORT[getGroup(a)] || 99, groupB = GROUP_SORT[getGroup(b)] || 99;
-      if (groupA !== groupB) return groupA - groupB;
-      return (RESULT_RANK[a.result]||99) - (RESULT_RANK[b.result]||99);
+      return (a.objective || 0) - (b.objective || 0);
     });
     return list;
   }
@@ -369,38 +368,14 @@
       var summary = document.createElement("summary");
       summary.innerHTML =
         '<span class="section__head">' + esc(sec.title) + '</span>' +
-        '<span class="section__count">' + list.length + ' goal' + (list.length !== 1 ? 's' : '') + '</span>' +
+        '<span class="section__count">' + list.length + ' objective' + (list.length !== 1 ? 's' : '') + '</span>' +
         '<span class="section__chev" aria-hidden="true">&#9660;</span>';
       details.appendChild(summary);
 
       details.appendChild(el("p", "section__desc", esc(sec.desc)));
 
-      if (sec.bySubject) {
-        var bySubj = {}, subjOrder = [];
-        // Sort the full list first (grade then group)
-        sortObjectives(list).forEach(function (o) {
-          var sg = o.subject_group || "Other";
-          if (!bySubj[sg]) { bySubj[sg] = []; subjOrder.push(sg); }
-          bySubj[sg].push(o);
-        });
-        // Subject display order (indexOf returns -1 for unknown → sort last via 99)
-        var SUBJ_ORDER = [
-          "Reading & Writing (English)", "Mathematics", "Science", "Social Studies",
-          "Graduation & Post-Secondary", "Postsecondary Readiness", "Academic Standards",
-          "Other Goals", "Other"
-        ];
-        subjOrder.sort(function(a, b) {
-          var ai = SUBJ_ORDER.indexOf(a); if (ai < 0) ai = 99;
-          var bi = SUBJ_ORDER.indexOf(b); if (bi < 0) bi = 99;
-          return ai - bi;
-        });
-        subjOrder.forEach(function (sg) {
-          details.appendChild(el("h3", "subject__head", esc(sg)));
-          bySubj[sg].forEach(function (o) { details.appendChild(renderObjective(o)); });
-        });
-      } else {
-        sortObjectives(list).forEach(function (o) { details.appendChild(renderObjective(o)); });
-      }
+      // List objectives in DIP order (by objective number), no subject sub-grouping
+      sortObjectives(list).forEach(function (o) { details.appendChild(renderObjective(o)); });
       container.appendChild(details);
     });
 
