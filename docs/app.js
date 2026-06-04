@@ -18,13 +18,20 @@
   var RESULT_BADGE = {
     met: "Met", missed: "Missed", no_data: "No state data", internal: "Internal"
   };
-  var RESULT_ORDER = ["missed", "met", "no_data", "internal"];
-  var GROUP_TITLE = {
-    missed: "Missed targets",
-    met: "Met targets",
-    no_data: "Awaiting state data",
-    internal: "District-internal measures (no state equivalent)"
-  };
+  // Order objectives within a group: problems first, then wins, then pending.
+  var RESULT_RANK = { missed: 0, met: 1, no_data: 2, internal: 3 };
+
+  // Reader-friendly top-level sections, in display order.
+  var SECTIONS = [
+    { key: "standardized_testing", title: "Standardized Testing", bySubject: true,
+      desc: "How students score on the state's STAAR and end-of-course exams, by subject." },
+    { key: "attendance_graduation", title: "Attendance & Graduation",
+      desc: "Whether students stay enrolled, graduate on time, and avoid dropping out." },
+    { key: "postsecondary", title: "Postsecondary Readiness",
+      desc: "College, career, and military readiness — including AP/IB and career & technical programs." },
+    { key: "other", title: "Other District Goals",
+      desc: "Goals CISD measures with its own assessments, which have no direct state-data equivalent." }
+  ];
 
   // Describe the "promised" target in words
   function promisedText(p) {
@@ -109,6 +116,15 @@
     return card;
   }
 
+  function sortObjectives(list) {
+    list.sort(function (a, b) {
+      var ra = RESULT_RANK[a.result], rb = RESULT_RANK[b.result];
+      if (ra !== rb) return ra - rb;
+      return a.objective - b.objective;
+    });
+    return list;
+  }
+
   function renderYear(year) {
     renderStatStrip(year);
     document.getElementById("legend").hidden = false;
@@ -116,17 +132,37 @@
     var container = document.getElementById("objectives");
     container.innerHTML = "";
 
-    var byResult = {};
+    var bySection = {};
     (year.objectives || []).forEach(function (o) {
-      (byResult[o.result] = byResult[o.result] || []).push(o);
+      var k = o.section || "other";
+      (bySection[k] = bySection[k] || []).push(o);
     });
 
-    RESULT_ORDER.forEach(function (res) {
-      var list = byResult[res];
+    SECTIONS.forEach(function (sec) {
+      var list = bySection[sec.key];
       if (!list || !list.length) return;
-      container.appendChild(el("h2", "group-head", GROUP_TITLE[res] + " (" + list.length + ")"));
-      list.sort(function (a, b) { return a.objective - b.objective; });
-      list.forEach(function (o) { container.appendChild(renderObjective(o)); });
+
+      var secEl = el("section", "section");
+      secEl.appendChild(el("h2", "section__head", esc(sec.title)));
+      secEl.appendChild(el("p", "section__desc", esc(sec.desc)));
+
+      if (sec.bySubject) {
+        // sub-group by subject_group, preserving a sensible subject order
+        var bySubj = {};
+        var order = [];
+        sortObjectives(list).forEach(function (o) {
+          var sg = o.subject_group || "Other";
+          if (!bySubj[sg]) { bySubj[sg] = []; order.push(sg); }
+          bySubj[sg].push(o);
+        });
+        order.forEach(function (sg) {
+          secEl.appendChild(el("h3", "subject__head", esc(sg)));
+          bySubj[sg].forEach(function (o) { secEl.appendChild(renderObjective(o)); });
+        });
+      } else {
+        sortObjectives(list).forEach(function (o) { secEl.appendChild(renderObjective(o)); });
+      }
+      container.appendChild(secEl);
     });
   }
 
@@ -154,6 +190,13 @@
           '<p class="err">No outcome data available yet.</p>';
         return;
       }
+      // Data freshness bar
+      if (data.data_as_of) {
+        document.getElementById("fresh-dip").textContent = data.data_as_of.dip || "—";
+        document.getElementById("fresh-tea").textContent = data.data_as_of.tea || "—";
+        document.getElementById("freshness").hidden = false;
+      }
+
       renderTabs(data, renderYear);
       renderYear(data.years[0]);
 

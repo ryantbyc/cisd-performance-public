@@ -34,9 +34,9 @@ a { color:var(--brand); }
 }
 .skip-link:focus { left:0; }
 
-/* Hero */
+/* Hero — green theme (placeholder gradient; an image overlay will replace this, like the Hub) */
 .hero {
-  background:linear-gradient(135deg, var(--brand-700) 0%, var(--brand) 100%);
+  background:linear-gradient(135deg, #2c6e5d 0%, #4a9a7e 100%);
   padding:var(--sp-8) 0 var(--sp-7);
 }
 .eyebrow {
@@ -52,6 +52,31 @@ a { color:var(--brand); }
 .lede em { color:rgba(255,255,255,.95); font-style:italic; }
 
 main { padding:var(--sp-6) 0 var(--sp-6); display:block; }
+
+/* Data freshness bar */
+.freshness {
+  display:flex; gap:var(--sp-5); flex-wrap:wrap;
+  margin-bottom:var(--sp-5); padding:var(--sp-3) var(--sp-4);
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--r-md);
+}
+.freshness__item { font-size:13px; color:var(--ink-2); }
+.freshness__k {
+  font-size:11px; font-weight:700; letter-spacing:.04em; text-transform:uppercase;
+  color:var(--ink-3); margin-right:var(--sp-2);
+}
+
+/* Section + subject headings */
+.section { margin-top:var(--sp-7); }
+.section:first-of-type { margin-top:var(--sp-2); }
+.section__head {
+  margin:0 0 var(--sp-2); font-size:20px; font-weight:700; letter-spacing:-.01em; color:var(--ink);
+}
+.section__desc { margin:0 0 var(--sp-4); font-size:14px; color:var(--ink-2); max-width:70ch; }
+.subject__head {
+  margin:var(--sp-5) 0 var(--sp-3); font-size:13px; font-weight:700;
+  letter-spacing:.04em; text-transform:uppercase; color:var(--c-subject,var(--ink-3));
+  padding-left:var(--sp-3); border-left:3px solid var(--c-subject,var(--line-2));
+}
 
 /* Stat strip */
 .statstrip {
