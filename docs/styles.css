@@ -226,6 +226,15 @@ details.obj > summary:hover { background:rgba(0,0,0,.02); }
   width:100%; font-size:14px; color:var(--ink-2); margin-top:2px;
   font-weight:400;
 }
+/* CISD self-reported summative claim shown in row summary */
+.obj__claim {
+  width:100%; font-size:12px; font-weight:600; margin-top:3px;
+  letter-spacing:.02em;
+}
+.claim--met     { color:var(--good); }
+.claim--partial { color:var(--warn); }
+.claim--missed  { color:var(--bad); }
+.claim--neutral { color:var(--ink-3); }
 .obj__summary-right { display:flex; align-items:center; gap:var(--sp-3); flex:none; }
 .obj__actual {
   font-size:18px; font-weight:700; letter-spacing:-.02em;

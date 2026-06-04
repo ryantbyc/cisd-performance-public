@@ -33,18 +33,51 @@
   // Sort order for filters: missed first
   var RESULT_RANK = { missed: 0, met: 1, context: 2, no_data: 3, internal: 4 };
 
-  var SECTIONS = [
-    { key: "standardized_testing", title: "Standardized Testing", bySubject: true,
-      desc: "How students score on state-administered STAAR and end-of-course exams by subject. Goals are set each year in the District Improvement Plan." },
-    { key: "attendance_graduation", title: "Attendance & Graduation",
-      desc: "Whether students stay enrolled, graduate on time, and avoid dropping out of school." },
-    { key: "postsecondary", title: "Postsecondary Readiness",
-      desc: "Are students ready for college, careers, or the military after graduation? Includes AP/IB exams and career & technical education (CTE) programs." },
-    { key: "other", title: "Other District Goals",
-      desc: "These goals are measured by CISD using their own internal assessments — not state-administered tests. The state does not separately track these metrics, so no TEA comparison is available." }
-  ];
+  // SECTIONS is built dynamically from the goals metadata in outcomes.json
+  // (see buildSections() below)
+  var SECTIONS = [];
 
   var activeFilter = null;
+
+  // ── CISD claim display ───────────────────────────────────────────────────
+  var CLAIM_ICON = {
+    met:        "✓",
+    significant:"◑",
+    some:       "◑",
+    no_progress:"✕",
+    not_met:    "✕",
+    not_found:  "—",
+    unknown:    ""
+  };
+  var CLAIM_CLS = {
+    met:         "claim--met",
+    significant: "claim--partial",
+    some:        "claim--partial",
+    no_progress: "claim--missed",
+    not_met:     "claim--missed",
+  };
+
+  // ── Build section list from goals metadata in payload ────────────────────
+  function buildSections(data) {
+    var goalMeta = {};
+    (data.goals || []).forEach(function(g) { goalMeta[g.goal] = g; });
+    // Collect which goal numbers actually appear in the current year
+    var present = {};
+    ((data.years || [])[0] || { objectives: [] }).objectives.forEach(function(o) {
+      if (o.goal) present[o.goal] = true;
+    });
+    return Object.keys(present).sort().map(function(gk) {
+      var gn = parseInt(gk, 10);
+      var meta = goalMeta[gn] || {};
+      return {
+        key:       "goal_" + gn,
+        goalNum:   gn,
+        title:     "Goal " + gn + ": " + (meta.title || ("Goal " + gn)),
+        desc:      meta.desc || "",
+        bySubject: true   // all goals use subject sub-grouping
+      };
+    });
+  }
 
   // ── Plain-language summary for the row label ──────────────────────────────
   var GRADE_LABEL = {
@@ -189,9 +222,15 @@
     var actualCls = "obj__actual obj__actual--" + (o.result === "met" ? "met" : o.result === "missed" ? "missed" : "context");
 
     // Summary row (always visible)
-    // Primary label: abbreviated DIP goal text; subtitle: student group if not "all"
+    // Primary label: abbreviated DIP goal text
+    // Subtitles: student group (if not all) + CISD's self-reported summative result
     var rowLabel = o.short_label || plainLabel(o);
     var grpSubtitle = (o.group && o.group !== "all") ? (GROUP_LABEL[o.group] || o.group) : null;
+    var claimCode = o.claimed_code || "unknown";
+    var claimText = (claimCode && claimCode !== "unknown" && claimCode !== "not_found")
+      ? (CLAIM_ICON[claimCode] || "") + " CISD: " + esc(o.claimed || "")
+      : null;
+    var claimCls = "obj__claim " + (CLAIM_CLS[claimCode] || "claim--neutral");
     var summary = document.createElement("summary");
     summary.innerHTML =
       '<div class="obj__summary-left">' +
@@ -199,6 +238,7 @@
         '<div>' +
           '<div class="obj__label">' + esc(rowLabel) + '</div>' +
           (grpSubtitle ? '<div class="obj__plain">' + esc(grpSubtitle) + '</div>' : '') +
+          (claimText ? '<div class="' + claimCls + '">' + claimText + '</div>' : '') +
         '</div>' +
       '</div>' +
       '<div class="obj__summary-right">' +
@@ -375,6 +415,9 @@
         return;
       }
 
+      // Build section list from goals metadata (replaces hardcoded SECTIONS)
+      SECTIONS = buildSections(data);
+
       renderDistrictGrade(data);
 
       if (data.data_as_of) {
@@ -383,7 +426,7 @@
         document.getElementById("freshness").hidden = false;
       }
 
-      renderTabs(data, renderYear);
+      renderTabs(data, function(yr) { SECTIONS = buildSections(data); renderYear(yr); });
       renderYear(data.years[0]);
 
       document.getElementById("foot-prov").textContent =
