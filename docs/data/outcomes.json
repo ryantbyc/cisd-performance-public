@@ -1,7 +1,7 @@
 {
   "district": "Conroe ISD",
   "district_cdn": "170902",
-  "generated_at": "2026-06-05T16:00:25.955108+00:00",
+  "generated_at": "2026-06-05T16:14:20.326481+00:00",
   "latest_year": "2024-25",
   "data_as_of": {
     "dip": "2024–25 School Year",
@@ -265,8 +265,76 @@
           "source_file": "2024 District Reference.csv",
           "tapr_column": "2024 District Overall Grade"
         },
-        "academic_performance": [],
+        "academic_performance": [
+          {
+            "id": "staar_reading_gr38",
+            "title": "STAAR Reading",
+            "subtitle": "All Grades · % At Meets Grade Level or Above",
+            "all": 64.0,
+            "all_col": "STAAR Performance, Reading/Language Arts, SY 2023-24, All Students, % At Meets GL Standard or Above",
+            "subgroups": [
+              {
+                "key": "econ_disadv",
+                "label": "Econ. Disadvantaged",
+                "value": 47.0,
+                "tapr_column": "STAAR Performance, Reading/Language Arts, SY 2023-24, Econ Disadv, % At Meets GL Standard or Above"
+              },
+              {
+                "key": "emergent_bilingual",
+                "label": "Emergent Bilingual / ELL",
+                "value": 38.0,
+                "tapr_column": "STAAR Performance, Reading/Language Arts, SY 2023-24, EB/EL (Current), % At Meets GL Standard or Above"
+              },
+              {
+                "key": "special_ed",
+                "label": "Special Education",
+                "value": 26.0,
+                "tapr_column": "STAAR Performance, Reading/Language Arts, SY 2023-24, Special Ed (Current), % At Meets GL Standard or Above"
+              }
+            ],
+            "lower_is_better": false,
+            "source_file": "2024 District STAAR All Grades.csv"
+          },
+          {
+            "id": "staar_math_gr38",
+            "title": "STAAR Math",
+            "subtitle": "All Grades · % At Meets Grade Level or Above",
+            "all": 57.0,
+            "all_col": "STAAR Performance, Mathematics, SY 2023-24, All Students, % At Meets GL Standard or Above",
+            "subgroups": [
+              {
+                "key": "econ_disadv",
+                "label": "Econ. Disadvantaged",
+                "value": 39.0,
+                "tapr_column": "STAAR Performance, Mathematics, SY 2023-24, Econ Disadv, % At Meets GL Standard or Above"
+              },
+              {
+                "key": "emergent_bilingual",
+                "label": "Emergent Bilingual / ELL",
+                "value": 39.0,
+                "tapr_column": "STAAR Performance, Mathematics, SY 2023-24, EB/EL (Current), % At Meets GL Standard or Above"
+              },
+              {
+                "key": "special_ed",
+                "label": "Special Education",
+                "value": 28.0,
+                "tapr_column": "STAAR Performance, Mathematics, SY 2023-24, Special Ed (Current), % At Meets GL Standard or Above"
+              }
+            ],
+            "lower_is_better": false,
+            "source_file": "2024 District STAAR All Grades.csv"
+          }
+        ],
         "graduation_postsec": [
+          {
+            "id": "graduation_4yr",
+            "title": "4-Year Graduation Rate",
+            "subtitle": "Graduates + TxCHSE (Class of 2023)",
+            "all": 97.5,
+            "all_col": "District 2023 4-Year Longitudinal: [Graduates + TxCHSE Recipients] for All Students Rate",
+            "subgroups": [],
+            "source_file": "2024 District 4 Year Longitudinal Rate.csv"
+          },
           {
             "id": "ccmr",
             "title": "College, Career & Military Readiness",
@@ -306,6 +374,16 @@
               }
             ],
             "source_file": "2024 District CCMR College Ready TSI Annual Graduates.csv"
+          },
+          {
+            "id": "dropout_9_12",
+            "title": "Annual Dropout Rate",
+            "subtitle": "Grades 9–12",
+            "all": 0.3,
+            "all_col": "District 2023 Annual Dropout for Grades 09-12: All Students Rate",
+            "subgroups": [],
+            "lower_is_better": true,
+            "source_file": "2024 District Attendance Absenteeism Dropout.csv"
           }
         ]
       },
@@ -313,7 +391,8 @@
         "tapr_year": "2023",
         "accountability": null,
         "academic_performance": [],
-        "graduation_postsec": []
+        "graduation_postsec": [],
+        "format_note": "2023 TAPR uses coded column names — decoder not yet implemented"
       }
     }
   },
