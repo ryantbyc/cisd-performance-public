@@ -291,7 +291,7 @@
     if (o.tapr_source && o.tapr_source.tapr_column) {
       var src = o.tapr_source;
       var taprYr  = src.tapr_year || "2025";
-      var taprUrl = "https://rptsvr1.tea.texas.gov/perfreport/tapr/" + taprYr + "/district/d170902.html";
+      var taprUrl = "https://rptsvr1.tea.texas.gov/cgi/sas/broker?_service=marykay&_program=perfrept.perfmast.sas&_debug=0&ccyy=" + taprYr + "&lev=D&id=170902&prgopt=reports/tapr/paper_tapr.sas";
       var mq      = src.match_quality || "";
       var mqCls   = mq === "strong" ? "match--strong" : mq === "partial" ? "match--partial" : "match--unknown";
       var mqLabel = mq.charAt(0).toUpperCase() + mq.slice(1);
@@ -308,7 +308,7 @@
           '<dd class="tea-source__col">' + esc(src.tapr_column) + '</dd>' +
         '</dl>' +
         '<a class="tea-source__link" href="' + esc(taprUrl) + '" target="_blank" rel="noopener noreferrer">' +
-          'View Conroe ISD on TEA TAPR (' + esc(String(taprYr)) + ') ↗' +
+          'View Conroe ISD TAPR Report (' + esc(String(taprYr)) + ') PDF ↗' +
         '</a>';
       body.appendChild(srcDiv);
     }
