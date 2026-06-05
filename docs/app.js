@@ -561,6 +561,7 @@
     var container = document.getElementById("tea-section");
     if (!container) return;
     container.innerHTML = "";
+    container.scrollIntoView({ behavior: "smooth", block: "start" });
 
     var grade = campus.overall_grade || "—";
     var gradeCls = (grade.length === 1 && "ABCDF".indexOf(grade) >= 0)
