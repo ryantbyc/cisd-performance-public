@@ -1,7 +1,7 @@
 {
   "district": "Conroe ISD",
   "district_cdn": "170902",
-  "generated_at": "2026-06-05T18:57:51.761339+00:00",
+  "generated_at": "2026-06-05T19:36:53.998046+00:00",
   "latest_year": "2024-25",
   "data_as_of": {
     "dip": "2024–25 School Year",
@@ -523,7 +523,58 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 53.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 47.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 44.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 21.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 56.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 51.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 49.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 26.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -542,7 +593,58 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 42.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 43.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 37.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 18.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 37.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 36.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 38.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 16.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -561,7 +663,58 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 33.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 31.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 28.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 15.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 40.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 36.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 36.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 18.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -580,7 +733,58 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 38.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 32.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 33.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 4.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 48.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 41.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 45.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 23.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -599,7 +803,58 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 63.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 45.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 34.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 23.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 66.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 41.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 38.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 37.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -618,8 +873,142 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
-          "graduation_postsec": []
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 22.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 23.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 7.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 43.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 22.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 18.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 29.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": null
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 67.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 67.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": null
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": null
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "eoc_english1",
+              "title": "EOC English I",
+              "subtitle": "% At Approaches GL",
+              "all": 60.0,
+              "subgroups": [],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR EOC SAT ACT Accelerated Testers.csv"
+            },
+            {
+              "id": "eoc_english2",
+              "title": "EOC English II",
+              "subtitle": "% At Approaches GL",
+              "all": 60.0,
+              "subgroups": [],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR EOC SAT ACT Accelerated Testers.csv"
+            },
+            {
+              "id": "eoc_algebra1",
+              "title": "EOC Algebra I",
+              "subtitle": "% At Approaches GL",
+              "all": 72.0,
+              "subgroups": [],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR EOC SAT ACT Accelerated Testers.csv"
+            }
+          ],
+          "graduation_postsec": [
+            {
+              "id": "ccmr",
+              "title": "College, Career & Military Readiness",
+              "subtitle": "% of Class of 2024 graduates who are College, Career, or Military Ready",
+              "all": 23.3,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 19.6
+                },
+                {
+                  "key": "hispanic",
+                  "label": "Hispanic",
+                  "value": 21.1
+                },
+                {
+                  "key": "african_american",
+                  "label": "African American",
+                  "value": 9.4
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 19.2
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus CCMR College Ready TSI Annual Graduates.csv"
+            }
+          ]
         },
         {
           "campus_id": "170902078",
@@ -637,7 +1026,83 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 56.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 48.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 36.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 19.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 41.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 34.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 31.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 12.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 26.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 19.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 9.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 9.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -656,7 +1121,58 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 61.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 44.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 48.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 24.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 49.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 38.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 27.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 21.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -675,7 +1191,58 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 74.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 53.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 58.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 34.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 67.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 45.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 63.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 32.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -694,7 +1261,58 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 84.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 66.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 77.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 31.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 85.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 72.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 81.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 57.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -713,7 +1331,58 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 78.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 60.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 69.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 47.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 80.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 63.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 75.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 50.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -732,8 +1401,142 @@
             "social_studies": true,
             "post_secondary": false
           },
-          "academic_performance": [],
-          "graduation_postsec": []
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 40.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 36.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 23.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 15.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 26.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 24.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 17.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 20.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 50.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 45.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 35.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 29.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "eoc_english1",
+              "title": "EOC English I",
+              "subtitle": "% At Approaches GL",
+              "all": 59.0,
+              "subgroups": [],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR EOC SAT ACT Accelerated Testers.csv"
+            },
+            {
+              "id": "eoc_english2",
+              "title": "EOC English II",
+              "subtitle": "% At Approaches GL",
+              "all": 66.0,
+              "subgroups": [],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR EOC SAT ACT Accelerated Testers.csv"
+            },
+            {
+              "id": "eoc_algebra1",
+              "title": "EOC Algebra I",
+              "subtitle": "% At Approaches GL",
+              "all": 66.0,
+              "subgroups": [],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR EOC SAT ACT Accelerated Testers.csv"
+            }
+          ],
+          "graduation_postsec": [
+            {
+              "id": "ccmr",
+              "title": "College, Career & Military Readiness",
+              "subtitle": "% of Class of 2024 graduates who are College, Career, or Military Ready",
+              "all": 83.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 83.8
+                },
+                {
+                  "key": "hispanic",
+                  "label": "Hispanic",
+                  "value": 82.3
+                },
+                {
+                  "key": "african_american",
+                  "label": "African American",
+                  "value": 93.3
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 76.7
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus CCMR College Ready TSI Annual Graduates.csv"
+            }
+          ]
         },
         {
           "campus_id": "170902080",
@@ -751,7 +1554,83 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 81.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 68.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 55.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 35.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 77.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 53.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 55.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 40.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 63.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 34.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 20.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 25.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -770,8 +1649,142 @@
             "social_studies": true,
             "post_secondary": false
           },
-          "academic_performance": [],
-          "graduation_postsec": []
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 73.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 46.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 31.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 22.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 69.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 47.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 45.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 23.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 81.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 61.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 49.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 35.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "eoc_english1",
+              "title": "EOC English I",
+              "subtitle": "% At Approaches GL",
+              "all": 85.0,
+              "subgroups": [],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR EOC SAT ACT Accelerated Testers.csv"
+            },
+            {
+              "id": "eoc_english2",
+              "title": "EOC English II",
+              "subtitle": "% At Approaches GL",
+              "all": 85.0,
+              "subgroups": [],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR EOC SAT ACT Accelerated Testers.csv"
+            },
+            {
+              "id": "eoc_algebra1",
+              "title": "EOC Algebra I",
+              "subtitle": "% At Approaches GL",
+              "all": 85.0,
+              "subgroups": [],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR EOC SAT ACT Accelerated Testers.csv"
+            }
+          ],
+          "graduation_postsec": [
+            {
+              "id": "ccmr",
+              "title": "College, Career & Military Readiness",
+              "subtitle": "% of Class of 2024 graduates who are College, Career, or Military Ready",
+              "all": 84.5,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 69.7
+                },
+                {
+                  "key": "hispanic",
+                  "label": "Hispanic",
+                  "value": 72.8
+                },
+                {
+                  "key": "african_american",
+                  "label": "African American",
+                  "value": 75.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 51.9
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus CCMR College Ready TSI Annual Graduates.csv"
+            }
+          ]
         },
         {
           "campus_id": "170902050",
@@ -789,7 +1802,83 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 83.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 58.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 54.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 32.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 81.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 61.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 64.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 42.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 77.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 52.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 57.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 38.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -808,8 +1897,142 @@
             "social_studies": true,
             "post_secondary": false
           },
-          "academic_performance": [],
-          "graduation_postsec": []
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 52.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 44.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 23.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 21.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 29.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 22.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 13.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 15.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 67.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 59.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 40.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 34.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "eoc_english1",
+              "title": "EOC English I",
+              "subtitle": "% At Approaches GL",
+              "all": 70.0,
+              "subgroups": [],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR EOC SAT ACT Accelerated Testers.csv"
+            },
+            {
+              "id": "eoc_english2",
+              "title": "EOC English II",
+              "subtitle": "% At Approaches GL",
+              "all": 73.0,
+              "subgroups": [],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR EOC SAT ACT Accelerated Testers.csv"
+            },
+            {
+              "id": "eoc_algebra1",
+              "title": "EOC Algebra I",
+              "subtitle": "% At Approaches GL",
+              "all": 70.0,
+              "subgroups": [],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR EOC SAT ACT Accelerated Testers.csv"
+            }
+          ],
+          "graduation_postsec": [
+            {
+              "id": "ccmr",
+              "title": "College, Career & Military Readiness",
+              "subtitle": "% of Class of 2024 graduates who are College, Career, or Military Ready",
+              "all": 65.3,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 59.0
+                },
+                {
+                  "key": "hispanic",
+                  "label": "Hispanic",
+                  "value": 61.2
+                },
+                {
+                  "key": "african_american",
+                  "label": "African American",
+                  "value": 54.2
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 46.1
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus CCMR College Ready TSI Annual Graduates.csv"
+            }
+          ]
         },
         {
           "campus_id": "170902220",
@@ -827,7 +2050,83 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 62.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 57.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 57.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 32.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 26.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 20.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 20.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 16.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 49.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 48.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 40.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 27.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -846,7 +2145,83 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 72.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 55.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 53.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 34.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 63.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 46.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 45.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 27.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 44.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 22.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 22.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 23.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -865,7 +2240,58 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 47.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 45.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 42.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 23.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 53.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 52.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 52.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 34.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -884,7 +2310,83 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 59.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 50.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 36.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 28.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 52.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 41.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 31.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 26.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 27.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 18.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 12.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 18.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -903,7 +2405,58 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 85.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 57.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 72.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 33.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 85.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 64.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 68.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 44.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -922,7 +2475,83 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 80.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 66.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 58.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 43.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 77.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 47.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 62.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 38.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 65.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 37.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 33.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 43.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -941,7 +2570,83 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 57.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 51.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 38.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 22.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 42.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 36.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 30.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 21.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 43.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 36.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 29.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 28.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -960,7 +2665,58 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 44.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 35.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 38.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 13.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 52.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 45.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 55.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 20.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -979,7 +2735,58 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 85.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 60.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 56.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 52.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 84.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 63.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 68.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 64.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -998,7 +2805,58 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 54.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 43.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 62.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 31.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 49.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 38.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 54.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 35.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1017,7 +2875,58 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 63.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 55.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 73.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 26.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 56.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 47.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 61.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 28.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1036,7 +2945,83 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 58.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 49.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 39.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 15.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 50.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 40.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 48.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 15.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 48.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 38.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 27.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 19.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1055,8 +3040,142 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
-          "graduation_postsec": []
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 71.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 50.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 26.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 27.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 48.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 30.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 11.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 17.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 79.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 57.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 46.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 37.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "eoc_english1",
+              "title": "EOC English I",
+              "subtitle": "% At Approaches GL",
+              "all": 86.0,
+              "subgroups": [],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR EOC SAT ACT Accelerated Testers.csv"
+            },
+            {
+              "id": "eoc_english2",
+              "title": "EOC English II",
+              "subtitle": "% At Approaches GL",
+              "all": 87.0,
+              "subgroups": [],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR EOC SAT ACT Accelerated Testers.csv"
+            },
+            {
+              "id": "eoc_algebra1",
+              "title": "EOC Algebra I",
+              "subtitle": "% At Approaches GL",
+              "all": 76.0,
+              "subgroups": [],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR EOC SAT ACT Accelerated Testers.csv"
+            }
+          ],
+          "graduation_postsec": [
+            {
+              "id": "ccmr",
+              "title": "College, Career & Military Readiness",
+              "subtitle": "% of Class of 2024 graduates who are College, Career, or Military Ready",
+              "all": 72.9,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 49.2
+                },
+                {
+                  "key": "hispanic",
+                  "label": "Hispanic",
+                  "value": 66.1
+                },
+                {
+                  "key": "african_american",
+                  "label": "African American",
+                  "value": 60.9
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 46.4
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus CCMR College Ready TSI Annual Graduates.csv"
+            }
+          ]
         },
         {
           "campus_id": "170902068",
@@ -1074,7 +3193,83 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 38.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 33.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 20.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 9.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 31.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 26.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 21.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 7.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 22.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 16.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 4.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 9.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1093,7 +3288,58 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 66.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 55.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 78.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 31.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 68.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 57.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 73.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 48.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1112,7 +3358,58 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 84.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 77.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 75.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 46.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 78.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 61.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 58.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 49.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1131,7 +3428,58 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 42.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 36.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 31.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 21.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 42.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 37.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 41.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 20.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1150,7 +3498,58 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 55.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 47.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 44.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 20.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 52.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 43.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 52.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 22.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1169,7 +3568,58 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 46.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 45.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 46.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 18.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 40.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 40.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 45.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 20.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1188,7 +3638,83 @@
             "social_studies": true,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 60.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 48.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 30.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 21.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 53.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 40.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 29.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 20.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 51.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 37.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 20.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 22.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1245,7 +3771,58 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 64.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 43.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 61.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 22.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 67.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 52.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 64.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 35.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1264,7 +3841,83 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 74.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 52.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 33.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 23.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 71.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 46.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 45.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 22.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 69.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 44.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 36.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 26.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1283,7 +3936,58 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 59.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 42.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 49.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 23.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 58.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 47.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 51.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 30.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1302,7 +4006,83 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 83.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 61.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 48.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 38.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 82.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 58.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 60.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 39.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 78.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 51.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 43.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 38.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1321,7 +4101,58 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 43.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 43.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 49.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 17.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 40.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 38.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 45.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 31.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1340,7 +4171,83 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 87.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 71.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 72.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 45.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 82.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 61.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 70.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 48.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 70.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 47.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 54.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 34.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1359,7 +4266,83 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 41.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 38.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 24.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 20.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 33.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 31.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 20.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 14.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 35.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 31.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 19.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 23.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1378,7 +4361,58 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 62.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 52.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 53.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 21.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 56.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 49.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 52.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 32.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1397,8 +4431,142 @@
             "social_studies": true,
             "post_secondary": false
           },
-          "academic_performance": [],
-          "graduation_postsec": []
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 65.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 51.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 26.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 23.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 49.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 36.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 27.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 26.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 77.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 66.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 46.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 33.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "eoc_english1",
+              "title": "EOC English I",
+              "subtitle": "% At Approaches GL",
+              "all": 76.0,
+              "subgroups": [],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR EOC SAT ACT Accelerated Testers.csv"
+            },
+            {
+              "id": "eoc_english2",
+              "title": "EOC English II",
+              "subtitle": "% At Approaches GL",
+              "all": 82.0,
+              "subgroups": [],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR EOC SAT ACT Accelerated Testers.csv"
+            },
+            {
+              "id": "eoc_algebra1",
+              "title": "EOC Algebra I",
+              "subtitle": "% At Approaches GL",
+              "all": 81.0,
+              "subgroups": [],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR EOC SAT ACT Accelerated Testers.csv"
+            }
+          ],
+          "graduation_postsec": [
+            {
+              "id": "ccmr",
+              "title": "College, Career & Military Readiness",
+              "subtitle": "% of Class of 2024 graduates who are College, Career, or Military Ready",
+              "all": 85.4,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 79.1
+                },
+                {
+                  "key": "hispanic",
+                  "label": "Hispanic",
+                  "value": 82.7
+                },
+                {
+                  "key": "african_american",
+                  "label": "African American",
+                  "value": 78.8
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 61.1
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus CCMR College Ready TSI Annual Graduates.csv"
+            }
+          ]
         },
         {
           "campus_id": "170902128",
@@ -1416,7 +4584,58 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 49.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 43.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 44.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 21.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 45.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 38.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 41.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 28.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1435,7 +4654,83 @@
             "social_studies": true,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 55.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 44.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 27.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 23.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 52.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 40.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 29.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 23.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 43.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 31.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 21.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 22.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1454,7 +4749,58 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 77.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 53.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 77.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 46.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 77.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 53.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 74.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 54.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1473,7 +4819,58 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 61.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 59.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 60.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 21.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 53.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 49.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 52.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 12.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1492,7 +4889,58 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 49.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 44.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 35.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 24.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 40.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 37.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 38.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 18.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1511,7 +4959,58 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 84.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 69.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 78.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 65.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 83.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 68.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 89.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 72.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1530,7 +5029,58 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 54.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 52.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 44.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 21.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 48.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 44.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 37.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 21.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1549,7 +5099,58 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 55.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 51.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 51.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 21.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 37.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 30.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 26.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 19.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1568,7 +5169,58 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 69.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 48.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 55.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 41.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 63.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 41.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 48.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 33.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1587,7 +5239,83 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 85.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 75.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 71.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 54.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 85.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 77.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 71.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 60.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 69.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 65.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": null
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 48.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1606,7 +5334,83 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 71.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 55.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 70.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 35.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 62.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 45.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 61.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 30.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 54.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 44.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 53.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 33.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1625,8 +5429,142 @@
             "social_studies": true,
             "post_secondary": true
           },
-          "academic_performance": [],
-          "graduation_postsec": []
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 83.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 58.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 39.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 37.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 76.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 53.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 49.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 31.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 91.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 78.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 63.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 51.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "eoc_english1",
+              "title": "EOC English I",
+              "subtitle": "% At Approaches GL",
+              "all": 92.0,
+              "subgroups": [],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR EOC SAT ACT Accelerated Testers.csv"
+            },
+            {
+              "id": "eoc_english2",
+              "title": "EOC English II",
+              "subtitle": "% At Approaches GL",
+              "all": 93.0,
+              "subgroups": [],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR EOC SAT ACT Accelerated Testers.csv"
+            },
+            {
+              "id": "eoc_algebra1",
+              "title": "EOC Algebra I",
+              "subtitle": "% At Approaches GL",
+              "all": 90.0,
+              "subgroups": [],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR EOC SAT ACT Accelerated Testers.csv"
+            }
+          ],
+          "graduation_postsec": [
+            {
+              "id": "ccmr",
+              "title": "College, Career & Military Readiness",
+              "subtitle": "% of Class of 2024 graduates who are College, Career, or Military Ready",
+              "all": 90.8,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 80.5
+                },
+                {
+                  "key": "hispanic",
+                  "label": "Hispanic",
+                  "value": 88.8
+                },
+                {
+                  "key": "african_american",
+                  "label": "African American",
+                  "value": 72.5
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 72.4
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus CCMR College Ready TSI Annual Graduates.csv"
+            }
+          ]
         },
         {
           "campus_id": "170902071",
@@ -1644,7 +5582,83 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 88.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 70.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 78.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 58.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 81.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 60.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 67.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 52.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 76.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 58.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 57.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 57.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1663,7 +5677,83 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 39.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 37.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 30.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 15.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 28.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 28.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 25.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 16.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 10.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 10.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 5.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 18.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1682,7 +5772,83 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 47.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 43.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 38.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 16.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 45.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 42.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 38.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 20.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 24.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 20.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 12.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 11.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1701,7 +5867,83 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 61.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 46.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 34.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 28.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 52.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 36.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 31.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 26.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 41.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 28.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 22.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 25.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1720,7 +5962,83 @@
             "social_studies": false,
             "post_secondary": true
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 64.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 50.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 39.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 23.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 57.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 47.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 49.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 24.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 47.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 34.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 30.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 27.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1739,7 +6057,58 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 57.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 46.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 39.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 25.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 49.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 39.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 43.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 26.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         },
         {
@@ -1758,7 +6127,83 @@
             "social_studies": false,
             "post_secondary": false
           },
-          "academic_performance": [],
+          "academic_performance": [
+            {
+              "id": "staar_reading",
+              "title": "STAAR Reading",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 73.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 56.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 40.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 31.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_math",
+              "title": "STAAR Math",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 65.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 44.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 39.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 30.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            },
+            {
+              "id": "staar_science",
+              "title": "STAAR Science",
+              "subtitle": "All Grades · % At Meets GL",
+              "all": 70.0,
+              "subgroups": [
+                {
+                  "key": "econ_disadv",
+                  "label": "Econ. Disadvantaged",
+                  "value": 51.0
+                },
+                {
+                  "key": "emergent_bilingual",
+                  "label": "Emergent Bilingual / ELL",
+                  "value": 45.0
+                },
+                {
+                  "key": "special_ed",
+                  "label": "Special Education",
+                  "value": 37.0
+                }
+              ],
+              "lower_is_better": false,
+              "source_file": "2025 Campus STAAR All Grades.csv"
+            }
+          ],
           "graduation_postsec": []
         }
       ]

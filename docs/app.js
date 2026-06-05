@@ -591,32 +591,46 @@
     gradeGroup.appendChild(accCard);
     container.appendChild(gradeGroup);
 
-    // Distinctions
+    // Distinctions (compact — just tags, not a full metric group)
     var distKeys = Object.keys(campus.distinctions || {}).filter(function(k) {
       return campus.distinctions[k];
     });
     if (distKeys.length) {
-      var distGroup = el("div", "metric-group");
-      distGroup.appendChild(el("div", "metric-group__label", "Academic Distinctions"));
-      var distGrid = el("div", "metric-grid");
+      var distWrap = el("div", "");
+      distWrap.style.marginBottom = "var(--sp-5)";
+      var distLabel = el("div", "metric-group__label", "Distinctions");
+      distLabel.style.marginBottom = "var(--sp-2)";
+      var distTags = el("div", "campus-card__dists");
       distKeys.forEach(function(k) {
-        var card = el("div", "metric-card");
-        card.innerHTML =
-          '<div class="metric-card__title">&#10003; ' + esc(DIST_LABELS[k] || k) + '</div>' +
-          '<div class="metric-card__sub">Distinction Designation</div>';
-        distGrid.appendChild(card);
+        distTags.appendChild(el("span", "dist-tag", "✓ " + esc(DIST_LABELS[k] || k)));
       });
-      distGroup.appendChild(distGrid);
-      container.appendChild(distGroup);
+      distWrap.appendChild(distLabel);
+      distWrap.appendChild(distTags);
+      container.appendChild(distWrap);
     }
 
-    // STAAR performance (future)
-    if (!campus.academic_performance || !campus.academic_performance.length) {
-      var note = el("p", "loading",
-        "Campus-level STAAR performance data is not yet loaded. " +
-        "It will appear here once campus TAPR performance files are added.");
-      note.style.marginTop = "var(--sp-4)";
-      container.appendChild(note);
+    // Academic performance (STAAR + EOC)
+    if (campus.academic_performance && campus.academic_performance.length) {
+      var acGroup = el("div", "metric-group");
+      acGroup.appendChild(el("div", "metric-group__label", "Student Academic Performance"));
+      var acGrid = el("div", "metric-grid");
+      campus.academic_performance.forEach(function(m) {
+        acGrid.appendChild(renderMetricCard(m));
+      });
+      acGroup.appendChild(acGrid);
+      container.appendChild(acGroup);
+    }
+
+    // Post-secondary (CCMR)
+    if (campus.graduation_postsec && campus.graduation_postsec.length) {
+      var psGroup = el("div", "metric-group");
+      psGroup.appendChild(el("div", "metric-group__label", "Graduation & Post-Secondary Readiness"));
+      var psGrid = el("div", "metric-grid");
+      campus.graduation_postsec.forEach(function(m) {
+        psGrid.appendChild(renderMetricCard(m));
+      });
+      psGroup.appendChild(psGrid);
+      container.appendChild(psGroup);
     }
   }
 
