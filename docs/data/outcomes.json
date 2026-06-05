@@ -1,7 +1,7 @@
 {
   "district": "Conroe ISD",
   "district_cdn": "170902",
-  "generated_at": "2026-06-05T19:50:30.230073+00:00",
+  "generated_at": "2026-06-05T20:01:45.322057+00:00",
   "latest_year": "2024-25",
   "data_as_of": {
     "dip": "2024–25 School Year",
@@ -12633,5 +12633,16 @@
       ]
     }
   ],
+  "cip": {
+    "campuses": [
+      {
+        "campus_id": "170902101",
+        "campus_name": "Anderson Elementary",
+        "short_name": "Anderson Elementary",
+        "goals": [],
+        "years": []
+      }
+    ]
+  },
   "provenance": "DIP targets from CISD District Improvement Plans; actuals from TEA TAPR."
 }

@@ -14,7 +14,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=20260605h" />
+  <link rel="stylesheet" href="styles.css?v=20260605i" />
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
@@ -74,19 +74,6 @@
     <!-- TEA Data Section -->
     <div class="page-section page-section--tea" id="tea-section" aria-label="TEA district data"></div>
 
-    <!-- CIP Section wrapper -->
-    <div class="page-section page-section--cip">
-      <div class="page-section__hdr">
-        <div class="page-section__title-row">
-          <h2 class="page-section__title">CISD Campus Improvement Plans</h2>
-        </div>
-        <p class="page-section__desc">Each CISD campus adopts an annual Campus Improvement Plan with performance objectives and strategies. This section compares campus-level goals against TEA data for each campus.</p>
-      </div>
-      <div id="cip-objectives" aria-live="polite">
-        <p class="loading">Campus Improvement Plan data coming soon — starting with Anderson Elementary.</p>
-      </div>
-    </div>
-
     <!-- DIP Section wrapper -->
     <div class="page-section page-section--dip">
       <div class="page-section__hdr">
@@ -104,6 +91,30 @@
       <!-- Objectives -->
       <div id="objectives" aria-live="polite"></div>
     </div>
+
+    <!-- CIP Section wrapper -->
+    <div class="page-section page-section--cip">
+      <div class="page-section__hdr">
+        <div class="page-section__title-row">
+          <h2 class="page-section__title">CISD Campus Improvement Plans</h2>
+        </div>
+        <p class="page-section__desc">Each CISD campus adopts an annual Campus Improvement Plan with performance objectives and strategies. This section compares campus-level goals against TEA data for each campus.</p>
+      </div>
+
+      <!-- Campus identity (populated by JS) -->
+      <div id="cip-campus-hdr"></div>
+
+      <!-- Year tabs -->
+      <div class="yeartabs" id="cip-yeartabs" role="tablist" aria-label="CIP school year"></div>
+
+      <!-- Stat strip / filters -->
+      <section class="statstrip" id="cip-statstrip" aria-label="Filter CIP by outcome">
+        <p class="loading">Loading CIP data…</p>
+      </section>
+
+      <!-- Objectives -->
+      <div id="cip-objectives" aria-live="polite"></div>
+    </div>
   </main>
 
   <footer class="foot">
@@ -113,6 +124,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260605h"></script>
+  <script src="app.js?v=20260605i"></script>
 </body>
 </html>
