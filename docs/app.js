@@ -632,11 +632,6 @@
       SECTIONS = buildSections(data);
 
 
-      if (data.data_as_of) {
-        document.getElementById("fresh-dip").textContent = data.data_as_of.dip || "—";
-        document.getElementById("fresh-tea").textContent = data.data_as_of.tea || "—";
-        document.getElementById("freshness").hidden = false;
-      }
 
       var teaMetrics = data.tea_metrics || null;
       renderTabs(data, function(yr) { SECTIONS = buildSections(data); renderYear(yr, teaMetrics); });

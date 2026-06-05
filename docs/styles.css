@@ -68,21 +68,51 @@ a { color:var(--brand); }
 
 main { padding:var(--sp-6) 0 var(--sp-6); }
 
-/* ── Data freshness bar ─────────────────────────────────────────── */
-.freshness {
-  margin-bottom:var(--sp-5); padding:var(--sp-3) var(--sp-4);
+/* ── Definitions / Glossary ─────────────────────────────────────── */
+.glossary {
+  margin-bottom:var(--sp-5);
   background:var(--surface); border:1px solid var(--line); border-radius:var(--r-md);
 }
-.freshness__heading {
-  display:block; font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
-  color:var(--brand); margin-bottom:var(--sp-3);
+.glossary__summary {
+  list-style:none; cursor:pointer; user-select:none;
+  display:flex; align-items:center; gap:var(--sp-3);
+  padding:var(--sp-3) var(--sp-4);
 }
-.freshness__cols { display:flex; gap:var(--sp-5); flex-wrap:wrap; }
-.freshness__item { display:flex; flex-direction:column; gap:2px; }
-.freshness__k {
-  font-size:12px; font-weight:700; letter-spacing:.04em; text-transform:uppercase; color:var(--ink-3);
+.glossary__summary::-webkit-details-marker { display:none; }
+.glossary__summary:hover { background:var(--surface-2); border-radius:var(--r-md); }
+.glossary[open] .glossary__summary {
+  border-bottom:1px solid var(--line);
+  border-radius:var(--r-md) var(--r-md) 0 0;
 }
-.freshness__v { font-size:15px; font-weight:600; color:var(--ink); }
+.glossary__label {
+  font-size:14px; font-weight:700; color:var(--ink); flex:none;
+}
+.glossary__hint {
+  font-size:13px; color:var(--ink-3); flex:1;
+}
+.glossary__chev {
+  font-size:14px; color:var(--ink-3); transition:transform .2s ease; flex:none;
+}
+.glossary[open] .glossary__chev { transform:rotate(180deg); }
+
+.glossary__body { padding:var(--sp-4) var(--sp-5); }
+.glossary__grid {
+  display:grid;
+  grid-template-columns:max-content 1fr;
+  gap:var(--sp-2) var(--sp-5);
+  margin:0;
+}
+.glossary__grid dt {
+  font-size:13px; font-weight:700; color:var(--brand-700);
+  white-space:nowrap; padding-top:1px;
+}
+.glossary__grid dd {
+  font-size:13px; color:var(--ink-2); margin:0; line-height:1.55;
+}
+@media (max-width:600px) {
+  .glossary__grid { grid-template-columns:1fr; }
+  .glossary__grid dt { margin-bottom:-4px; }
+}
 
 /* ── District grade widget ──────────────────────────────────────── */
 .district-grade {

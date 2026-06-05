@@ -14,7 +14,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=20260605c" />
+  <link rel="stylesheet" href="styles.css?v=20260605d" />
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
@@ -36,20 +36,34 @@
   </header>
 
   <main id="content" class="wrap">
-    <!-- Data freshness -->
-    <div class="freshness" id="freshness" hidden>
-      <span class="freshness__heading">Latest Available Data</span>
-      <div class="freshness__cols">
-        <div class="freshness__item">
-          <span class="freshness__k">Conroe ISD District Plan</span>
-          <span class="freshness__v" id="fresh-dip">—</span>
-        </div>
-        <div class="freshness__item">
-          <span class="freshness__k">State (TEA) data</span>
-          <span class="freshness__v" id="fresh-tea">—</span>
-        </div>
+    <!-- Definitions / Glossary -->
+    <details class="glossary" id="glossary">
+      <summary class="glossary__summary">
+        <span class="glossary__label">Definitions &amp; Acronyms</span>
+        <span class="glossary__hint">Common TEA terms and acronyms used on this site</span>
+        <span class="glossary__chev" aria-hidden="true">&#9660;</span>
+      </summary>
+      <div class="glossary__body">
+        <dl class="glossary__grid">
+          <dt>TEA</dt><dd>Texas Education Agency — the state agency that oversees public K–12 education in Texas, publishes TAPR data, and assigns A–F accountability ratings.</dd>
+          <dt>TAPR</dt><dd>Texas Academic Performance Report — TEA's annual district- and campus-level data release covering STAAR results, graduation, CCMR, attendance, and more.</dd>
+          <dt>DIP</dt><dd>District Improvement Plan — CISD's annually adopted plan with measurable performance objectives, strategies, and formative review checkpoints for each school year.</dd>
+          <dt>STAAR</dt><dd>State of Texas Assessments of Academic Readiness — standardized exams administered in grades 3–8 and via End-of-Course (EOC) tests in high school.</dd>
+          <dt>EOC</dt><dd>End of Course — high school STAAR exams required for graduation: English I, English II, Algebra I, Biology, and U.S. History.</dd>
+          <dt>Approaches GL</dt><dd>Approaches Grade Level — the minimum passing standard on STAAR; students scoring at this level are considered on track at a basic level.</dd>
+          <dt>Meets GL</dt><dd>Meets Grade Level — the intermediate STAAR standard indicating solid grade-level performance; used most often in DIP targets.</dd>
+          <dt>Masters GL</dt><dd>Masters Grade Level — the highest STAAR performance level, indicating advanced understanding of grade-level content.</dd>
+          <dt>CCMR</dt><dd>College, Career, &amp; Military Readiness — the percentage of graduates who meet at least one readiness indicator (TSI scores, AP/IB exams, industry certifications, or military enlistment).</dd>
+          <dt>Econ. Disadvantaged</dt><dd>Students who qualify for free or reduced-price meals, or who have been identified as economically disadvantaged through other state criteria.</dd>
+          <dt>Emergent Bilingual / ELL</dt><dd>Students identified as English Language Learners (ELL) who are currently receiving bilingual or ESL services. Also labeled "EB/EL (Current)" in TAPR data.</dd>
+          <dt>Special Education</dt><dd>Students who receive services under an Individualized Education Program (IEP). Also labeled "Special Ed (Current)" in TAPR data.</dd>
+          <dt>TxCHSE</dt><dd>Texas Certificate of High School Equivalency — a GED-equivalent credential counted alongside traditional graduates in Texas graduation rate calculations.</dd>
+          <dt>A–F Rating</dt><dd>TEA's annual district and campus accountability rating (A through F) based on three domains: Student Achievement, School Progress, and Closing the Gaps.</dd>
+          <dt>Formative Review</dt><dd>Mid-year progress checkpoints (December, March, June) within the DIP where each strategy is rated: No Progress, Some Progress, Considerable, Accomplished, Continue/Modify, or Discontinue.</dd>
+          <dt>Divergence</dt><dd>A flag on this site indicating that CISD self-reported progress or success on an objective, but TEA state data shows the numeric target was not met.</dd>
+        </dl>
       </div>
-    </div>
+    </details>
 
     <!-- Year selector -->
     <div class="yeartabs" id="yeartabs" role="tablist" aria-label="School year"></div>
@@ -83,6 +97,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260605c"></script>
+  <script src="app.js?v=20260605d"></script>
 </body>
 </html>
