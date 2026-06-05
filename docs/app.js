@@ -138,24 +138,7 @@
     return "Not quantified";
   }
 
-  // ── District grade widget ─────────────────────────────────────────────────
-  function renderDistrictGrade(data) {
-    var widget = document.getElementById("district-grade");
-    if (!widget) return;
-    var dg = data.district_grade;
-    if (!dg || !dg.grade) { widget.hidden = true; return; }
-    var g = dg.grade;
-    var schoolYear = dg.year ? (parseInt(dg.year) - 1) + "–" + dg.year.slice(-2) : "";
-    widget.innerHTML =
-      '<div class="grade-letter grade-letter--' + esc(g) + '">' + esc(g) + '</div>' +
-      '<div class="grade-info">' +
-        '<div class="grade-info__label">TEA Accountability Rating</div>' +
-        '<div class="grade-info__title">Conroe ISD received a <strong>' + esc(g) + '</strong> from the Texas Education Agency</div>' +
-        '<div class="grade-info__note">Based on student achievement, school progress, and closing performance gaps' +
-          (schoolYear ? ' · ' + schoolYear + ' school year' : '') + '</div>' +
-      '</div>';
-    widget.hidden = false;
-  }
+  // renderDistrictGrade removed — accountability now shown inside the TEA Data section
 
   // ── Stat strip / filter buttons ──────────────────────────────────────────
   function renderStatStrip(year) {
@@ -490,17 +473,22 @@
       return;
     }
 
-    // Accountability grade card
+    // Accountability grade card — uses the district-grade widget layout
     if (districtData.accountability && districtData.accountability.grade) {
       var acc = districtData.accountability;
+      var taprYr = acc.tapr_year || "";
+      var schoolYr = taprYr ? (parseInt(taprYr) - 1) + "–" + String(taprYr).slice(-2) : "";
       var gradeGroup = el("div", "metric-group");
       gradeGroup.appendChild(el("div", "metric-group__label", "Accountability"));
-      var accCard = el("div", "metric-card metric-card--grade");
+      var accCard = el("div", "district-grade");
       accCard.innerHTML =
-        '<div class="metric-card__title">TEA Accountability Rating</div>' +
-        '<div class="metric-card__sub">Texas Education Agency · ' + esc(acc.tapr_year) + ' rating</div>' +
-        '<div class="metric-card__grade grade-letter--' + esc(acc.grade) + '">' + esc(acc.grade) + '</div>' +
-        '<div class="metric-card__src">Source: ' + esc((acc.source_file||"").replace(/\.csv$/i,"")) + '</div>';
+        '<div class="grade-letter grade-letter--' + esc(acc.grade) + '">' + esc(acc.grade) + '</div>' +
+        '<div class="grade-info">' +
+          '<div class="grade-info__label">TEA Accountability Rating</div>' +
+          '<div class="grade-info__title">Conroe ISD received a <strong>' + esc(acc.grade) + '</strong> from the Texas Education Agency</div>' +
+          '<div class="grade-info__note">Based on student achievement, school progress, and closing performance gaps' +
+            (schoolYr ? ' · ' + esc(schoolYr) + ' school year' : '') + '</div>' +
+        '</div>';
       gradeGroup.appendChild(accCard);
       container.appendChild(gradeGroup);
     }
@@ -643,7 +631,6 @@
       // Build section list from goals metadata (replaces hardcoded SECTIONS)
       SECTIONS = buildSections(data);
 
-      renderDistrictGrade(data);
 
       if (data.data_as_of) {
         document.getElementById("fresh-dip").textContent = data.data_as_of.dip || "—";
