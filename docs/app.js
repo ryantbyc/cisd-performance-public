@@ -773,7 +773,6 @@
 
       var details = document.createElement("details");
       details.className = "section";
-      details.setAttribute("open", "");
 
       var summary = document.createElement("summary");
       summary.innerHTML =
@@ -937,7 +936,6 @@
       if (!list || !list.length) return;
       var details = document.createElement("details");
       details.className = "section";
-      details.setAttribute("open", "");
       var summary = document.createElement("summary");
       summary.innerHTML =
         '<span class="section__head">' + esc(sec.title) + '</span>' +

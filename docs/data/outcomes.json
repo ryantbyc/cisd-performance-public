@@ -1,7 +1,7 @@
 {
   "district": "Conroe ISD",
   "district_cdn": "170902",
-  "generated_at": "2026-06-05T20:31:22.870440+00:00",
+  "generated_at": "2026-06-05T21:37:58.011207+00:00",
   "latest_year": "2024-25",
   "data_as_of": {
     "dip": "2024–25 School Year",
@@ -13234,6 +13234,763 @@
                     "expected_result": "Consistent use of Dreambox, Seesaw, Unique Learning, Imagine Learning, S'more, and ClassKick.",
                     "dec_review": "accomplished",
                     "mar_review": "accomplished",
+                    "jun_review": "accomplished"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "campus_id": "170902107",
+        "campus_name": "Armstrong Elementary",
+        "short_name": "Armstrong Elementary",
+        "goals": [
+          {
+            "goal": 1,
+            "title": "Student Achievement and Post-Secondary Success",
+            "desc": "Prepare all students for graduation and post-secondary success through high-quality, TEKS-aligned curriculum delivered consistently."
+          },
+          {
+            "goal": 2,
+            "title": "School Leadership and Fiscal Responsibility",
+            "desc": "Foster dynamic leaders who effectively manage teams and fiscal resources."
+          },
+          {
+            "goal": 3,
+            "title": "Recruitment, Development, and Retention of Staff",
+            "desc": "Recruit, develop, and retain highly-qualified staff to ensure effective instruction for all students."
+          },
+          {
+            "goal": 4,
+            "title": "Safe and Collaborative School Culture",
+            "desc": "Cultivate a safe, positive, and collaborative school culture conducive to learning, with strong parent and community partnerships."
+          },
+          {
+            "goal": 5,
+            "title": "Effective Instruction",
+            "desc": "Deliver meaningful instruction through objective-driven lessons and rigorous learning experiences using appropriate technology."
+          }
+        ],
+        "years": [
+          {
+            "school_year": "2024-25",
+            "source_pdf": "2025_CIP_Armstrong_Elementary.pdf",
+            "summary": {
+              "met": 7,
+              "missed": 4,
+              "partial": 4,
+              "no_data": 0,
+              "internal": 0
+            },
+            "objectives": [
+              {
+                "objective": 1,
+                "goal": 1,
+                "section": "goal_1",
+                "text": "Performance Objective 1: Increase performance level of all third grade students on items related to solving one-step and two-step problems involving multiplication and division within 100 using strategies based on objects; pictorial models, including arrays, area models, and equal groups; properties of operations; or recall of facts. Increase STAAR Math performance on TEKS 3.4K from 40% to 60% by May 2025.",
+                "short_label": "Increase 3rd grade STAAR Math (TEKS 3.4K) from 40% to 60%.",
+                "metric_label": "Grade 3 Math (Meets GL)",
+                "subject_group": "Mathematics",
+                "category": "staar",
+                "grade": "3",
+                "group": "all",
+                "goal_title": "Goal 1: Student Achievement and Post-Secondary Success",
+                "tapr_mappable": true,
+                "result_basis": "state",
+                "promised": {
+                  "type": "range",
+                  "baseline": 40,
+                  "target": 60,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Some progress",
+                "claimed_code": "some",
+                "actual": 30.0,
+                "result": "missed",
+                "divergence": true,
+                "match_quality": "strong",
+                "source_pdf": "2025_CIP_Armstrong_Elementary.pdf",
+                "source_page": 15,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Third grade teachers will plan for, differentiate, and teach daily instruction through quality mini-lessons, strategic intervention groups, on going review and math stations targeting skills needed to solve one-step and two-step problems involving multiplication and division within 100 using strategies based on objects; pictorial models, including arrays, area models, and equal groups; properties of operations; or recall of facts.",
+                    "expected_result": "Increase the African American student group STAAR Math performance from 27% to 55% by May 2025.",
+                    "dec_review": "some_progress",
+                    "mar_review": "some_progress",
+                    "jun_review": "continue_modify"
+                  },
+                  {
+                    "strategy": 2,
+                    "text": "Third grade teachers will plan for, differentiate, and teach daily instruction through quality mini-lessons, strategic intervention groups, ongoing review and math stations targeting skills needed to solve one-step and two-step problems involving multiplication and division within 100 using strategies based on objects; pictorial models, including arrays, area models, and equal groups; properties of operations; or recall of facts.",
+                    "expected_result": "Increase the Hispanic student group STAAR Math performance from 46% to 60% by May 2025.",
+                    "dec_review": "some_progress",
+                    "mar_review": "some_progress",
+                    "jun_review": "continue_modify"
+                  }
+                ]
+              },
+              {
+                "objective": 2,
+                "goal": 1,
+                "section": "goal_1",
+                "text": "Performance Objective 2: Increase performance level of all fourth grade students on items related to solving with fluency one- and two-step problems involving multiplication and division, including interpreting remainders. Increase STAAR Math performance on TEKS 4.4H from 28% to 55% by May 2025.",
+                "short_label": "Increase 4th grade STAAR Math (TEKS 4.4H) from 28% to 55%.",
+                "metric_label": "Grade 4 Math (Meets GL)",
+                "subject_group": "Mathematics",
+                "category": "staar",
+                "grade": "4",
+                "group": "all",
+                "goal_title": "Goal 1: Student Achievement and Post-Secondary Success",
+                "tapr_mappable": true,
+                "result_basis": "state",
+                "promised": {
+                  "type": "range",
+                  "baseline": 28,
+                  "target": 55,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Some progress",
+                "claimed_code": "some",
+                "actual": 43.0,
+                "result": "missed",
+                "divergence": true,
+                "match_quality": "strong",
+                "source_pdf": "2025_CIP_Armstrong_Elementary.pdf",
+                "source_page": 17,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Fourth grade teachers will plan for, differentiate, and teach daily instruction through quality mini-lessons, strategic intervention groups, ongoing review and math stations targeting skills needed to solve with fluency one- and two-step problems involving multiplication and division, including interpreting remainders.",
+                    "expected_result": "Increase the African American student group STAAR Math performance from 25% to 55% by May 2025.",
+                    "dec_review": "some_progress",
+                    "mar_review": "some_progress",
+                    "jun_review": "continue_modify"
+                  },
+                  {
+                    "strategy": 2,
+                    "text": "Fourth grade teachers will plan for, differentiate, and teach daily instruction through quality mini-lessons, strategic intervention groups, ongoing review and math stations targeting skills needed to solve with fluency one- and two-step problems involving multiplication and division, including interpreting remainders.",
+                    "expected_result": "Increase the Hispanic student group STAAR Math performance from 26% to 55% by May 2025.",
+                    "dec_review": "some_progress",
+                    "mar_review": "some_progress",
+                    "jun_review": "continue_modify"
+                  }
+                ]
+              },
+              {
+                "objective": 3,
+                "goal": 1,
+                "section": "goal_1",
+                "text": "Performance Objective 3: Increase performance level of all third grade students on items related to making connections to personal experiences, ideas in other texts, and society. Increase STAAR Reading performance on TEKS 3.6E from 48% to 60% by May 2025.",
+                "short_label": "Increase 3rd grade STAAR Reading (TEKS 3.6E) from 48% to 60%.",
+                "metric_label": "Grade 3 Reading (Meets GL)",
+                "subject_group": "Reading & Writing (English)",
+                "category": "staar",
+                "grade": "3",
+                "group": "all",
+                "goal_title": "Goal 1: Student Achievement and Post-Secondary Success",
+                "tapr_mappable": true,
+                "result_basis": "state",
+                "promised": {
+                  "type": "range",
+                  "baseline": 48,
+                  "target": 60,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Some progress",
+                "claimed_code": "some",
+                "actual": 32.0,
+                "result": "missed",
+                "divergence": true,
+                "match_quality": "strong",
+                "source_pdf": "2025_CIP_Armstrong_Elementary.pdf",
+                "source_page": 19,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Third grade teachers will plan for, differentiate, and teach through read alouds, guided reading, and strategy groups needed to make connections to personal experiences, ideas in other texts, and society.",
+                    "expected_result": "Increase the African American student group STAAR Reading performance from 36% to 50% by May 2025.",
+                    "dec_review": "some_progress",
+                    "mar_review": "considerable",
+                    "jun_review": "continue_modify"
+                  },
+                  {
+                    "strategy": 2,
+                    "text": "Third grade teachers will plan for, differentiate, and teach through read alouds, guided reading, and strategy groups needed to make connections to personal experiences, ideas in other texts, and society.",
+                    "expected_result": "Increase the Hispanic student group STAAR Reading performance from 52% to 67% by May 2025.",
+                    "dec_review": "some_progress",
+                    "mar_review": "some_progress",
+                    "jun_review": "continue_modify"
+                  },
+                  {
+                    "strategy": 3,
+                    "text": "Third grade teachers will engage students in structured conversations utilizing TEKS frames surrounding making connections to ideas in other texts and society during read alouds and guided reading.",
+                    "expected_result": "Emergent bilingual students will advance proficiency levels in speaking and reading domains for TELPAS.",
+                    "dec_review": "considerable",
+                    "mar_review": "considerable",
+                    "jun_review": "accomplished"
+                  }
+                ]
+              },
+              {
+                "objective": 4,
+                "goal": 1,
+                "section": "goal_1",
+                "text": "Performance Objective 4: Increase performance level of all fourth grade students on items related to making connections to personal experiences, ideas in other texts, and society. Increase STAAR Reading performance on TEKS 4.6E from 46% to 60% by May 2025.",
+                "short_label": "Increase 4th grade STAAR Reading (TEKS 4.6E) from 46% to 60%.",
+                "metric_label": "Grade 4 Reading (Meets GL)",
+                "subject_group": "Reading & Writing (English)",
+                "category": "staar",
+                "grade": "4",
+                "group": "all",
+                "goal_title": "Goal 1: Student Achievement and Post-Secondary Success",
+                "tapr_mappable": true,
+                "result_basis": "state",
+                "promised": {
+                  "type": "range",
+                  "baseline": 46,
+                  "target": 60,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Significant progress",
+                "claimed_code": "significant",
+                "actual": 51.0,
+                "result": "missed",
+                "divergence": true,
+                "match_quality": "strong",
+                "source_pdf": "2025_CIP_Armstrong_Elementary.pdf",
+                "source_page": 22,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Fourth grade teachers will plan for, differentiate, and teach through read alouds, guided reading, and strategy groups needed to make connections to personal experiences, ideas in other texts, and society.",
+                    "expected_result": "Increase the African American student group STAAR Reading performance from 30% to 45% by May 2025.",
+                    "dec_review": "some_progress",
+                    "mar_review": "considerable",
+                    "jun_review": "continue_modify"
+                  },
+                  {
+                    "strategy": 2,
+                    "text": "Fourth grade teachers will plan for, differentiate, and teach through read alouds, guided reading, and strategy groups needed to make connections to personal experiences, ideas in other texts, and society.",
+                    "expected_result": "Increase the Hispanic student group STAAR Reading performance from 50% to 65% by May 2025.",
+                    "dec_review": "some_progress",
+                    "mar_review": "considerable",
+                    "jun_review": "continue_modify"
+                  },
+                  {
+                    "strategy": 3,
+                    "text": "4th grade teachers will engage students in structured conversations utilizing TEKS frames surrounding making connections to ideas in other texts and society during read alouds and guided reading.",
+                    "expected_result": "4th grade students will engage in structured conversations utilizing TEKS frames surrounding making connections to ideas in other texts and society.",
+                    "dec_review": "some_progress",
+                    "mar_review": "considerable",
+                    "jun_review": "accomplished"
+                  },
+                  {
+                    "strategy": 4,
+                    "text": "Fourth grade teachers will engage students in structured conversations utilizing TEKS frames surrounding making connections to ideas in other texts and society during read alouds and guided reading.",
+                    "expected_result": "Emergent Bilingual students will engage in structured conversations utilizing TEKS frames surrounding making connections to ideas in other texts and society to increase student proficiency levels in either the Speaking or Reading domains for TELPAS.",
+                    "dec_review": "some_progress",
+                    "mar_review": "considerable",
+                    "jun_review": "accomplished"
+                  }
+                ]
+              },
+              {
+                "objective": 5,
+                "goal": 1,
+                "section": "goal_1",
+                "text": "Performance Objective 5: Increase performance levels of 3rd and 4th grade students on items related to Extended Constructed Response. Increase third and fourth grade STAAR Reading performance levels on the Extended Constructed Response from 62% scoring a one or higher to 72% scoring a one or higher by May 2025.",
+                "short_label": "Increase 3rd/4th grade ECR writing from 62% scoring 1+ to 72%.",
+                "metric_label": "Grade 3/4 Extended Constructed Response (ECR)",
+                "subject_group": "Reading & Writing (English)",
+                "category": "internal",
+                "grade": null,
+                "group": "all",
+                "goal_title": "Goal 1: Student Achievement and Post-Secondary Success",
+                "tapr_mappable": false,
+                "result_basis": "district",
+                "promised": {
+                  "type": "range",
+                  "baseline": 62,
+                  "target": 72,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Some progress",
+                "claimed_code": "some",
+                "actual": null,
+                "result": "partial",
+                "divergence": false,
+                "match_quality": null,
+                "source_pdf": "2025_CIP_Armstrong_Elementary.pdf",
+                "source_page": 25,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Third and fourth grade teachers will plan for, differentiate, and teach through individual writing conferences, strategic intervention groups, and utilize the Conroe ISD 2 Day Cycle format.",
+                    "expected_result": "Increase the African American student group STAAR Reading performance from 44% scoring a one or higher on the Extended Constructed Response to 60% by May 2025.",
+                    "dec_review": "some_progress",
+                    "mar_review": "some_progress",
+                    "jun_review": "continue_modify"
+                  },
+                  {
+                    "strategy": 2,
+                    "text": "Third and fourth grade teachers will plan for, differentiate, and teach through individual writing conferences, strategic intervention groups, and utilize the Conroe ISD 2 Day Cycle.",
+                    "expected_result": "Increase the Hispanic student group STAAR Reading performance from 36% scoring a one or higher on the Extended Constructed Response to 50% by May 2025.",
+                    "dec_review": "some_progress",
+                    "mar_review": "some_progress",
+                    "jun_review": "continue_modify"
+                  }
+                ]
+              },
+              {
+                "objective": 6,
+                "goal": 1,
+                "section": "goal_1",
+                "text": "Performance Objective 6: Increase student performance in Kindergarten - 2nd grade on the standards based report card items relating to problem solving. 70% of students will score a 3 or higher on the problem solving cluster by May 2025.",
+                "short_label": "K-2 students: 70% score 3+ on problem solving cluster by May 2025.",
+                "metric_label": "K-2 Problem Solving (Standards-Based Report Card)",
+                "subject_group": "Mathematics",
+                "category": "internal",
+                "grade": null,
+                "group": "all",
+                "goal_title": "Goal 1: Student Achievement and Post-Secondary Success",
+                "tapr_mappable": false,
+                "result_basis": "district",
+                "promised": {
+                  "type": "threshold",
+                  "baseline": null,
+                  "target": 70,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Some progress",
+                "claimed_code": "some",
+                "actual": null,
+                "result": "partial",
+                "divergence": false,
+                "match_quality": null,
+                "source_pdf": "2025_CIP_Armstrong_Elementary.pdf",
+                "source_page": 27,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "All Kindergarten - 2nd grade teachers will plan for, differentiate, and teach though daily small group instruction targeting skills needed to solve word problems.",
+                    "expected_result": "Improvement of small group instruction to increase problem solving skills of K-2 students.",
+                    "dec_review": "some_progress",
+                    "mar_review": "considerable",
+                    "jun_review": "accomplished"
+                  }
+                ]
+              },
+              {
+                "objective": 7,
+                "goal": 1,
+                "section": "goal_1",
+                "text": "Performance Objective 7: Increase performance level of Kindergarten-2nd grade students on the standards based report card items related to retelling text in ways that maintain meaning and logical order. Increase performance on TEKS K.5E, 1.6E, and 2.6E by May 2025.",
+                "short_label": "K-2 students increase retelling performance on TEKS K.5E, 1.6E, and 2.6E.",
+                "metric_label": "K-2 Retelling Text (Standards-Based Report Card)",
+                "subject_group": "Reading & Writing (English)",
+                "category": "internal",
+                "grade": null,
+                "group": "all",
+                "goal_title": "Goal 1: Student Achievement and Post-Secondary Success",
+                "tapr_mappable": false,
+                "result_basis": "district",
+                "promised": {
+                  "type": "target_only",
+                  "baseline": null,
+                  "target": null,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Significant progress",
+                "claimed_code": "significant",
+                "actual": null,
+                "result": "partial",
+                "divergence": false,
+                "match_quality": null,
+                "source_pdf": "2025_CIP_Armstrong_Elementary.pdf",
+                "source_page": 29,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Kindergarten-2nd grade teachers will plan for, differentiate, and teach through read alouds, writing lessons, and strategic intervention groups to increase student performance with retelling text in ways that maintain meaning and logical order. Increase performance on TEKS K.5E, 1.6E, and 2.6E by May 2025.",
+                    "expected_result": "Students will effectively retell text in ways that maintain meaning and logical order.",
+                    "dec_review": "considerable",
+                    "mar_review": "considerable",
+                    "jun_review": "continue_modify"
+                  }
+                ]
+              },
+              {
+                "objective": 8,
+                "goal": 1,
+                "section": "goal_1",
+                "text": "Performance Objective 8: Establish a well-rounded school curriculum that addresses STEM, Music, Art, and Physical Education or Enriched Learning Experiences.",
+                "short_label": "Establish well-rounded curriculum: STEM, Music, Art, and Physical Education.",
+                "metric_label": "Well-Rounded Curriculum (STEM, Music, Art, PE)",
+                "subject_group": "Other Goals",
+                "category": "internal",
+                "grade": null,
+                "group": "all",
+                "goal_title": "Goal 1: Student Achievement and Post-Secondary Success",
+                "tapr_mappable": false,
+                "result_basis": "district",
+                "promised": {
+                  "type": "target_only",
+                  "baseline": null,
+                  "target": null,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Significant progress",
+                "claimed_code": "significant",
+                "actual": null,
+                "result": "partial",
+                "divergence": false,
+                "match_quality": null,
+                "source_pdf": "2025_CIP_Armstrong_Elementary.pdf",
+                "source_page": 31,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "To provide firsthand experience related to the topic or concept being taught in the program or specific subject area.",
+                    "expected_result": "Increase academic knowledge and to strengthen observation and perception skills.",
+                    "dec_review": "considerable",
+                    "mar_review": "considerable",
+                    "jun_review": "accomplished"
+                  }
+                ]
+              },
+              {
+                "objective": 1,
+                "goal": 2,
+                "section": "goal_2",
+                "text": "Performance Objective 1: Armstrong Elementary will monitor and maintain efficient and effective fiscal management of resources and operations throughout the fiscal year.",
+                "short_label": "Monitor and maintain efficient fiscal management throughout the fiscal year.",
+                "metric_label": "Fiscal Management",
+                "subject_group": "Other Goals",
+                "category": "internal",
+                "grade": null,
+                "group": "all",
+                "goal_title": "Goal 2: School Leadership and Fiscal Responsibility",
+                "tapr_mappable": false,
+                "result_basis": "district",
+                "promised": {
+                  "type": "target_only",
+                  "baseline": null,
+                  "target": null,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Met Objective",
+                "claimed_code": "met",
+                "actual": null,
+                "result": "met",
+                "divergence": false,
+                "match_quality": null,
+                "source_pdf": "2025_CIP_Armstrong_Elementary.pdf",
+                "source_page": 32,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "The campus principal and financial campus secretary will meet weekly to review budgeted items and spending to ensure the budget enhances the teaching and learning of all students at Armstrong Elementary.",
+                    "expected_result": "Manage funds to meet campus needs and increase student performance.",
+                    "dec_review": "considerable",
+                    "mar_review": "considerable",
+                    "jun_review": "accomplished"
+                  }
+                ]
+              },
+              {
+                "objective": 2,
+                "goal": 2,
+                "section": "goal_2",
+                "text": "Performance Objective 2: Armstrong Leadership team conducts weekly targeted walk-throughs focusing on campus expectations and CISD best practices.",
+                "short_label": "Conduct weekly targeted walk-throughs focusing on campus expectations and best practices.",
+                "metric_label": "Instructional Walk-Throughs",
+                "subject_group": "Other Goals",
+                "category": "internal",
+                "grade": null,
+                "group": "all",
+                "goal_title": "Goal 2: School Leadership and Fiscal Responsibility",
+                "tapr_mappable": false,
+                "result_basis": "district",
+                "promised": {
+                  "type": "target_only",
+                  "baseline": null,
+                  "target": null,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Met Objective",
+                "claimed_code": "met",
+                "actual": null,
+                "result": "met",
+                "divergence": false,
+                "match_quality": null,
+                "source_pdf": "2025_CIP_Armstrong_Elementary.pdf",
+                "source_page": 34,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Leadership team will meet weekly to review instructional walk-through data and to develop plans to support the implementation of instructional best practices.",
+                    "expected_result": "Increase instructional knowledge and implementation of best practices.",
+                    "dec_review": "considerable",
+                    "mar_review": "considerable",
+                    "jun_review": "accomplished"
+                  }
+                ]
+              },
+              {
+                "objective": 1,
+                "goal": 3,
+                "section": "goal_3",
+                "text": "Performance Objective 1: Armstrong will recruit, retain, and develop highly qualified teachers and staff for all students.",
+                "short_label": "Recruit, retain, and develop highly qualified teachers and staff.",
+                "metric_label": "Staff Recruitment and Development",
+                "subject_group": "Other Goals",
+                "category": "internal",
+                "grade": null,
+                "group": "all",
+                "goal_title": "Goal 3: Recruitment, Development, and Retention of Staff",
+                "tapr_mappable": false,
+                "result_basis": "district",
+                "promised": {
+                  "type": "target_only",
+                  "baseline": null,
+                  "target": null,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Met Objective",
+                "claimed_code": "met",
+                "actual": null,
+                "result": "met",
+                "divergence": false,
+                "match_quality": null,
+                "source_pdf": "2025_CIP_Armstrong_Elementary.pdf",
+                "source_page": 36,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "The hiring committee will attend and recruit at Conroe ISD Job Fair, local universities, and regional job fairs and will communicate incentives offered through the Teacher Incentive Allotment to potential staff members.",
+                    "expected_result": "Hire highly qualified teachers and staff to maximize student learning.",
+                    "dec_review": "considerable",
+                    "mar_review": "considerable",
+                    "jun_review": "accomplished"
+                  },
+                  {
+                    "strategy": 2,
+                    "text": "Campus administration will meet monthly with all teachers to support professional growth, provide feedback, and to reflect on professional progress toward goals.",
+                    "expected_result": "Hire highly qualified teachers and staff to maximize student learning.",
+                    "dec_review": "considerable",
+                    "mar_review": "considerable",
+                    "jun_review": "accomplished"
+                  }
+                ]
+              },
+              {
+                "objective": 1,
+                "goal": 4,
+                "section": "goal_4",
+                "text": "Performance Objective 1: Armstrong will work jointly with parents and the community to maximize learning for all students through communication, collaborative partnerships and unity of purpose.",
+                "short_label": "Work jointly with parents and community through communication and collaborative partnerships.",
+                "metric_label": "Parent and Community Engagement",
+                "subject_group": "Other Goals",
+                "category": "internal",
+                "grade": null,
+                "group": "all",
+                "goal_title": "Goal 4: Safe and Collaborative School Culture",
+                "tapr_mappable": false,
+                "result_basis": "district",
+                "promised": {
+                  "type": "target_only",
+                  "baseline": null,
+                  "target": null,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Met Objective",
+                "claimed_code": "met",
+                "actual": null,
+                "result": "met",
+                "divergence": false,
+                "match_quality": null,
+                "source_pdf": "2025_CIP_Armstrong_Elementary.pdf",
+                "source_page": 38,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Armstrong will host Title 1 family engagement events in the fall and spring: Annual Fall Title 1 Family Meeting, Fall Reading night, and Spring Math night.",
+                    "expected_result": "Provide families with information, training, and materials to support their child's learning.",
+                    "dec_review": "considerable",
+                    "mar_review": "considerable",
+                    "jun_review": "accomplished"
+                  }
+                ]
+              },
+              {
+                "objective": 2,
+                "goal": 4,
+                "section": "goal_4",
+                "text": "Performance Objective 2: Armstrong will provide a safe and orderly school environment conducive to learning for all students and staff.",
+                "short_label": "Provide a safe and orderly school environment conducive to learning.",
+                "metric_label": "Safe and Orderly School Environment",
+                "subject_group": "Other Goals",
+                "category": "internal",
+                "grade": null,
+                "group": "all",
+                "goal_title": "Goal 4: Safe and Collaborative School Culture",
+                "tapr_mappable": false,
+                "result_basis": "district",
+                "promised": {
+                  "type": "target_only",
+                  "baseline": null,
+                  "target": null,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Met Objective",
+                "claimed_code": "met",
+                "actual": null,
+                "result": "met",
+                "divergence": false,
+                "match_quality": null,
+                "source_pdf": "2025_CIP_Armstrong_Elementary.pdf",
+                "source_page": 39,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Positive Behavior Support Liaison and counselors will meet with students weekly to intervene and teach self regulation and social skills.",
+                    "expected_result": "Reduce number of behavioral issues and emotional outcries to increase student engagement in the classroom.",
+                    "dec_review": "considerable",
+                    "mar_review": "considerable",
+                    "jun_review": "accomplished"
+                  },
+                  {
+                    "strategy": 2,
+                    "text": "Campus STOIC Standouts will train staff and conduct learning walks spotlighting exemplar classroom systems, structures, and routines throughout the year and will provide targeted feedback for improvement and implementation of STOIC procedures.",
+                    "expected_result": "Provide teachers with tools needed to be proficient or higher in Domain 3 of T-TESS evaluations.",
+                    "dec_review": "considerable",
+                    "mar_review": "considerable",
+                    "jun_review": "accomplished"
+                  }
+                ]
+              },
+              {
+                "objective": 1,
+                "goal": 5,
+                "section": "goal_5",
+                "text": "Performance Objective 1: Armstrong will ensure that all students and staff have access to technology to maximize learning and to enhance the educational practices of teachers.",
+                "short_label": "Ensure all students and staff have access to technology to maximize learning.",
+                "metric_label": "Technology Access and Integration",
+                "subject_group": "Other Goals",
+                "category": "internal",
+                "grade": null,
+                "group": "all",
+                "goal_title": "Goal 5: Effective Instruction",
+                "tapr_mappable": false,
+                "result_basis": "district",
+                "promised": {
+                  "type": "target_only",
+                  "baseline": null,
+                  "target": null,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Met Objective",
+                "claimed_code": "met",
+                "actual": null,
+                "result": "met",
+                "divergence": false,
+                "match_quality": null,
+                "source_pdf": "2025_CIP_Armstrong_Elementary.pdf",
+                "source_page": 41,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Teacher will utilize Seesaw, Summit, Amplify, and Dreambox software to transform lessons to data-informed, real-time assessments that enable teachers to create powerful learning opportunities.",
+                    "expected_result": "Additional data collected will drive instruction and intervention.",
+                    "dec_review": "considerable",
+                    "mar_review": "considerable",
+                    "jun_review": "accomplished"
+                  }
+                ]
+              },
+              {
+                "objective": 2,
+                "goal": 5,
+                "section": "goal_5",
+                "text": "Performance Objective 2: Instructional Coaches will assist teachers in designing lessons and scaffolding instructional best practices to meet the needs of all learners.",
+                "short_label": "Instructional Coaches assist teachers in designing lessons and scaffolding best practices.",
+                "metric_label": "Instructional Coaching and Lesson Design",
+                "subject_group": "Other Goals",
+                "category": "internal",
+                "grade": null,
+                "group": "all",
+                "goal_title": "Goal 5: Effective Instruction",
+                "tapr_mappable": false,
+                "result_basis": "district",
+                "promised": {
+                  "type": "target_only",
+                  "baseline": null,
+                  "target": null,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Met Objective",
+                "claimed_code": "met",
+                "actual": null,
+                "result": "met",
+                "divergence": false,
+                "match_quality": null,
+                "source_pdf": "2025_CIP_Armstrong_Elementary.pdf",
+                "source_page": 43,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Teachers and instructional coaches will collaborate through Big Picture Planning for each unit in ELAR and Math, PLC meetings, weekly lesson planning, coaching cycles, and Instructional Rounds to design and implement best practices.",
+                    "expected_result": "Increased student growth and building teacher capacity in CISD best practices.",
+                    "dec_review": "considerable",
+                    "mar_review": "considerable",
                     "jun_review": "accomplished"
                   }
                 ]
