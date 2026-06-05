@@ -1,7 +1,7 @@
 {
   "district": "Conroe ISD",
   "district_cdn": "170902",
-  "generated_at": "2026-06-05T20:01:45.322057+00:00",
+  "generated_at": "2026-06-05T20:31:22.870440+00:00",
   "latest_year": "2024-25",
   "data_as_of": {
     "dip": "2024–25 School Year",
@@ -12639,8 +12639,608 @@
         "campus_id": "170902101",
         "campus_name": "Anderson Elementary",
         "short_name": "Anderson Elementary",
-        "goals": [],
-        "years": []
+        "goals": [
+          {
+            "goal": 1,
+            "title": "Student Achievement and Post-Secondary Success",
+            "desc": "Prepare all students for graduation and post-secondary success through high-quality, TEKS-aligned curriculum delivered consistently."
+          },
+          {
+            "goal": 2,
+            "title": "School Leadership and Fiscal Responsibility",
+            "desc": "Foster dynamic leaders who effectively manage teams and fiscal resources."
+          },
+          {
+            "goal": 3,
+            "title": "Recruitment, Development, and Retention of Staff",
+            "desc": "Recruit, develop, and retain highly-qualified staff to ensure effective instruction for all students."
+          },
+          {
+            "goal": 4,
+            "title": "Safe and Collaborative School Culture",
+            "desc": "Cultivate a safe, positive, and collaborative school culture conducive to learning, with strong parent and community partnerships."
+          },
+          {
+            "goal": 5,
+            "title": "Effective Instruction",
+            "desc": "Deliver meaningful instruction through objective-driven lessons and rigorous learning experiences using appropriate technology."
+          }
+        ],
+        "years": [
+          {
+            "school_year": "2024-25",
+            "source_pdf": "2025_CIP_Anderson_Elementary.pdf",
+            "summary": {
+              "met": 9,
+              "missed": 2,
+              "partial": 1,
+              "no_data": 0,
+              "internal": 0
+            },
+            "objectives": [
+              {
+                "objective": 1,
+                "goal": 1,
+                "section": "goal_1",
+                "text": "Performance Objective 1: Increase the percent of third grade students that achieve the Meets level or above on the 2025 STAAR Reading Assessment from 44% to 49%.",
+                "short_label": "Increase 3rd grade STAAR Reading Meets from 44% to 49%.",
+                "metric_label": "Grade 3 Reading (Meets GL)",
+                "subject_group": "Reading & Writing (English)",
+                "category": "staar",
+                "grade": "3",
+                "group": "all",
+                "goal_title": "Goal 1: Student Achievement and Post-Secondary Success",
+                "tapr_mappable": true,
+                "result_basis": "state",
+                "promised": {
+                  "type": "range",
+                  "baseline": 44,
+                  "target": 49,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Some progress",
+                "claimed_code": "some",
+                "actual": 48.0,
+                "result": "missed",
+                "divergence": true,
+                "match_quality": "strong",
+                "source_pdf": "2025_CIP_Anderson_Elementary.pdf",
+                "source_page": 10,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Differentiate instruction based on assessment results and identify students who need additional support; provide targeted interventions in letter sound recognition.",
+                    "expected_result": "By the end of PK, 90% of students are expected to be proficient at 20 letter sounds.",
+                    "dec_review": "some_progress",
+                    "mar_review": "considerable",
+                    "jun_review": "continue_modify"
+                  },
+                  {
+                    "strategy": 2,
+                    "text": "Design and implement engaging and interactive activities that focus on phoneme segmentation, using games, rhymes, and hands-on materials.",
+                    "expected_result": "By the end of Kindergarten, 70% of students are expected to meet benchmark levels in phoneme segmentation through the mCLASS Assessment.",
+                    "dec_review": "some_progress",
+                    "mar_review": "considerable",
+                    "jun_review": "continue_modify"
+                  },
+                  {
+                    "strategy": 3,
+                    "text": "Implement small group instruction with targeted and individualized support for students with similar decoding needs.",
+                    "expected_result": "By the end of first grade, 70% of students are expected to meet benchmark levels in decoding through the mCLASS Assessment.",
+                    "dec_review": "some_progress",
+                    "mar_review": "considerable",
+                    "jun_review": "continue_modify"
+                  },
+                  {
+                    "strategy": 4,
+                    "text": "Implement a balanced literacy approach (phonics, fluency, vocabulary, comprehension, and writing) to foster overall reading proficiency in grades K-2.",
+                    "expected_result": "By the end of second grade, 60% of students are expected to read on or above grade level on the BAS, SEL, or Running Record assessments.",
+                    "dec_review": "some_progress",
+                    "mar_review": "considerable",
+                    "jun_review": "accomplished"
+                  },
+                  {
+                    "strategy": 5,
+                    "text": "Implement a balanced literacy approach (phonics, fluency, vocabulary, comprehension, and writing) to foster overall reading proficiency in grade 3.",
+                    "expected_result": "By the end of third grade, 60% of students are expected to read on or above grade level on the BAS, SEL, or running record assessments.",
+                    "dec_review": "some_progress",
+                    "mar_review": "considerable",
+                    "jun_review": "continue_modify"
+                  }
+                ]
+              },
+              {
+                "objective": 2,
+                "goal": 1,
+                "section": "goal_1",
+                "text": "Performance Objective 2: Increase the percent of third grade students that achieve the Meets level or above on the 2025 STAAR Math Assessment from 49% to 54%.",
+                "short_label": "Increase 3rd grade STAAR Math Meets from 49% to 54%.",
+                "metric_label": "Grade 3 Math (Meets GL)",
+                "subject_group": "Mathematics",
+                "category": "staar",
+                "grade": "3",
+                "group": "all",
+                "goal_title": "Goal 1: Student Achievement and Post-Secondary Success",
+                "tapr_mappable": true,
+                "result_basis": "state",
+                "promised": {
+                  "type": "range",
+                  "baseline": 49,
+                  "target": 54,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Some progress",
+                "claimed_code": "some",
+                "actual": 53.0,
+                "result": "missed",
+                "divergence": true,
+                "match_quality": "strong",
+                "source_pdf": "2025_CIP_Anderson_Elementary.pdf",
+                "source_page": 13,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Tailor instruction based on initial assessment results and identify students who need additional support in counting sets; provide targeted interventions.",
+                    "expected_result": "By the end of PK, 90% of students are expected to master counting sets through the CIRCLE Assessment.",
+                    "dec_review": "some_progress",
+                    "mar_review": "considerable",
+                    "jun_review": "accomplished"
+                  },
+                  {
+                    "strategy": 2,
+                    "text": "Design and implement hands-on and interactive activities to engage students in counting and comparing sets and 1-to-1 correspondence.",
+                    "expected_result": "By the end of Kindergarten, 60% of students are expected to score on or above grade level in numeracy on the Early Math Assessment.",
+                    "dec_review": "some_progress",
+                    "mar_review": "some_progress",
+                    "jun_review": "accomplished"
+                  },
+                  {
+                    "strategy": 3,
+                    "text": "Support teachers with professional development opportunities to enhance teaching methods and strategies for developing numeracy skills.",
+                    "expected_result": "By the end of first and second grade, 60% of first grade and 70% of second grade students are expected to be on or above grade level in numeracy on the Early Math Assessment.",
+                    "dec_review": "some_progress",
+                    "mar_review": "some_progress",
+                    "jun_review": "continue_modify"
+                  },
+                  {
+                    "strategy": 4,
+                    "text": "Differentiate small group instruction to address students experiencing difficulties with mathematical fluency and fundamental math skills.",
+                    "expected_result": "At the end of third grade, 70% of third grade students will meet the district mastery set score for the EOY Universal Screener in Eduphoria.",
+                    "dec_review": "some_progress",
+                    "mar_review": "considerable",
+                    "jun_review": "accomplished"
+                  }
+                ]
+              },
+              {
+                "objective": 3,
+                "goal": 1,
+                "section": "goal_1",
+                "text": "Performance Objective 3: Increase the percent of fourth grade students that achieve the Meets level or above on the 2025 STAAR Reading Assessment from 46% to 51%.",
+                "short_label": "Increase 4th grade STAAR Reading Meets from 46% to 51%.",
+                "metric_label": "Grade 4 Reading (Meets GL)",
+                "subject_group": "Reading & Writing (English)",
+                "category": "staar",
+                "grade": "4",
+                "group": "all",
+                "goal_title": "Goal 1: Student Achievement and Post-Secondary Success",
+                "tapr_mappable": true,
+                "result_basis": "state",
+                "promised": {
+                  "type": "range",
+                  "baseline": 46,
+                  "target": 51,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Met Objective",
+                "claimed_code": "met",
+                "actual": 58.0,
+                "result": "met",
+                "divergence": false,
+                "match_quality": "strong",
+                "source_pdf": "2025_CIP_Anderson_Elementary.pdf",
+                "source_page": 15,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Fourth grade students will work in small group instruction to strengthen their reading and will track progress through district Quarterly Assessments (QAs), Common Assessments (CAs), and student data trackers.",
+                    "expected_result": "At the end of the year, 52% of fourth grade students will achieve the Meets level or above on the 2024 STAAR Reading Assessment.",
+                    "dec_review": "considerable",
+                    "mar_review": "considerable",
+                    "jun_review": "accomplished"
+                  }
+                ]
+              },
+              {
+                "objective": 4,
+                "goal": 1,
+                "section": "goal_1",
+                "text": "Performance Objective 4: Increase the percent of fourth grade students that achieve the Meets level or above on the 2025 STAAR Math Assessment from 48% to 53%.",
+                "short_label": "Increase 4th grade STAAR Math Meets from 48% to 53%.",
+                "metric_label": "Grade 4 Math (Meets GL)",
+                "subject_group": "Mathematics",
+                "category": "staar",
+                "grade": "4",
+                "group": "all",
+                "goal_title": "Goal 1: Student Achievement and Post-Secondary Success",
+                "tapr_mappable": true,
+                "result_basis": "state",
+                "promised": {
+                  "type": "range",
+                  "baseline": 48,
+                  "target": 53,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Some progress",
+                "claimed_code": "some",
+                "actual": 59.0,
+                "result": "met",
+                "divergence": false,
+                "match_quality": "strong",
+                "source_pdf": "2025_CIP_Anderson_Elementary.pdf",
+                "source_page": 16,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Identify students performing below the Meets level threshold and provide them with targeted, small-group instruction focusing on their specific areas of weakness.",
+                    "expected_result": "At the end of fourth grade, 80% of fourth grade students will meet the District mastery-set score for the EOY Universal Screener in Eduphoria.",
+                    "dec_review": "some_progress",
+                    "mar_review": "considerable",
+                    "jun_review": "continue_modify"
+                  }
+                ]
+              },
+              {
+                "objective": 5,
+                "goal": 1,
+                "section": "goal_1",
+                "text": "Performance Objective 5: Emergent Bilingual (EB) students will increase at least one level on the 2025 TELPAS Yearly Progress Indicator.",
+                "short_label": "EB students will increase at least one level on the 2025 TELPAS Yearly Progress Indicator.",
+                "metric_label": "Emergent Bilingual — TELPAS Progress",
+                "subject_group": "Reading & Writing (English)",
+                "category": "internal",
+                "grade": null,
+                "group": "emergent_bilingual",
+                "goal_title": "Goal 1: Student Achievement and Post-Secondary Success",
+                "tapr_mappable": false,
+                "result_basis": "district",
+                "promised": {
+                  "type": "target_only",
+                  "baseline": null,
+                  "target": null,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Significant progress",
+                "claimed_code": "significant",
+                "actual": null,
+                "result": "partial",
+                "divergence": false,
+                "match_quality": null,
+                "source_pdf": "2025_CIP_Anderson_Elementary.pdf",
+                "source_page": 17,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Utilize literacy intervention, small group guided reading instruction, and 7 Steps of Language & Literacy Strategies.",
+                    "expected_result": "At the end of the year, 30% of third and fourth grade EB students will increase their TELPAS Yearly Progress Indicator.",
+                    "dec_review": "some_progress",
+                    "mar_review": "considerable",
+                    "jun_review": "continue_modify"
+                  }
+                ]
+              },
+              {
+                "objective": 1,
+                "goal": 2,
+                "section": "goal_2",
+                "text": "Performance Objective 1: To maintain efficient and effective fiscal management of resources and operations.",
+                "short_label": "Maintain efficient and effective fiscal management of resources and operations.",
+                "metric_label": "Fiscal Management",
+                "subject_group": "Other Goals",
+                "category": "internal",
+                "grade": null,
+                "group": "all",
+                "goal_title": "Goal 2: School Leadership and Fiscal Responsibility",
+                "tapr_mappable": false,
+                "result_basis": "district",
+                "promised": {
+                  "type": "target_only",
+                  "baseline": null,
+                  "target": null,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Met Objective",
+                "claimed_code": "met",
+                "actual": null,
+                "result": "met",
+                "divergence": false,
+                "match_quality": null,
+                "source_pdf": "2025_CIP_Anderson_Elementary.pdf",
+                "source_page": 18,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Evaluate educational priorities on campus and provide resources within the budget to ensure the most effective instruction. Inventory materials and provide staff development opportunities that align with standards-based instruction.",
+                    "expected_result": "Integrated relevant materials and training for maximized student success.",
+                    "dec_review": "considerable",
+                    "mar_review": "accomplished",
+                    "jun_review": "accomplished"
+                  }
+                ]
+              },
+              {
+                "objective": 1,
+                "goal": 3,
+                "section": "goal_3",
+                "text": "Performance Objective 1: Staff will continue to grow professionally through staff development trainings and implementation of new learning.",
+                "short_label": "Staff will continue to grow professionally through staff development and implementation of new learning.",
+                "metric_label": "Staff Professional Development",
+                "subject_group": "Other Goals",
+                "category": "internal",
+                "grade": null,
+                "group": "all",
+                "goal_title": "Goal 3: Recruitment, Development, and Retention of Staff",
+                "tapr_mappable": false,
+                "result_basis": "district",
+                "promised": {
+                  "type": "target_only",
+                  "baseline": null,
+                  "target": null,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Met Objective",
+                "claimed_code": "met",
+                "actual": null,
+                "result": "met",
+                "divergence": false,
+                "match_quality": null,
+                "source_pdf": "2025_CIP_Anderson_Elementary.pdf",
+                "source_page": 19,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Teachers will be expected to attend a minimum of two hours of professional staff development per semester.",
+                    "expected_result": "New learning implemented in the classroom, with evidence shown through lesson planning.",
+                    "dec_review": "considerable",
+                    "mar_review": "accomplished",
+                    "jun_review": "accomplished"
+                  }
+                ]
+              },
+              {
+                "objective": 1,
+                "goal": 4,
+                "section": "goal_4",
+                "text": "Performance Objective 1: The school as a whole will implement the school's proactive behavior management program in addition to the guidance curriculum plan focused on positive character development, social-emotional learning, and overall emotional well-being of every child.",
+                "short_label": "Implement proactive behavior management program and guidance curriculum for social-emotional learning.",
+                "metric_label": "Behavior Management & SEL Program",
+                "subject_group": "Other Goals",
+                "category": "internal",
+                "grade": null,
+                "group": "all",
+                "goal_title": "Goal 4: Safe and Collaborative School Culture",
+                "tapr_mappable": false,
+                "result_basis": "district",
+                "promised": {
+                  "type": "target_only",
+                  "baseline": null,
+                  "target": null,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Met Objective",
+                "claimed_code": "met",
+                "actual": null,
+                "result": "met",
+                "divergence": false,
+                "match_quality": null,
+                "source_pdf": "2025_CIP_Anderson_Elementary.pdf",
+                "source_page": 21,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Staff and students will implement the 'Shine Like an All-Star' character program through consistent implementation of the classroom learning environment that incorporates social skills curriculum and the comprehensive school counseling program.",
+                    "expected_result": "Students will demonstrate improved social-emotional skills, positive behavior, and character development, resulting in a more inclusive, empathetic, and respectful school community.",
+                    "dec_review": "considerable",
+                    "mar_review": "considerable",
+                    "jun_review": "accomplished"
+                  }
+                ]
+              },
+              {
+                "objective": 2,
+                "goal": 4,
+                "section": "goal_4",
+                "text": "Performance Objective 2: The Foundations team will provide training and support for staff and students in common area expectations to create a structured, safe, and positive atmosphere.",
+                "short_label": "Foundations team will provide training in common area expectations for a structured, safe atmosphere.",
+                "metric_label": "Common Area Expectations Training",
+                "subject_group": "Other Goals",
+                "category": "internal",
+                "grade": null,
+                "group": "all",
+                "goal_title": "Goal 4: Safe and Collaborative School Culture",
+                "tapr_mappable": false,
+                "result_basis": "district",
+                "promised": {
+                  "type": "target_only",
+                  "baseline": null,
+                  "target": null,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Met Objective",
+                "claimed_code": "met",
+                "actual": null,
+                "result": "met",
+                "divergence": false,
+                "match_quality": null,
+                "source_pdf": "2025_CIP_Anderson_Elementary.pdf",
+                "source_page": 22,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "The Foundations team will use a rubric to monitor common areas.",
+                    "expected_result": "Increased SAEs and decreased behavior referrals.",
+                    "dec_review": "considerable",
+                    "mar_review": "considerable",
+                    "jun_review": "accomplished"
+                  }
+                ]
+              },
+              {
+                "objective": 3,
+                "goal": 4,
+                "section": "goal_4",
+                "text": "Performance Objective 3: We will enhance parental involvement in student academic development by promoting stronger and positive two-way communication with teachers.",
+                "short_label": "Enhance parental involvement by promoting stronger two-way communication with teachers.",
+                "metric_label": "Parent-Teacher Communication & Engagement",
+                "subject_group": "Other Goals",
+                "category": "internal",
+                "grade": null,
+                "group": "all",
+                "goal_title": "Goal 4: Safe and Collaborative School Culture",
+                "tapr_mappable": false,
+                "result_basis": "district",
+                "promised": {
+                  "type": "target_only",
+                  "baseline": null,
+                  "target": null,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Met Objective",
+                "claimed_code": "met",
+                "actual": null,
+                "result": "met",
+                "divergence": false,
+                "match_quality": null,
+                "source_pdf": "2025_CIP_Anderson_Elementary.pdf",
+                "source_page": 23,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Create a safe environment for parents by establishing collaborative, open communication and feedback through in-person or virtual conferences regarding academic expectations, concerns, and goals.",
+                    "expected_result": "Increased communication and feedback between parents and teachers, resulting in increased academic and emotional growth.",
+                    "dec_review": "considerable",
+                    "mar_review": "considerable",
+                    "jun_review": "accomplished"
+                  }
+                ]
+              },
+              {
+                "objective": 1,
+                "goal": 5,
+                "section": "goal_5",
+                "text": "Performance Objective 1: Integrate consistent small group instruction for reading and math.",
+                "short_label": "Integrate consistent small group instruction for reading and math.",
+                "metric_label": "Small Group Instruction (Reading & Math)",
+                "subject_group": "Other Goals",
+                "category": "internal",
+                "grade": null,
+                "group": "all",
+                "goal_title": "Goal 5: Effective Instruction",
+                "tapr_mappable": false,
+                "result_basis": "district",
+                "promised": {
+                  "type": "target_only",
+                  "baseline": null,
+                  "target": null,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Met Objective",
+                "claimed_code": "met",
+                "actual": null,
+                "result": "met",
+                "divergence": false,
+                "match_quality": null,
+                "source_pdf": "2025_CIP_Anderson_Elementary.pdf",
+                "source_page": 24,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Teachers and paraprofessionals will plan and implement differentiated small group lessons that support the TEKS and the CISD scope and sequence.",
+                    "expected_result": "Students will experience enhanced learning opportunities, increased academic growth, and a deeper understanding of the curriculum, leading to improved overall academic performance and achievement.",
+                    "dec_review": "considerable",
+                    "mar_review": "considerable",
+                    "jun_review": "accomplished"
+                  }
+                ]
+              },
+              {
+                "objective": 2,
+                "goal": 5,
+                "section": "goal_5",
+                "text": "Performance Objective 2: To ensure that all students and staff have access to technology to maximize learning and communication, and to enhance the educational practices of teachers.",
+                "short_label": "Ensure all students and staff have access to technology to maximize learning.",
+                "metric_label": "Technology Access & Educational Practice",
+                "subject_group": "Other Goals",
+                "category": "internal",
+                "grade": null,
+                "group": "all",
+                "goal_title": "Goal 5: Effective Instruction",
+                "tapr_mappable": false,
+                "result_basis": "district",
+                "promised": {
+                  "type": "target_only",
+                  "baseline": null,
+                  "target": null,
+                  "delta": null,
+                  "threshold_dir": null,
+                  "target_year": "2025"
+                },
+                "claimed": "Met Objective",
+                "claimed_code": "met",
+                "actual": null,
+                "result": "met",
+                "divergence": false,
+                "match_quality": null,
+                "source_pdf": "2025_CIP_Anderson_Elementary.pdf",
+                "source_page": 26,
+                "tapr_source": null,
+                "strategies": [
+                  {
+                    "strategy": 1,
+                    "text": "Provide the technology and programs needed in the classroom to supplement and enrich learning (Dreambox, Seesaw, Unique Learning, Imagine Learning, S'more, ClassKick).",
+                    "expected_result": "Consistent use of Dreambox, Seesaw, Unique Learning, Imagine Learning, S'more, and ClassKick.",
+                    "dec_review": "accomplished",
+                    "mar_review": "accomplished",
+                    "jun_review": "accomplished"
+                  }
+                ]
+              }
+            ]
+          }
+        ]
       }
     ]
   },
