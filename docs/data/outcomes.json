@@ -1,7 +1,7 @@
 {
   "district": "Conroe ISD",
   "district_cdn": "170902",
-  "generated_at": "2026-06-05T18:25:20.518927+00:00",
+  "generated_at": "2026-06-05T18:57:51.761339+00:00",
   "latest_year": "2024-25",
   "data_as_of": {
     "dip": "2024–25 School Year",
@@ -508,500 +508,6 @@
     "campuses": {
       "2024-25": [
         {
-          "campus_id": "170902002",
-          "name": "BOOKER T WASHINGTON H S",
-          "short_name": "Booker T Washington Hs",
-          "type": "S",
-          "grade_span": "09 - 12",
-          "overall_grade": "B",
-          "distinctions": {
-            "exceeds_growth": false,
-            "exceeds_closing_gaps": false,
-            "reading_ela": false,
-            "math": false,
-            "science": false,
-            "social_studies": false,
-            "post_secondary": false
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902011",
-          "name": "CANEY CREEK H S",
-          "short_name": "Caney Creek Hs",
-          "type": "S",
-          "grade_span": "09 - 12",
-          "overall_grade": "B",
-          "distinctions": {
-            "exceeds_growth": false,
-            "exceeds_closing_gaps": false,
-            "reading_ela": false,
-            "math": true,
-            "science": true,
-            "social_studies": true,
-            "post_secondary": false
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902014",
-          "name": "COLLEGE PARK H S",
-          "short_name": "College Park Hs",
-          "type": "S",
-          "grade_span": "09 - 12",
-          "overall_grade": "A",
-          "distinctions": {
-            "exceeds_growth": false,
-            "exceeds_closing_gaps": false,
-            "reading_ela": true,
-            "math": false,
-            "science": true,
-            "social_studies": true,
-            "post_secondary": false
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902001",
-          "name": "CONROE H S",
-          "short_name": "Conroe Hs",
-          "type": "S",
-          "grade_span": "09 - 12",
-          "overall_grade": "C",
-          "distinctions": {
-            "exceeds_growth": false,
-            "exceeds_closing_gaps": false,
-            "reading_ela": false,
-            "math": false,
-            "science": false,
-            "social_studies": true,
-            "post_secondary": false
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902016",
-          "name": "GRAND OAKS H S",
-          "short_name": "Grand Oaks Hs",
-          "type": "S",
-          "grade_span": "09 - 12",
-          "overall_grade": "B",
-          "distinctions": {
-            "exceeds_growth": false,
-            "exceeds_closing_gaps": false,
-            "reading_ela": false,
-            "math": false,
-            "science": false,
-            "social_studies": false,
-            "post_secondary": false
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902201",
-          "name": "JUVENILE DETENTION CTR",
-          "short_name": "Juvenile Detention Ctr",
-          "type": "S",
-          "grade_span": "07 - 10",
-          "overall_grade": "X",
-          "distinctions": {
-            "exceeds_growth": false,
-            "exceeds_closing_gaps": false,
-            "reading_ela": false,
-            "math": false,
-            "science": false,
-            "social_studies": false,
-            "post_secondary": false
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902005",
-          "name": "OAK RIDGE H S",
-          "short_name": "Oak Ridge Hs",
-          "type": "S",
-          "grade_span": "09 - 12",
-          "overall_grade": "B",
-          "distinctions": {
-            "exceeds_growth": false,
-            "exceeds_closing_gaps": false,
-            "reading_ela": true,
-            "math": true,
-            "science": true,
-            "social_studies": true,
-            "post_secondary": false
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902003",
-          "name": "THE WOODLANDS H S",
-          "short_name": "The Woodlands Hs",
-          "type": "S",
-          "grade_span": "09 - 12",
-          "overall_grade": "A",
-          "distinctions": {
-            "exceeds_growth": false,
-            "exceeds_closing_gaps": false,
-            "reading_ela": true,
-            "math": true,
-            "science": true,
-            "social_studies": true,
-            "post_secondary": true
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902078",
-          "name": "BOZMAN INT",
-          "short_name": "Bozman Int",
-          "type": "M",
-          "grade_span": "05 - 06",
-          "overall_grade": "B",
-          "distinctions": {
-            "exceeds_growth": false,
-            "exceeds_closing_gaps": false,
-            "reading_ela": true,
-            "math": false,
-            "science": false,
-            "social_studies": false,
-            "post_secondary": false
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902080",
-          "name": "CLARK INT",
-          "short_name": "Clark Int",
-          "type": "M",
-          "grade_span": "05 - 06",
-          "overall_grade": "A",
-          "distinctions": {
-            "exceeds_growth": true,
-            "exceeds_closing_gaps": true,
-            "reading_ela": false,
-            "math": true,
-            "science": true,
-            "social_studies": false,
-            "post_secondary": true
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902050",
-          "name": "COLLINS INT",
-          "short_name": "Collins Int",
-          "type": "M",
-          "grade_span": "05 - 06",
-          "overall_grade": "A",
-          "distinctions": {
-            "exceeds_growth": true,
-            "exceeds_closing_gaps": true,
-            "reading_ela": true,
-            "math": true,
-            "science": true,
-            "social_studies": false,
-            "post_secondary": true
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902077",
-          "name": "COX INT",
-          "short_name": "Cox Int",
-          "type": "M",
-          "grade_span": "05 - 06",
-          "overall_grade": "A",
-          "distinctions": {
-            "exceeds_growth": false,
-            "exceeds_closing_gaps": false,
-            "reading_ela": false,
-            "math": false,
-            "science": false,
-            "social_studies": false,
-            "post_secondary": false
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902073",
-          "name": "CRYAR INT",
-          "short_name": "Cryar Int",
-          "type": "M",
-          "grade_span": "05 - 06",
-          "overall_grade": "B",
-          "distinctions": {
-            "exceeds_growth": true,
-            "exceeds_closing_gaps": true,
-            "reading_ela": true,
-            "math": true,
-            "science": false,
-            "social_studies": false,
-            "post_secondary": true
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902055",
-          "name": "DONALD J STOCKTON JH",
-          "short_name": "Donald J Stockton Jh",
-          "type": "M",
-          "grade_span": "07 - 08",
-          "overall_grade": "B",
-          "distinctions": {
-            "exceeds_growth": true,
-            "exceeds_closing_gaps": true,
-            "reading_ela": true,
-            "math": false,
-            "science": false,
-            "social_studies": false,
-            "post_secondary": false
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902068",
-          "name": "GRANGERLAND INT",
-          "short_name": "Grangerland Int",
-          "type": "M",
-          "grade_span": "05 - 06",
-          "overall_grade": "C",
-          "distinctions": {
-            "exceeds_growth": false,
-            "exceeds_closing_gaps": false,
-            "reading_ela": false,
-            "math": false,
-            "science": false,
-            "social_studies": false,
-            "post_secondary": false
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902054",
-          "name": "IRONS J H",
-          "short_name": "Irons Jh",
-          "type": "M",
-          "grade_span": "07 - 08",
-          "overall_grade": "B",
-          "distinctions": {
-            "exceeds_growth": false,
-            "exceeds_closing_gaps": false,
-            "reading_ela": false,
-            "math": false,
-            "science": false,
-            "social_studies": true,
-            "post_secondary": false
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902046",
-          "name": "KNOX J H",
-          "short_name": "Knox Jh",
-          "type": "M",
-          "grade_span": "07 - 08",
-          "overall_grade": "A",
-          "distinctions": {
-            "exceeds_growth": false,
-            "exceeds_closing_gaps": false,
-            "reading_ela": false,
-            "math": false,
-            "science": false,
-            "social_studies": false,
-            "post_secondary": false
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902053",
-          "name": "MCCULLOUGH J H",
-          "short_name": "Mccullough Jh",
-          "type": "M",
-          "grade_span": "07 - 08",
-          "overall_grade": "A",
-          "distinctions": {
-            "exceeds_growth": false,
-            "exceeds_closing_gaps": false,
-            "reading_ela": false,
-            "math": false,
-            "science": false,
-            "social_studies": false,
-            "post_secondary": false
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902067",
-          "name": "MITCHELL INT",
-          "short_name": "Mitchell Int",
-          "type": "M",
-          "grade_span": "05 - 06",
-          "overall_grade": "A",
-          "distinctions": {
-            "exceeds_growth": true,
-            "exceeds_closing_gaps": true,
-            "reading_ela": true,
-            "math": true,
-            "science": true,
-            "social_studies": false,
-            "post_secondary": true
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902051",
-          "name": "MOORHEAD J H",
-          "short_name": "Moorhead Jh",
-          "type": "M",
-          "grade_span": "07 - 08",
-          "overall_grade": "D",
-          "distinctions": {
-            "exceeds_growth": false,
-            "exceeds_closing_gaps": false,
-            "reading_ela": false,
-            "math": false,
-            "science": false,
-            "social_studies": false,
-            "post_secondary": false
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902041",
-          "name": "PEET J H",
-          "short_name": "Peet Jh",
-          "type": "M",
-          "grade_span": "07 - 08",
-          "overall_grade": "C",
-          "distinctions": {
-            "exceeds_growth": false,
-            "exceeds_closing_gaps": false,
-            "reading_ela": false,
-            "math": false,
-            "science": false,
-            "social_studies": true,
-            "post_secondary": false
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902070",
-          "name": "TRAVIS INT",
-          "short_name": "Travis Int",
-          "type": "M",
-          "grade_span": "05 - 06",
-          "overall_grade": "D",
-          "distinctions": {
-            "exceeds_growth": false,
-            "exceeds_closing_gaps": false,
-            "reading_ela": false,
-            "math": false,
-            "science": false,
-            "social_studies": false,
-            "post_secondary": false
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902056",
-          "name": "VETERANS MEMORIAL INT",
-          "short_name": "Veterans Memorial Int",
-          "type": "M",
-          "grade_span": "05 - 06",
-          "overall_grade": "B",
-          "distinctions": {
-            "exceeds_growth": true,
-            "exceeds_closing_gaps": true,
-            "reading_ela": true,
-            "math": true,
-            "science": false,
-            "social_studies": false,
-            "post_secondary": true
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902069",
-          "name": "VOGEL INT",
-          "short_name": "Vogel Int",
-          "type": "M",
-          "grade_span": "05 - 06",
-          "overall_grade": "B",
-          "distinctions": {
-            "exceeds_growth": false,
-            "exceeds_closing_gaps": false,
-            "reading_ela": true,
-            "math": false,
-            "science": false,
-            "social_studies": false,
-            "post_secondary": true
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902045",
-          "name": "WILKERSON INT",
-          "short_name": "Wilkerson Int",
-          "type": "M",
-          "grade_span": "05 - 06",
-          "overall_grade": "B",
-          "distinctions": {
-            "exceeds_growth": true,
-            "exceeds_closing_gaps": false,
-            "reading_ela": true,
-            "math": true,
-            "science": true,
-            "social_studies": false,
-            "post_secondary": true
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902049",
-          "name": "YORK J H",
-          "short_name": "York Jh",
-          "type": "M",
-          "grade_span": "07 - 08",
-          "overall_grade": "A",
-          "distinctions": {
-            "exceeds_growth": false,
-            "exceeds_closing_gaps": false,
-            "reading_ela": false,
-            "math": false,
-            "science": false,
-            "social_studies": false,
-            "post_secondary": false
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
           "campus_id": "170902101",
           "name": "ANDERSON EL",
           "short_name": "Anderson Elem",
@@ -1097,6 +603,44 @@
           "graduation_postsec": []
         },
         {
+          "campus_id": "170902002",
+          "name": "BOOKER T WASHINGTON H S",
+          "short_name": "Booker T Washington Hs",
+          "type": "S",
+          "grade_span": "09 - 12",
+          "overall_grade": "B",
+          "distinctions": {
+            "exceeds_growth": false,
+            "exceeds_closing_gaps": false,
+            "reading_ela": false,
+            "math": false,
+            "science": false,
+            "social_studies": false,
+            "post_secondary": false
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
+          "campus_id": "170902078",
+          "name": "BOZMAN INT",
+          "short_name": "Bozman Int",
+          "type": "M",
+          "grade_span": "05 - 06",
+          "overall_grade": "B",
+          "distinctions": {
+            "exceeds_growth": false,
+            "exceeds_closing_gaps": false,
+            "reading_ela": true,
+            "math": false,
+            "science": false,
+            "social_studies": false,
+            "post_secondary": false
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
           "campus_id": "170902132",
           "name": "BRADLEY EL",
           "short_name": "Bradley Elem",
@@ -1173,11 +717,163 @@
           "graduation_postsec": []
         },
         {
+          "campus_id": "170902011",
+          "name": "CANEY CREEK H S",
+          "short_name": "Caney Creek Hs",
+          "type": "S",
+          "grade_span": "09 - 12",
+          "overall_grade": "B",
+          "distinctions": {
+            "exceeds_growth": false,
+            "exceeds_closing_gaps": false,
+            "reading_ela": false,
+            "math": true,
+            "science": true,
+            "social_studies": true,
+            "post_secondary": false
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
+          "campus_id": "170902080",
+          "name": "CLARK INT",
+          "short_name": "Clark Int",
+          "type": "M",
+          "grade_span": "05 - 06",
+          "overall_grade": "A",
+          "distinctions": {
+            "exceeds_growth": true,
+            "exceeds_closing_gaps": true,
+            "reading_ela": false,
+            "math": true,
+            "science": true,
+            "social_studies": false,
+            "post_secondary": true
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
+          "campus_id": "170902014",
+          "name": "COLLEGE PARK H S",
+          "short_name": "College Park Hs",
+          "type": "S",
+          "grade_span": "09 - 12",
+          "overall_grade": "A",
+          "distinctions": {
+            "exceeds_growth": false,
+            "exceeds_closing_gaps": false,
+            "reading_ela": true,
+            "math": false,
+            "science": true,
+            "social_studies": true,
+            "post_secondary": false
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
+          "campus_id": "170902050",
+          "name": "COLLINS INT",
+          "short_name": "Collins Int",
+          "type": "M",
+          "grade_span": "05 - 06",
+          "overall_grade": "A",
+          "distinctions": {
+            "exceeds_growth": true,
+            "exceeds_closing_gaps": true,
+            "reading_ela": true,
+            "math": true,
+            "science": true,
+            "social_studies": false,
+            "post_secondary": true
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
+          "campus_id": "170902001",
+          "name": "CONROE H S",
+          "short_name": "Conroe Hs",
+          "type": "S",
+          "grade_span": "09 - 12",
+          "overall_grade": "C",
+          "distinctions": {
+            "exceeds_growth": false,
+            "exceeds_closing_gaps": false,
+            "reading_ela": false,
+            "math": false,
+            "science": false,
+            "social_studies": true,
+            "post_secondary": false
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
+          "campus_id": "170902220",
+          "name": "CONROE VIRTUAL SCHOOL",
+          "short_name": "Conroe Virtual School",
+          "type": "B",
+          "grade_span": "05 - 10",
+          "overall_grade": "C",
+          "distinctions": {
+            "exceeds_growth": false,
+            "exceeds_closing_gaps": false,
+            "reading_ela": true,
+            "math": false,
+            "science": false,
+            "social_studies": false,
+            "post_secondary": false
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
+          "campus_id": "170902077",
+          "name": "COX INT",
+          "short_name": "Cox Int",
+          "type": "M",
+          "grade_span": "05 - 06",
+          "overall_grade": "A",
+          "distinctions": {
+            "exceeds_growth": false,
+            "exceeds_closing_gaps": false,
+            "reading_ela": false,
+            "math": false,
+            "science": false,
+            "social_studies": false,
+            "post_secondary": false
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
           "campus_id": "170902106",
           "name": "CREIGHTON EL",
           "short_name": "Creighton Elem",
           "type": "E",
           "grade_span": "PK - 04",
+          "overall_grade": "B",
+          "distinctions": {
+            "exceeds_growth": true,
+            "exceeds_closing_gaps": true,
+            "reading_ela": true,
+            "math": true,
+            "science": false,
+            "social_studies": false,
+            "post_secondary": true
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
+          "campus_id": "170902073",
+          "name": "CRYAR INT",
+          "short_name": "Cryar Int",
+          "type": "M",
+          "grade_span": "05 - 06",
           "overall_grade": "B",
           "distinctions": {
             "exceeds_growth": true,
@@ -1221,6 +917,25 @@
             "exceeds_growth": false,
             "exceeds_closing_gaps": false,
             "reading_ela": false,
+            "math": false,
+            "science": false,
+            "social_studies": false,
+            "post_secondary": false
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
+          "campus_id": "170902055",
+          "name": "DONALD J STOCKTON JH",
+          "short_name": "Donald J Stockton Jh",
+          "type": "M",
+          "grade_span": "07 - 08",
+          "overall_grade": "B",
+          "distinctions": {
+            "exceeds_growth": true,
+            "exceeds_closing_gaps": true,
+            "reading_ela": true,
             "math": false,
             "science": false,
             "social_studies": false,
@@ -1315,6 +1030,44 @@
           "distinctions": {
             "exceeds_growth": false,
             "exceeds_closing_gaps": true,
+            "reading_ela": false,
+            "math": false,
+            "science": false,
+            "social_studies": false,
+            "post_secondary": false
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
+          "campus_id": "170902016",
+          "name": "GRAND OAKS H S",
+          "short_name": "Grand Oaks Hs",
+          "type": "S",
+          "grade_span": "09 - 12",
+          "overall_grade": "B",
+          "distinctions": {
+            "exceeds_growth": false,
+            "exceeds_closing_gaps": false,
+            "reading_ela": false,
+            "math": false,
+            "science": false,
+            "social_studies": false,
+            "post_secondary": false
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
+          "campus_id": "170902068",
+          "name": "GRANGERLAND INT",
+          "short_name": "Grangerland Int",
+          "type": "M",
+          "grade_span": "05 - 06",
+          "overall_grade": "C",
+          "distinctions": {
+            "exceeds_growth": false,
+            "exceeds_closing_gaps": false,
             "reading_ela": false,
             "math": false,
             "science": false,
@@ -1420,11 +1173,87 @@
           "graduation_postsec": []
         },
         {
+          "campus_id": "170902054",
+          "name": "IRONS J H",
+          "short_name": "Irons Jh",
+          "type": "M",
+          "grade_span": "07 - 08",
+          "overall_grade": "B",
+          "distinctions": {
+            "exceeds_growth": false,
+            "exceeds_closing_gaps": false,
+            "reading_ela": false,
+            "math": false,
+            "science": false,
+            "social_studies": true,
+            "post_secondary": false
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
+          "campus_id": "170902010",
+          "name": "JJAEP",
+          "short_name": "JJAEP",
+          "type": "B",
+          "grade_span": "06 - 11",
+          "overall_grade": "X",
+          "distinctions": {
+            "exceeds_growth": false,
+            "exceeds_closing_gaps": false,
+            "reading_ela": false,
+            "math": false,
+            "science": false,
+            "social_studies": false,
+            "post_secondary": false
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
+          "campus_id": "170902201",
+          "name": "JUVENILE DETENTION CTR",
+          "short_name": "Juvenile Detention Ctr",
+          "type": "S",
+          "grade_span": "07 - 10",
+          "overall_grade": "X",
+          "distinctions": {
+            "exceeds_growth": false,
+            "exceeds_closing_gaps": false,
+            "reading_ela": false,
+            "math": false,
+            "science": false,
+            "social_studies": false,
+            "post_secondary": false
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
           "campus_id": "170902125",
           "name": "KAUFMAN EL",
           "short_name": "Kaufman Elem",
           "type": "E",
           "grade_span": "KG - 04",
+          "overall_grade": "A",
+          "distinctions": {
+            "exceeds_growth": false,
+            "exceeds_closing_gaps": false,
+            "reading_ela": false,
+            "math": false,
+            "science": false,
+            "social_studies": false,
+            "post_secondary": false
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
+          "campus_id": "170902046",
+          "name": "KNOX J H",
+          "short_name": "Knox Jh",
+          "type": "M",
+          "grade_span": "07 - 08",
           "overall_grade": "A",
           "distinctions": {
             "exceeds_growth": false,
@@ -1458,12 +1287,69 @@
           "graduation_postsec": []
         },
         {
+          "campus_id": "170902053",
+          "name": "MCCULLOUGH J H",
+          "short_name": "Mccullough Jh",
+          "type": "M",
+          "grade_span": "07 - 08",
+          "overall_grade": "A",
+          "distinctions": {
+            "exceeds_growth": false,
+            "exceeds_closing_gaps": false,
+            "reading_ela": false,
+            "math": false,
+            "science": false,
+            "social_studies": false,
+            "post_secondary": false
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
           "campus_id": "170902105",
           "name": "MILAM EL",
           "short_name": "Milam Elem",
           "type": "E",
           "grade_span": "EE - 04",
           "overall_grade": "C",
+          "distinctions": {
+            "exceeds_growth": false,
+            "exceeds_closing_gaps": false,
+            "reading_ela": false,
+            "math": false,
+            "science": false,
+            "social_studies": false,
+            "post_secondary": false
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
+          "campus_id": "170902067",
+          "name": "MITCHELL INT",
+          "short_name": "Mitchell Int",
+          "type": "M",
+          "grade_span": "05 - 06",
+          "overall_grade": "A",
+          "distinctions": {
+            "exceeds_growth": true,
+            "exceeds_closing_gaps": true,
+            "reading_ela": true,
+            "math": true,
+            "science": true,
+            "social_studies": false,
+            "post_secondary": true
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
+          "campus_id": "170902051",
+          "name": "MOORHEAD J H",
+          "short_name": "Moorhead Jh",
+          "type": "M",
+          "grade_span": "07 - 08",
+          "overall_grade": "D",
           "distinctions": {
             "exceeds_growth": false,
             "exceeds_closing_gaps": false,
@@ -1496,6 +1382,25 @@
           "graduation_postsec": []
         },
         {
+          "campus_id": "170902005",
+          "name": "OAK RIDGE H S",
+          "short_name": "Oak Ridge Hs",
+          "type": "S",
+          "grade_span": "09 - 12",
+          "overall_grade": "B",
+          "distinctions": {
+            "exceeds_growth": false,
+            "exceeds_closing_gaps": false,
+            "reading_ela": true,
+            "math": true,
+            "science": true,
+            "social_studies": true,
+            "post_secondary": false
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
           "campus_id": "170902128",
           "name": "PATTERSON EL",
           "short_name": "Patterson Elem",
@@ -1509,6 +1414,25 @@
             "math": false,
             "science": false,
             "social_studies": false,
+            "post_secondary": false
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
+          "campus_id": "170902041",
+          "name": "PEET J H",
+          "short_name": "Peet Jh",
+          "type": "M",
+          "grade_span": "07 - 08",
+          "overall_grade": "C",
+          "distinctions": {
+            "exceeds_growth": false,
+            "exceeds_closing_gaps": false,
+            "reading_ela": false,
+            "math": false,
+            "science": false,
+            "social_studies": true,
             "post_secondary": false
           },
           "academic_performance": [],
@@ -1686,6 +1610,25 @@
           "graduation_postsec": []
         },
         {
+          "campus_id": "170902003",
+          "name": "THE WOODLANDS H S",
+          "short_name": "The Woodlands Hs",
+          "type": "S",
+          "grade_span": "09 - 12",
+          "overall_grade": "A",
+          "distinctions": {
+            "exceeds_growth": false,
+            "exceeds_closing_gaps": false,
+            "reading_ela": true,
+            "math": true,
+            "science": true,
+            "social_studies": true,
+            "post_secondary": true
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
           "campus_id": "170902071",
           "name": "TOUGH EL",
           "short_name": "Tough Elem",
@@ -1697,6 +1640,82 @@
             "exceeds_closing_gaps": true,
             "reading_ela": true,
             "math": false,
+            "science": true,
+            "social_studies": false,
+            "post_secondary": true
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
+          "campus_id": "170902070",
+          "name": "TRAVIS INT",
+          "short_name": "Travis Int",
+          "type": "M",
+          "grade_span": "05 - 06",
+          "overall_grade": "D",
+          "distinctions": {
+            "exceeds_growth": false,
+            "exceeds_closing_gaps": false,
+            "reading_ela": false,
+            "math": false,
+            "science": false,
+            "social_studies": false,
+            "post_secondary": false
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
+          "campus_id": "170902056",
+          "name": "VETERANS MEMORIAL INT",
+          "short_name": "Veterans Memorial Int",
+          "type": "M",
+          "grade_span": "05 - 06",
+          "overall_grade": "B",
+          "distinctions": {
+            "exceeds_growth": true,
+            "exceeds_closing_gaps": true,
+            "reading_ela": true,
+            "math": true,
+            "science": false,
+            "social_studies": false,
+            "post_secondary": true
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
+          "campus_id": "170902069",
+          "name": "VOGEL INT",
+          "short_name": "Vogel Int",
+          "type": "M",
+          "grade_span": "05 - 06",
+          "overall_grade": "B",
+          "distinctions": {
+            "exceeds_growth": false,
+            "exceeds_closing_gaps": false,
+            "reading_ela": true,
+            "math": false,
+            "science": false,
+            "social_studies": false,
+            "post_secondary": true
+          },
+          "academic_performance": [],
+          "graduation_postsec": []
+        },
+        {
+          "campus_id": "170902045",
+          "name": "WILKERSON INT",
+          "short_name": "Wilkerson Int",
+          "type": "M",
+          "grade_span": "05 - 06",
+          "overall_grade": "B",
+          "distinctions": {
+            "exceeds_growth": true,
+            "exceeds_closing_gaps": false,
+            "reading_ela": true,
+            "math": true,
             "science": true,
             "social_studies": false,
             "post_secondary": true
@@ -1724,31 +1743,12 @@
           "graduation_postsec": []
         },
         {
-          "campus_id": "170902220",
-          "name": "CONROE VIRTUAL SCHOOL",
-          "short_name": "Conroe Virtual School",
-          "type": "B",
-          "grade_span": "05 - 10",
-          "overall_grade": "C",
-          "distinctions": {
-            "exceeds_growth": false,
-            "exceeds_closing_gaps": false,
-            "reading_ela": true,
-            "math": false,
-            "science": false,
-            "social_studies": false,
-            "post_secondary": false
-          },
-          "academic_performance": [],
-          "graduation_postsec": []
-        },
-        {
-          "campus_id": "170902010",
-          "name": "JJAEP",
-          "short_name": "JJAEP",
-          "type": "B",
-          "grade_span": "06 - 11",
-          "overall_grade": "X",
+          "campus_id": "170902049",
+          "name": "YORK J H",
+          "short_name": "York Jh",
+          "type": "M",
+          "grade_span": "07 - 08",
+          "overall_grade": "A",
           "distinctions": {
             "exceeds_growth": false,
             "exceeds_closing_gaps": false,
