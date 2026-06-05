@@ -447,6 +447,179 @@
     return card;
   }
 
+  // ── Campus selector ──────────────────────────────────────────────────────
+  var CAMPUS_TYPE_LABELS = { S: "High Schools", M: "Middle Schools", E: "Elementary", B: "K-12" };
+  var DIST_LABELS = {
+    exceeds_growth:       "Exceeds Growth",
+    exceeds_closing_gaps: "Exceeds Closing Gaps",
+    reading_ela:          "Reading/ELA",
+    math:                 "Math",
+    science:              "Science",
+    social_studies:       "Social Studies",
+    post_secondary:       "Post-Secondary",
+  };
+
+  function renderCampusSelector(schoolYear, teaMetrics, onBack) {
+    var container = document.getElementById("tea-section");
+    if (!container) return;
+    container.innerHTML = "";
+
+    var campusList = (teaMetrics && teaMetrics.campuses && teaMetrics.campuses[schoolYear])
+      ? teaMetrics.campuses[schoolYear] : null;
+
+    if (!campusList || !campusList.length) {
+      container.appendChild(el("p", "loading",
+        "Campus-level TAPR data is not yet available for " + esc(schoolYear) + "."));
+      // Show back button
+      var backBtn = el("button", "campus-back-btn", "← Back to District view");
+      backBtn.addEventListener("click", onBack);
+      container.insertBefore(backBtn, container.firstChild);
+      return;
+    }
+
+    var wrap = el("div", "campus-selector");
+
+    // Type filter bar
+    var typeBar = el("div", "campus-selector__type-bar");
+    var allTypes = ["all", "S", "M", "E", "B"];
+    var typeLabels = { all: "All Campuses", S: "High Schools", M: "Middle Schools", E: "Elementary", B: "K-12" };
+    var activeType = "all";
+
+    // Back-to-district button
+    var backBtn2 = el("button", "campus-back-btn", "← District view");
+    backBtn2.style.marginBottom = "var(--sp-4)";
+    backBtn2.style.display = "block";
+    backBtn2.addEventListener("click", onBack);
+    wrap.appendChild(backBtn2);
+
+    var campusGrid = el("div", "campus-grid");
+
+    function renderGrid() {
+      campusGrid.innerHTML = "";
+      var filtered = activeType === "all"
+        ? campusList
+        : campusList.filter(function(c) { return c.type === activeType; });
+      filtered.forEach(function(campus) {
+        var grade = campus.overall_grade || "—";
+        var gradeCls = (grade.length === 1 && "ABCDF".indexOf(grade) >= 0)
+          ? "campus-card__grade--" + grade
+          : "campus-card__grade--none";
+        var distKeys = Object.keys(campus.distinctions || {}).filter(function(k) {
+          return campus.distinctions[k];
+        });
+        var distHtml = distKeys.map(function(k) {
+          return '<span class="dist-tag">' + esc(DIST_LABELS[k] || k) + '</span>';
+        }).join("");
+
+        var card = el("button", "campus-card");
+        card.setAttribute("aria-selected", "false");
+        card.innerHTML =
+          '<div class="campus-card__grade ' + esc(gradeCls) + '">' + esc(grade) + '</div>' +
+          '<div class="campus-card__info">' +
+            '<div class="campus-card__name">' + esc(campus.short_name || campus.name) + '</div>' +
+            '<div class="campus-card__meta">' + esc(CAMPUS_TYPE_LABELS[campus.type] || campus.type) +
+              (campus.grade_span ? " · " + esc(campus.grade_span) : "") + '</div>' +
+            (distHtml ? '<div class="campus-card__dists">' + distHtml + '</div>' : '') +
+          '</div>';
+        card.addEventListener("click", function() {
+          renderCampusDetail(campus, schoolYear, teaMetrics, onBack);
+        });
+        campusGrid.appendChild(card);
+      });
+    }
+
+    allTypes.forEach(function(type) {
+      // Only show types that have campuses
+      var hasType = type === "all" || campusList.some(function(c) { return c.type === type; });
+      if (!hasType) return;
+      var btn = el("button", "campus-type-btn", esc(typeLabels[type] || type));
+      btn.setAttribute("aria-selected", type === activeType ? "true" : "false");
+      btn.addEventListener("click", function() {
+        activeType = type;
+        [].forEach.call(typeBar.children, function(b) { b.setAttribute("aria-selected", "false"); });
+        btn.setAttribute("aria-selected", "true");
+        renderGrid();
+      });
+      typeBar.appendChild(btn);
+    });
+
+    wrap.appendChild(typeBar);
+    renderGrid();
+    wrap.appendChild(campusGrid);
+    container.appendChild(wrap);
+  }
+
+  function renderCampusDetail(campus, schoolYear, teaMetrics, onBack) {
+    var container = document.getElementById("tea-section");
+    if (!container) return;
+    container.innerHTML = "";
+
+    var grade = campus.overall_grade || "—";
+    var gradeCls = (grade.length === 1 && "ABCDF".indexOf(grade) >= 0)
+      ? "campus-card__grade--" + grade : "campus-card__grade--none";
+
+    // Header
+    var hdr = el("div", "campus-detail-hdr");
+    var backBtn = el("button", "campus-back-btn", "← All campuses");
+    backBtn.addEventListener("click", function() {
+      renderCampusSelector(schoolYear, teaMetrics, onBack);
+    });
+    hdr.appendChild(backBtn);
+
+    var titleWrap = el("div", "");
+    titleWrap.innerHTML =
+      '<div class="campus-detail__name">' + esc(campus.short_name || campus.name) + '</div>' +
+      '<div class="campus-detail__meta">' +
+        esc(CAMPUS_TYPE_LABELS[campus.type] || campus.type) +
+        (campus.grade_span ? " · Grades " + esc(campus.grade_span) : "") +
+      '</div>';
+    hdr.appendChild(titleWrap);
+    container.appendChild(hdr);
+
+    // Accountability grade card
+    var gradeGroup = el("div", "metric-group");
+    gradeGroup.appendChild(el("div", "metric-group__label", "Accountability"));
+    var accCard = el("div", "district-grade");
+    accCard.innerHTML =
+      '<div class="grade-letter grade-letter--' + esc(grade) + '">' + esc(grade) + '</div>' +
+      '<div class="grade-info">' +
+        '<div class="grade-info__label">TEA Accountability Rating</div>' +
+        '<div class="grade-info__title">' + esc(campus.short_name || campus.name) +
+          ' received a <strong>' + esc(grade) + '</strong> from the Texas Education Agency</div>' +
+        '<div class="grade-info__note">Based on student achievement, school progress, and closing performance gaps · 2024–25</div>' +
+      '</div>';
+    gradeGroup.appendChild(accCard);
+    container.appendChild(gradeGroup);
+
+    // Distinctions
+    var distKeys = Object.keys(campus.distinctions || {}).filter(function(k) {
+      return campus.distinctions[k];
+    });
+    if (distKeys.length) {
+      var distGroup = el("div", "metric-group");
+      distGroup.appendChild(el("div", "metric-group__label", "Academic Distinctions"));
+      var distGrid = el("div", "metric-grid");
+      distKeys.forEach(function(k) {
+        var card = el("div", "metric-card");
+        card.innerHTML =
+          '<div class="metric-card__title">&#10003; ' + esc(DIST_LABELS[k] || k) + '</div>' +
+          '<div class="metric-card__sub">Distinction Designation</div>';
+        distGrid.appendChild(card);
+      });
+      distGroup.appendChild(distGrid);
+      container.appendChild(distGroup);
+    }
+
+    // STAAR performance (future)
+    if (!campus.academic_performance || !campus.academic_performance.length) {
+      var note = el("p", "loading",
+        "Campus-level STAAR performance data is not yet loaded. " +
+        "It will appear here once campus TAPR performance files are added.");
+      note.style.marginTop = "var(--sp-4)";
+      container.appendChild(note);
+    }
+  }
+
   // ── TEA Section renderer ──────────────────────────────────────────────────
   function renderTeaSection(schoolYear, teaMetrics) {
     var container = document.getElementById("tea-section");
@@ -455,21 +628,48 @@
 
     var districtData = (teaMetrics && teaMetrics.district && teaMetrics.district[schoolYear])
       ? teaMetrics.district[schoolYear] : null;
+    var hasCampuses  = teaMetrics && teaMetrics.campuses && !!teaMetrics.campuses[schoolYear];
 
-    // Section header + scope badge
+    // ── Section header ──────────────────────────────────────────────────────
     var hdr = el("div", "page-section__hdr");
-    hdr.innerHTML =
-      '<div class="page-section__title-row">' +
-        '<h2 class="page-section__title">Texas Education Agency Data</h2>' +
-        '<span class="scope-badge">&#128205; District</span>' +
-        '<span class="scope-badge scope-badge--future" title="Campus-level data coming in a future update">Campus view — coming soon</span>' +
-      '</div>' +
-      '<p class="page-section__desc">Official TEA accountability data for Conroe ISD as a district. ' +
-        'Sub-group breakdowns are shown where available.</p>';
+    var titleRow = el("div", "page-section__title-row");
+    titleRow.innerHTML = '<h2 class="page-section__title">Texas Education Agency Data</h2>';
+
+    // District scope button (always active by default)
+    var distBtn = document.createElement("button");
+    distBtn.className = "scope-badge";
+    distBtn.setAttribute("aria-selected", "true");
+    distBtn.textContent = "📍 District";
+    distBtn.addEventListener("click", function() {
+      renderTeaSection(schoolYear, teaMetrics);
+    });
+    titleRow.appendChild(distBtn);
+
+    // Campus scope button
+    var campusBtn = document.createElement("button");
+    campusBtn.className = "scope-badge" + (hasCampuses ? "" : " scope-badge--future");
+    campusBtn.setAttribute("aria-selected", "false");
+    campusBtn.textContent = hasCampuses ? "🏫 By Campus" : "🏫 Campus — 2024–25 only";
+    if (hasCampuses) {
+      campusBtn.addEventListener("click", function() {
+        renderCampusSelector(schoolYear, teaMetrics, function() {
+          renderTeaSection(schoolYear, teaMetrics);
+        });
+      });
+    } else {
+      campusBtn.title = "Campus data is only available for 2024-25";
+      campusBtn.style.cursor = "default";
+    }
+    titleRow.appendChild(campusBtn);
+
+    hdr.appendChild(titleRow);
+    hdr.appendChild(el("p", "page-section__desc",
+      "Official TEA accountability data for Conroe ISD. " +
+      "Switch to By Campus to see individual school ratings and distinctions."));
     container.appendChild(hdr);
 
     if (!districtData) {
-      container.appendChild(el("p", "loading", "No TEA data available for " + esc(schoolYear) + "."));
+      container.appendChild(el("p", "loading", "No TEA district data available for " + esc(schoolYear) + "."));
       return;
     }
 

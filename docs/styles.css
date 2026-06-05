@@ -76,7 +76,7 @@ main { padding:var(--sp-6) 0 var(--sp-6); }
 .glossary__summary {
   list-style:none; cursor:pointer; user-select:none;
   display:flex; align-items:center; gap:var(--sp-3);
-  padding:var(--sp-3) var(--sp-4);
+  padding:var(--sp-2) var(--sp-4);
 }
 .glossary__summary::-webkit-details-marker { display:none; }
 .glossary__summary:hover { background:var(--surface-2); border-radius:var(--r-md); }
@@ -84,14 +84,16 @@ main { padding:var(--sp-6) 0 var(--sp-6); }
   border-bottom:1px solid var(--line);
   border-radius:var(--r-md) var(--r-md) 0 0;
 }
+/* Title-group: label + hint stacked vertically */
+.glossary__title-group { flex:1; min-width:0; }
 .glossary__label {
-  font-size:14px; font-weight:700; color:var(--ink); flex:none;
+  display:block; font-size:14px; font-weight:700; color:var(--ink);
 }
 .glossary__hint {
-  font-size:13px; color:var(--ink-3); flex:1;
+  display:block; font-size:12px; color:var(--ink-3); margin-top:1px;
 }
 .glossary__chev {
-  font-size:14px; color:var(--ink-3); transition:transform .2s ease; flex:none;
+  font-size:13px; color:var(--ink-3); transition:transform .2s ease; flex:none;
 }
 .glossary[open] .glossary__chev { transform:rotate(180deg); }
 
@@ -164,13 +166,88 @@ main { padding:var(--sp-6) 0 var(--sp-6); }
   padding:3px 10px; border-radius:999px;
   background:var(--brand-50); color:var(--brand-700);
   border:1px solid var(--brand-100, #b2d8cf);
-  white-space:nowrap;
+  white-space:nowrap; cursor:pointer; font:inherit;
+  transition:background .12s, border-color .12s;
+}
+.scope-badge:hover { background:var(--brand-100, #b2d8cf); }
+.scope-badge[aria-selected="true"] {
+  background:var(--brand); color:#fff; border-color:var(--brand);
 }
 .scope-badge--future {
   background:var(--surface-2); color:var(--ink-3);
   border-color:var(--line); font-weight:500;
   cursor:default;
 }
+
+/* ── Campus selector ────────────────────────────────────────────── */
+.campus-selector {
+  margin-bottom:var(--sp-6);
+}
+.campus-selector__type-bar {
+  display:flex; gap:var(--sp-2); flex-wrap:wrap; margin-bottom:var(--sp-4);
+}
+.campus-type-btn {
+  padding:var(--sp-1) var(--sp-4); font:inherit; font-size:13px; font-weight:600;
+  color:var(--ink-2); background:var(--surface); border:1px solid var(--line);
+  border-radius:999px; cursor:pointer; transition:all .12s ease;
+}
+.campus-type-btn:hover { border-color:var(--line-2); }
+.campus-type-btn[aria-selected="true"] {
+  color:#fff; background:var(--brand); border-color:var(--brand);
+}
+
+.campus-grid {
+  display:grid;
+  grid-template-columns:repeat(auto-fill, minmax(220px,1fr));
+  gap:var(--sp-3);
+}
+.campus-card {
+  background:var(--surface); border:1px solid var(--line); border-radius:var(--r-md);
+  padding:var(--sp-3) var(--sp-4); cursor:pointer;
+  display:flex; align-items:center; gap:var(--sp-3);
+  transition:box-shadow .12s ease, border-color .12s ease;
+}
+.campus-card:hover { box-shadow:var(--shadow-hover); border-color:var(--line-2); }
+.campus-card[aria-selected="true"] {
+  border-color:var(--brand); background:var(--brand-50);
+}
+.campus-card__grade {
+  font-size:28px; font-weight:800; line-height:1;
+  width:40px; height:40px; display:flex; align-items:center; justify-content:center;
+  border-radius:var(--r-sm); flex:none; font-variant-numeric:normal;
+}
+.campus-card__grade--A { color:#1e6b35; background:#c8e8d5; }
+.campus-card__grade--B { color:#2a7fbf; background:#d0e8f7; }
+.campus-card__grade--C { color:#7a4708; background:#f7e4c4; }
+.campus-card__grade--D { color:#9b1c1c; background:#f9d4d3; }
+.campus-card__grade--F { color:#fff;    background:#b3261e; }
+.campus-card__grade--X { color:var(--ink-3); background:var(--surface-2); font-size:18px; }
+.campus-card__grade--none { color:var(--ink-3); background:var(--surface-2); font-size:18px; }
+
+.campus-card__info { flex:1; min-width:0; }
+.campus-card__name {
+  font-size:14px; font-weight:700; color:var(--ink); line-height:1.25;
+  white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+}
+.campus-card__meta { font-size:11px; color:var(--ink-3); margin-top:2px; }
+.campus-card__dists { display:flex; flex-wrap:wrap; gap:3px; margin-top:5px; }
+.dist-tag {
+  font-size:10px; font-weight:600; padding:1px 6px; border-radius:999px;
+  background:var(--brand-50); color:var(--brand-700);
+}
+
+/* Campus detail panel (inside the TEA section, replaces district metrics) */
+.campus-detail-hdr {
+  display:flex; align-items:center; gap:var(--sp-3); flex-wrap:wrap;
+  margin-bottom:var(--sp-5); padding-bottom:var(--sp-4); border-bottom:2px solid var(--line);
+}
+.campus-back-btn {
+  font:inherit; font-size:13px; font-weight:600; color:var(--brand);
+  background:none; border:none; cursor:pointer; padding:0; text-decoration:underline;
+}
+.campus-back-btn:hover { color:var(--brand-700); }
+.campus-detail__name { font-size:22px; font-weight:700; letter-spacing:-.015em; }
+.campus-detail__meta { font-size:13px; color:var(--ink-2); margin-top:2px; }
 
 /* ── Metric group ───────────────────────────────────────────────── */
 .metric-group { margin-bottom:var(--sp-6); margin-top:var(--sp-5); }
