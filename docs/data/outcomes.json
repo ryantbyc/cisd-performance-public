@@ -1,10 +1,10 @@
 {
   "district": "Conroe ISD",
   "district_cdn": "170902",
-  "generated_at": "2026-06-05T21:37:58.011207+00:00",
-  "latest_year": "2024-25",
+  "generated_at": "2026-06-05T23:19:02.660250+00:00",
+  "latest_year": "2025-26",
   "data_as_of": {
-    "dip": "2024–25 School Year",
+    "dip": "2025-26 School Year",
     "tea": "Spring 2025"
   },
   "district_grade": {
@@ -15,27 +15,32 @@
     {
       "goal": 1,
       "title": "Student Achievement and Post-Secondary Success",
-      "desc": "Conroe ISD's goals for student academic performance, graduation rates, and post-secondary readiness — measured against state STAAR exams and TEA data."
+      "desc": "CISD goals for student academic performance, graduation rates, and post-secondary readiness — measured against state STAAR exams and TEA data."
     },
     {
       "goal": 2,
-      "title": "School Leadership and Fiscal Responsibility",
-      "desc": "Goals for district leadership quality and responsible management of resources."
-    },
-    {
-      "goal": 3,
       "title": "Recruitment, Development, and Retention of Staff",
       "desc": "Goals for recruiting, developing, and retaining highly-qualified staff."
     },
     {
-      "goal": 4,
+      "goal": 3,
       "title": "Safe and Collaborative School Culture",
       "desc": "Goals for school safety, culture, and family engagement."
     },
     {
+      "goal": 4,
+      "title": "Fiscal Stewardship",
+      "desc": "Goals for fiscally responsible budget management aligned with student achievement."
+    },
+    {
       "goal": 5,
-      "title": "Effective Instruction",
-      "desc": "Goals for delivering effective, objective-driven instruction."
+      "title": "Communication and Community Relations",
+      "desc": "Goals for building partnerships and trust with parents and the community."
+    },
+    {
+      "goal": 6,
+      "title": "Operations",
+      "desc": "Goals for efficient, safe, and effective management of facilities, resources, and services."
     }
   ],
   "tea_metrics": {
@@ -6211,6 +6216,1383 @@
   },
   "years": [
     {
+      "school_year": "2025-26",
+      "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+      "summary": {
+        "met": 0,
+        "missed": 0,
+        "partial": 0,
+        "no_data": 8,
+        "internal": 18
+      },
+      "objectives": [
+        {
+          "objective": 1,
+          "text": "Performance Objective 1: Increase the percentage of students that perform at Meets Grade Level or above on the STAAR Reading/Language Arts to include (3rd grade -EOC English I & II Assessments) from 64% to 66% by May 2026 (as reported by Texas Education Agency to determine District accountability performance).",
+          "short_label": "Increase the percentage of students that perform at Meets Grade Level or above on the STAAR Reading/Language Arts to include (3rd grade -EOC English I & II Assessments) from 64% to 66% by May 2026 (as reported by Texas Education Agency to determine District accountability performance).",
+          "metric_label": "Grade 3 Reading/ELA (Meets)",
+          "grade": "3",
+          "group": "all",
+          "category": "staar",
+          "goal": 1,
+          "goal_title": "Student Achievement and Post-Secondary Success",
+          "section": "goal_1",
+          "subject_group": "Reading & Writing (English)",
+          "tapr_mappable": true,
+          "result_basis": "state",
+          "promised": {
+            "type": "range",
+            "baseline": 64.0,
+            "target": 66.0,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": "2026"
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "no_data",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 23,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative By May 2026, Early Childhood instructional coaches will deliver at least four Professional learning sessions and conduct monthly Formative instructional coaching cycles focused on the explicit teaching of phonological awareness. Oct Mar June",
+              "expected_result": "Success will be measured by at least an increase from 82% to 85% of Prekindergarten students showing growth in phonological awareness on CIRCLE assessments. Instructional coaches will provide a minimum of four Professional learning sessions and conduct monthly coaching cycles with all assigned educators. At least 90% of teachers will demonstrate improved instructional practices, and all educators will participate in regular data meetings to inform instruction using CIRCLE and Standards- Based Reporting data. Some",
+              "dec_review": "some_progress",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 2,
+              "text": "Formative By May 2026, instructional coaches will participate in at least four Instructional Coach Symposiums focused on small group Formative instruction strategies, resulting in 90% of coaches demonstrating increased ability to support teachers in designing and delivering focused, Oct Mar June high-quality small group lessons for students receiving accelerated instruction, as measured by coaching logs, feedback surveys, and observation data.",
+              "expected_result": "The expected result by May 2026 is increased growth in reading comprehension as measured by NWEA MAP data.",
+              "dec_review": "some_progress",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 3,
+              "text": "Formative By May 2026, instructional coaches will support Language Arts Professional Learning Communities (PLCs) in selecting and Formative using complex, grade-level texts aligned with high-priority TEKS in at least 90% of PLC meetings. This will ensure all students have access to Oct Mar June rigorous content, as measured by PLC agendas, coaching logs, and teacher feedback.",
+              "expected_result": "The expected result by May 2026 is increased growth in reading comprehension as measured by NWEA MAP data.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 4,
+              "text": "Formative By May 2026, the Gifted and Talented department will provide targeted support to Language Arts departments by delivering at Formative least three training sessions and ongoing coaching focused on the use of complex, grade-level texts aligned with high-priority TEKS, ensuring Oct Mar June that Language Arts teachers incorporate these texts to promote access to rigorous content for all students, as documented through training attendance, coaching logs, and lesson plan .",
+              "expected_result": "The percentage of students who receive a Masters Grade Level score on the STAAR 3rd through 8th grade Reading/Language Arts Assessment will increase from 86% to 88% by May 2026.",
+              "dec_review": "some_progress",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 5,
+              "text": "Formative Providers of Dyslexia Instruction (PDIs) designated to teach students a dyslexia and related disorders intervention will receive Formative training throughout the 2025-2026 school year. Oct Mar June",
+              "expected_result": "Students with dyslexia will receive quality dyslexia instruction with fidelity of the various dyslexia interventions.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 6,
+              "text": "Formative Special Education department and related service providers will provide targeted professional development and evidence-based Formative intervention training for all Special Education providers to better support students with identified academic needs. Oct Mar June",
+              "expected_result": "Special Education teachers will receive evidence-based intervention training with fidelity which will help grow students with identified academic needs",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 2,
+          "text": "Performance Objective 2: Increase the percentage of students that perform at Meets Grade Level or above on the STAAR Math to include (3rd grade -EOC Algebra I Assessments) from 58% to 60% by May 2026 (as reported by Texas Education Agency to determine District accountability performance).",
+          "short_label": "Increase the percentage of students that perform at Meets Grade Level or above on the STAAR Math to include (3rd grade -EOC Algebra I Assessments) from 58% to 60% by May 2026 (as reported by Texas Education Agency to determine District accountability performance).",
+          "metric_label": "Grade 3 Math (Meets)",
+          "grade": "3",
+          "group": "all",
+          "category": "staar",
+          "goal": 1,
+          "goal_title": "Student Achievement and Post-Secondary Success",
+          "section": "goal_1",
+          "subject_group": "Mathematics",
+          "tapr_mappable": true,
+          "result_basis": "state",
+          "promised": {
+            "type": "range",
+            "baseline": 58.0,
+            "target": 60.0,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": "2026"
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "no_data",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 27,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative By May 2026, Early Childhood instructional coaches will deliver at least four professional development sessions and conduct Formative monthly instructional coaching focused on the explicit teaching of early foundational numeracy skills. Oct Mar June",
+              "expected_result": "Success will be measured by at least an increase from 93% to 95% of Prekindergarten students showing growth in overall skills on CIRCLE assessments. Instructional coaches will provide a minimum of four professional development sessions and conduct monthly coaching cycles with all assigned educators. At least 90% of teachers will demonstrate improved instructional practices, and all educators will participate in regular data meetings to inform instruction using CIRCLE and Standards-Based Reporting data. Some",
+              "dec_review": "some_progress",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 2,
+              "text": "Formative Implement targeted, data-driven accelerated instruction to include small group support, interventions, and high-leverage strategies Formative aligned to priority TEKS in order to close learning gaps and increase the number of students achieving Meets Grade Level or above on the Oct Mar June STAAR Math 3rd grade -EOC Algebra I Assessments.",
+              "expected_result": "Use NWEA MAP to monitor performance and student growth.",
+              "dec_review": "no_progress",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 3,
+              "text": "Formative Provide support to teachers and instructional coaches with priority standards through professional development and planning Formative aligned to CISD Solves focusing on fluency, problem solving, and manipulative use in order to increase students achieving Meets Grade Level Oct Mar June or above on STAAR Math 3rd grade -EOC Algebra I Assessments.",
+              "expected_result": "Use NWEA MAP to monitor performance and student growth.",
+              "dec_review": "some_progress",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 4,
+              "text": "Formative Special Education department and related service providers will provide targeted professional development and evidence-based Formative intervention training for all Special Education providers to better support students with identified academic needs. Oct Mar June",
+              "expected_result": "Special Education teachers will receive evidence-based intervention training with fidelity which will help grow students with identified academic needs",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 3,
+          "text": "Performance Objective 3: Increase the percentage of students that perform at Meets Grade Level or above on the STAAR Science to include (5th and 8th grade -EOC Biology Assessments) from 60% to 62% by May 2026 (as reported by Texas Education Agency to determine District accountability performance).",
+          "short_label": "Increase the percentage of students that perform at Meets Grade Level or above on the STAAR Science to include (5th and 8th grade -EOC Biology Assessments) from 60% to 62% by May 2026 (as reported by Texas Education Agency to determine District accountability performance).",
+          "metric_label": "Grade 5 Science (Meets)",
+          "grade": "5",
+          "group": "all",
+          "category": "staar",
+          "goal": 1,
+          "goal_title": "Student Achievement and Post-Secondary Success",
+          "section": "goal_1",
+          "subject_group": "Science",
+          "tapr_mappable": true,
+          "result_basis": "state",
+          "promised": {
+            "type": "range",
+            "baseline": 60.0,
+            "target": 62.0,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": "2026"
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "no_data",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 30,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative Implement targeted data-driven instruction and intervention for students who did not approach grade level standards on the 5th Formative and 8th grade STAAR Science and EOC Biology Assessments. Oct Mar June",
+              "expected_result": "Use NWEA MAP in 5th grade, 8th grade, and STAAR EOC Biology Released Assessments to monitor performance and student growth.",
+              "dec_review": "some_progress",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 2,
+              "text": "Formative Teachers will receive ongoing targeted coaching to align the curriculum and deliver high quality instruction with an emphasis on Formative vertically aligned TEKS, implementation of effective formative assessments, and enrichment opportunities. Oct Mar June",
+              "expected_result": "Use NWEA MAP in 5th grade, 8th grade, and STAAR EOC Biology Released Assessments to monitor performance and student growth.",
+              "dec_review": "some_progress",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 3,
+              "text": "Formative Special Education department and related service providers will provide targeted professional development and evidence-based Formative intervention training for all Special Education providers to better support students with identified academic needs. Oct Mar June",
+              "expected_result": "Special Education teachers will receive evidence-based intervention training with fidelity which will help grow students with identified academic needs",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 4,
+          "text": "Performance Objective 4: Increase the percentage of students that perform at Meets Grade Level or above on the STAAR Social Studies (to include 8th grade and EOC U.S. History Assessments) from 61% to 63% by May 2026 (as reported by Texas Education Agency to determine District accountability performance).",
+          "short_label": "Increase the percentage of students that perform at Meets Grade Level or above on the STAAR Social Studies (to include 8th grade and EOC U.S. History Assessments) from 61% to 63% by May 2026 (as reported by Texas Education Agency to determine District accountability performance).",
+          "metric_label": "Grade 8 Social Studies (Meets)",
+          "grade": "8",
+          "group": "all",
+          "category": "staar",
+          "goal": 1,
+          "goal_title": "Student Achievement and Post-Secondary Success",
+          "section": "goal_1",
+          "subject_group": "Social Studies",
+          "tapr_mappable": true,
+          "result_basis": "state",
+          "promised": {
+            "type": "range",
+            "baseline": 61.0,
+            "target": 63.0,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": "2026"
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "no_data",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 32,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative Implement targeted data-driven instruction and intervention for students who did not approach grade level standards on the 8th Formative grade STAAR Social Studies and EOC U.S. History Assessments. Oct Mar June",
+              "expected_result": "Use Quarterly and/or STAAR Released Social Studies Assessments to monitor performance and student growth.",
+              "dec_review": "some_progress",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 2,
+              "text": "Formative Develop and implement STAAR aligned formative and summative assessments based on priority standards in Social Studies. Formative",
+              "expected_result": "Use Quarterly and/or STAAR Released Social Studies Assessments to monitor performance and Oct Mar June student growth.",
+              "dec_review": "some_progress",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 3,
+              "text": "Formative Special Education department and related service providers will provide targeted professional development and evidence-based Formative intervention training for all Special Education providers to better support students with identified academic needs. Oct Mar June",
+              "expected_result": "Special Education teachers will receive evidence-based intervention training with fidelity, which will help grow students with identified academic needs.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 5,
+          "text": "Performance Objective 5: Increase the number of Emergent Bilingual (EB) students who demonstrate progress in English language proficiency on the Texas English Language Proficiency Assessment System (TELPAS 3-12) by one proficiency level from 32% to 35% by May 2026.",
+          "short_label": "Increase the number of Emergent Bilingual (EB) students who demonstrate progress in English language proficiency on the Texas English Language Proficiency Assessment System (TELPAS 3-12) by one proficiency level from 32% to 35% by May 2026.",
+          "metric_label": "District-internal measure",
+          "grade": null,
+          "group": "emergent_bilingual",
+          "category": "telpas",
+          "goal": 1,
+          "goal_title": "Student Achievement and Post-Secondary Success",
+          "section": "goal_1",
+          "subject_group": "Other Goals",
+          "tapr_mappable": false,
+          "result_basis": "district",
+          "promised": {
+            "type": "range",
+            "baseline": 32.0,
+            "target": 35.0,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": "2026"
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "internal",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 34,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative Provide targeted instructional guidance and specialized professional learning for Social Studies teachers with emphasis on Formative Emergent Bilinguals in 8th grade. Oct Mar June",
+              "expected_result": "Use Quarterly Assessments and/or STAAR Released Social Studies Assessments to monitor performance and student growth.",
+              "dec_review": "some_progress",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 2,
+              "text": "Formative The total number of Emergent Bilingual students that demonstrate 1 year composite growth will increase by 5%. Formative",
+              "expected_result": "Monitor usage of Summit K12 to track student growth in all four language domains. Oct Mar June",
+              "dec_review": "some_progress",
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 6,
+          "text": "Performance Objective 6: The percent of 3rd grade students that perform at Meets Grade Level or above on STAAR Reading & Language Arts will increase from 58% to 67% by May 2030.",
+          "short_label": "The percent of 3rd grade students that perform at Meets Grade Level or above on STAAR Reading & Language Arts will increase from 58% to 67% by May 2030.",
+          "metric_label": "Grade 3 Reading/ELA (Meets)",
+          "grade": "3",
+          "group": "all",
+          "category": "staar",
+          "goal": 1,
+          "goal_title": "Student Achievement and Post-Secondary Success",
+          "section": "goal_1",
+          "subject_group": "Reading & Writing (English)",
+          "tapr_mappable": true,
+          "result_basis": "state",
+          "promised": {
+            "type": "range",
+            "baseline": 58.0,
+            "target": 67.0,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": "2030"
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "no_data",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 36,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative The percent of Prekindergarten students who are on track on the End-of-Year Phonological Awareness CLI Circle assessment will Formative increase from 81% to 86% by June 2030. Oct Mar June",
+              "expected_result": "An increase in the percentage of Prekindergarten students demonstrating age-appropriate phonological awareness skills, moving from 81% to 86% by May 2030, indicates improved early literacy readiness and foundational language development.",
+              "dec_review": "some_progress",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 2,
+              "text": "Formative The percent of Kindergarten to 3rd grade students reaching their NWEA MAP Growth Projection on the Reading assessment will Formative reach 55% by 2030. Oct Mar June",
+              "expected_result": "An increased percentage of Kindergarten through 3rd grade students meeting or exceeding their individual growth goals on the NWEA MAP Reading assessment, reaching 55% by 2030, indicating improved reading development and effective instruction aligned to student needs.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 7,
+          "text": "Performance Objective 7: The percent of 3rd grade students that perform at Meets Grade Level or above on STAAR Math will increase from 56% to 65% by May 2030.",
+          "short_label": "The percent of 3rd grade students that perform at Meets Grade Level or above on STAAR Math will increase from 56% to 65% by May 2030.",
+          "metric_label": "Grade 3 Math (Meets)",
+          "grade": "3",
+          "group": "all",
+          "category": "staar",
+          "goal": 1,
+          "goal_title": "Student Achievement and Post-Secondary Success",
+          "section": "goal_1",
+          "subject_group": "Mathematics",
+          "tapr_mappable": true,
+          "result_basis": "state",
+          "promised": {
+            "type": "range",
+            "baseline": 56.0,
+            "target": 65.0,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": "2030"
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "no_data",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 38,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative The percent of Prekindergarten students that are proficient on the End-of-Year Math Progress Monitoring portion of the CLI Formative Circle assessment will increase from 92% to 95% by May 2030. Oct Mar June",
+              "expected_result": "An increase in the percentage of Prekindergarten students demonstrating proficiency in foundational Math skills, rising from 92% to 95% by May 2030, reflects strengthened early numeracy development and effective early Math instruction.",
+              "dec_review": "some_progress",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 2,
+              "text": "Formative The percent of Kindergarten to 3rd Grade students reaching their NWEA MAP Growth Projection on the Math assessment will Formative reach 55% by 2030. Oct Mar June",
+              "expected_result": "An increase in the percentage of Kindergarten through 3rd grade students meeting or exceeding their projected growth targets on the NWEA MAP Math assessment, reaching 55% by 2030, reflecting strengthened foundational Math skills and the effectiveness of differentiated instruction and interventions.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 8,
+          "text": "Performance Objective 8: The percentage of graduates that meet College, Career, and Military Readiness (CCMR) criteria will increase from 78% to 88% by June 2030.",
+          "short_label": "The percentage of graduates that meet College, Career, and Military Readiness (CCMR) criteria will increase from 78% to 88% by June 2030.",
+          "metric_label": "CCMR",
+          "grade": null,
+          "group": "all",
+          "category": "ccmr",
+          "goal": 1,
+          "goal_title": "Student Achievement and Post-Secondary Success",
+          "section": "goal_1",
+          "subject_group": "Graduation & Post-Secondary",
+          "tapr_mappable": true,
+          "result_basis": "state",
+          "promised": {
+            "type": "range",
+            "baseline": 78.0,
+            "target": 88.0,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": "2030"
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "no_data",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 40,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative The percent of graduates who meet Texas Success Initiative (TSI) criteria in both Math and English/Language Arts will increased Formative from 47% to 60 % by June 2030. Oct Mar June",
+              "expected_result": "An increase in the percentage of high school graduates demonstrating college readiness in both Math and English/Language Arts, with 60% meeting TSI criteria by June 2030. This reflects stronger academic preparation and support systems that enable more students to graduate ready for post-secondary education without the need for remediation.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 2,
+              "text": "Formative The percent of graduates who earn an industry based certification (IBC) and are completers will increase from 8% to 30 % by Formative June 2030. Oct Mar June",
+              "expected_result": "A significant rise in the number of graduates who complete a program of study and earn a recognized industry-based certification, increasing from 8% to 30% by June 2030. This reflects improved career and technical education (CTE) alignment, better workforce readiness, and expanded post-secondary opportunities for students.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 3,
+              "text": "Formative The percent of economically disadvantaged graduates who meet College, Career, and Military Readiness (CCMR) requirements Formative will increase from 65 % to 76% by June 2030. Oct Mar June",
+              "expected_result": "An increase in the percentage of economically disadvantaged graduates who meet CCMR criteria, rising from 65% to 76% by June 2030. This indicates expanded access to and success in college, career, and military readiness opportunities, leading to greater post-secondary preparedness and equity in student outcomes.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 9,
+          "text": "Performance Objective 9: Based on an economic disadvantage percentage of 44% the District will increase the Relative Performance from 58% to 60% for the 2025-2026 academic year.",
+          "short_label": "Based on an economic disadvantage percentage of 44% the District will increase the Relative Performance from 58% to 60% for the 2025-2026 academic year.",
+          "metric_label": "District-internal measure",
+          "grade": null,
+          "group": "all",
+          "category": "internal",
+          "goal": 1,
+          "goal_title": "Student Achievement and Post-Secondary Success",
+          "section": "goal_1",
+          "subject_group": "Other Goals",
+          "tapr_mappable": false,
+          "result_basis": "district",
+          "promised": {
+            "type": "range",
+            "baseline": 58.0,
+            "target": 60.0,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": null
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "internal",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 42,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative Train principals and leadership teams to use TEA's Accountability Reports to monitor campus-level Relative Performance trends Formative and drivers. Oct Mar June",
+              "expected_result": "Campus leadership will use TEA Accountability Reports to regularly monitor and analyze Relative Performance trends and drivers, resulting in data-informed decisions that contribute to increasing the District's Relative Performance from 58% to 60% by the end of the 2025-2026 academic year.",
+              "dec_review": "some_progress",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 2,
+              "text": "Formative Through the tracking of student performance gains using NWEA MAP, Quarterly Assessments, and STAAR, the District will Formative increase the percentage of campuses who reach an A level rating in Domain IIB Relative Performance from 6% in 2025 to 15% of campuses in Oct Mar June 2026.",
+              "expected_result": "The District will increase the percentage of campuses who reach an A level rating in Domain IIB Relative Performance from 6% in 2025 to 15% of campuses in 2026 .",
+              "dec_review": "no_progress",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 3,
+              "text": "Formative Provide targeted School Improvement support with ongoing monitoring and guidance to strengthen instructional practices and Formative increase Title I campus relative performance. Oct Mar June",
+              "expected_result": "Title I campuses will demonstrate measurable gains in relative performance, with consistent progress toward closing achievement gaps and meeting accountability targets.",
+              "dec_review": "some_progress",
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 10,
+          "text": "Performance Objective 10: Maintain a high school graduation rate of 97.3% or higher by ensuring students are equipped for a variety of postsecondary success.",
+          "short_label": "Maintain a high school graduation rate of 97.3% or higher by ensuring students are equipped for a variety of postsecondary success.",
+          "metric_label": "Graduation",
+          "grade": null,
+          "group": "all",
+          "category": "graduation",
+          "goal": 1,
+          "goal_title": "Student Achievement and Post-Secondary Success",
+          "section": "goal_1",
+          "subject_group": "Graduation & Post-Secondary",
+          "tapr_mappable": true,
+          "result_basis": "state",
+          "promised": {
+            "type": "threshold",
+            "baseline": null,
+            "target": 97.3,
+            "delta": null,
+            "threshold_dir": "min",
+            "target_year": null
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "no_data",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 44,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative Provide a report of prior year attendance at the beginning of the school year and every 9-week period thereafter, identifying Formative students with high absences. Support campuses in developing personalized attendance plans, with a focus on students exhibiting irregular Oct Mar June attendance, high mobility, and socioeconomic challenges.",
+              "expected_result": "Achieve a graduation rate of 97.1% or higher by enhancing student attendance through proactive tracking, intervention, and support systems.",
+              "dec_review": "some_progress",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 2,
+              "text": "Formative Ensure consistent academic course placement is aligned and appropriate with the student's educational experience, minimizing the Formative need for repeating coursework while promoting efficient progress toward graduation. Oct Mar June",
+              "expected_result": "Increase the number of Texas graduation required courses credited to students who transfer from other countries into Conroe ISD.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 3,
+              "text": "Formative Provide secondary campuses with monthly dropout reports throughout the school year as well as guidance and support from the Formative Department for Dropout Prevention to reduce their campuses' dropout rates for the 2025-2026 school year. Oct Mar June",
+              "expected_result": "The 2024-2025 and 2025-2026 dropout rates will be less than 2% for all students in seventh through twelfth grades, in both years.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 4,
+              "text": "Formative Provide instruction in foundational digital citizenship skills, which serves as a critical prerequisite for the comprehensive Formative development of digital literacy and essential 21st-century skills. Oct Mar June",
+              "expected_result": "Increase the number of students participating in digital citizenship lessons which are aligned to educating students about appropriate online behavior and cyberbullying awareness and response.",
+              "dec_review": "some_progress",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 5,
+              "text": "Formative Equip Fine Arts students with the skills, experiences, and support needed for post-secondary readiness while developing staff Formative capacity to guide and sustain those pathways. Oct Mar June",
+              "expected_result": "Students enrolled in two or more Fine Arts courses have higher attendance and graduation rates compared to students not enrolled in Fine Arts courses.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 6,
+              "text": "Formative Provide targeted professional development for Languages Other Than English (LOTE) teachers on differentiated instruction and Formative proficiency-based grading to support post secondary readiness. Oct Mar June",
+              "expected_result": "Increase successful course completion in required LOTE courses for graduation and increased positive teacher efficacy as reported by professional learning survey data.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 1,
+          "text": "Performance Objective 1: Implement a plan to attract, source, and hire highly effective teachers and administrators to staff campuses in Conroe ISD at a 100% fill rate.",
+          "short_label": "Implement a plan to attract, source, and hire highly effective teachers and administrators to staff campuses in Conroe ISD at a 100% fill rate.",
+          "metric_label": "District-internal measure",
+          "grade": null,
+          "group": "all",
+          "category": "internal",
+          "goal": 2,
+          "goal_title": "Recruitment, Development, and Retention of Staff",
+          "section": "goal_2",
+          "subject_group": "Other Goals",
+          "tapr_mappable": false,
+          "result_basis": "district",
+          "promised": {
+            "type": "qualitative",
+            "baseline": null,
+            "target": null,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": null
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "internal",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 47,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative The District will utilize all available resources to recruit quality, diverse applicant pools in identified shortage areas, specifically Formative Bilingual and Special Education, and for high need campuses in accordance with DBA Legal, DC Legal, DC Local, and Title II Oct Mar June Requirements. In addition to Yearlong Clinical Teachers, the District will utilize colleges, universities, regional education service centers, education-related professional organizations, job fairs, TEA certification pathways, alternative certification programs, Grow Our Own programs, CTE Teaching and Training Program, and in-house recruitment of degreed paraprofessionals and other non-teaching staff.",
+              "expected_result": "The District expects to build/enhance partnerships with Yearlong Clinical Teachers and other stated resources to recruit quality, diverse applicant pools in identified shortage areas, specifically Bilingual and Special Education, and Considerable for high need campuses.",
+              "dec_review": "considerable",
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 2,
+          "text": "Performance Objective 2: Implement a professional learning plan focused on the diverse needs of staff to ensure at least 90% teacher participation and satisfaction as measured by feedback obtained from completion of an end of year survey.",
+          "short_label": "Implement a professional learning plan focused on the diverse needs of staff to ensure at least 90% teacher participation and satisfaction as measured by feedback obtained from completion of an end of year survey.",
+          "metric_label": "District-internal measure",
+          "grade": null,
+          "group": "all",
+          "category": "internal",
+          "goal": 2,
+          "goal_title": "Recruitment, Development, and Retention of Staff",
+          "section": "goal_2",
+          "subject_group": "Other Goals",
+          "tapr_mappable": false,
+          "result_basis": "district",
+          "promised": {
+            "type": "target_only",
+            "baseline": null,
+            "target": 90.0,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": null
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "internal",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 49,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative The District will provide structured supports to assist teachers in obtaining certification. Supports will include continuation and Formative expansion of shared tracking documents and the addition of structured preparation time for teachers to address Alternative Certification Oct Mar June Program (ACP) requirements.",
+              "expected_result": "The District expects to provide adequate support to ensure at least 75% of teachers acquire appropriate certification within the first year of employment and 100% acquire certification within two years.",
+              "dec_review": "some_progress",
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 3,
+          "text": "Performance Objective 3: Implement a plan to retain highly effective staff such that 90% of teachers are retained each school year.",
+          "short_label": "Implement a plan to retain highly effective staff such that 90% of teachers are retained each school year.",
+          "metric_label": "District-internal measure",
+          "grade": null,
+          "group": "all",
+          "category": "internal",
+          "goal": 2,
+          "goal_title": "Recruitment, Development, and Retention of Staff",
+          "section": "goal_2",
+          "subject_group": "Other Goals",
+          "tapr_mappable": false,
+          "result_basis": "district",
+          "promised": {
+            "type": "qualitative",
+            "baseline": null,
+            "target": null,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": null
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "internal",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 50,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative The District will retain highly qualified educators, and specifically Novice Teachers, by engaging in meaningful consultation and Formative examining relevant data to understand educators' most pressing needs, including potential root causes, through hiring surveys, of Oct Mar June informal complaints/concerns, and exit surveys as required by ESEA section 2102 (d)(3) and 2102(b)(3).",
+              "expected_result": "The District expects to retain more highly qualified teachers by developing systems/solutions to address educators' most pressing needs such that the retention rate for Novice Teachers is 90% and the retention rate for all teachers is 90%.",
+              "dec_review": "no_progress",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 2,
+              "text": "Formative The District will retain highly qualified educators by expanding the Teacher Incentive Allotment (TIA) which allows high Formative performing teachers at the hardest to staff campuses to earn additional compensation for outstanding performance as demonstrated by student Oct Mar June growth.",
+              "expected_result": "The District expects to retain highly qualified teachers by increasing the number of teachers who are eligible for TIA distinction and associated compensation.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 4,
+          "text": "Performance Objective 4: Establish a leadership pipeline that identifies, develops, and advances high-potential employees, with at least 85% of participants completing the program annually.",
+          "short_label": "Establish a leadership pipeline that identifies, develops, and advances high-potential employees, with at least 85% of participants completing the program annually.",
+          "metric_label": "District-internal measure",
+          "grade": null,
+          "group": "all",
+          "category": "internal",
+          "goal": 2,
+          "goal_title": "Recruitment, Development, and Retention of Staff",
+          "section": "goal_2",
+          "subject_group": "Other Goals",
+          "tapr_mappable": false,
+          "result_basis": "district",
+          "promised": {
+            "type": "target_only",
+            "baseline": null,
+            "target": 85.0,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": null
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "internal",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 52,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative Enhance CISD Leads by expanding training modules, strengthening mentorship opportunities, and integrating job-embedded Formative assignments to deepen leadership development. Oct Mar June",
+              "expected_result": "Participants demonstrate increased leadership readiness, with a growing pool of qualified candidates prepared to assume future leadership roles across the District.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 1,
+          "text": "Performance Objective 1: Develop and implement a professional learning framework that empowers school counselors with the knowledge, skills, and resources necessary to successfully deliver a comprehensive school counseling program.",
+          "short_label": "Develop and implement a professional learning framework that empowers school counselors with the knowledge, skills, and resources necessary to successfully deliver a comprehensive school counseling program.",
+          "metric_label": "District-internal measure",
+          "grade": null,
+          "group": "all",
+          "category": "internal",
+          "goal": 3,
+          "goal_title": "Safe and Collaborative School Culture",
+          "section": "goal_3",
+          "subject_group": "Other Goals",
+          "tapr_mappable": false,
+          "result_basis": "district",
+          "promised": {
+            "type": "qualitative",
+            "baseline": null,
+            "target": null,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": null
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "internal",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 53,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative Offer ongoing professional development sessions specifically tailored for school counselors, focusing on the legal statutes and Formative professional expectations that define their roles. Oct Mar June",
+              "expected_result": "At least 90% of school counselors will demonstrate increased knowledge related to legal and institutional guidelines for advocacy, as measured by evaluation data collected following professional development sessions.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 2,
+              "text": "Formative Campuses will utilize the CATCH (Coordinated Approach to Child Health) curriculum to educate students about the dangers of Formative fentanyl and other opioids and to support suicide prevention as required by SB 3908. Oct Mar June",
+              "expected_result": "100% of 6th through 8th grade campuses utilize CATCH curriculum program.",
+              "dec_review": "some_progress",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 3,
+              "text": "Formative Ensure that students, staff, and the community receive appropriate information in key areas such as bullying prevention and Formative intervention, mental health awareness, suicide prevention and intervention, and substance use prevention, intervention, and awareness. This Oct Mar June approach supports the following policies: FDB, FFEB, FFF, FFH, FFI, and FFB.",
+              "expected_result": "Increase attendance in school and community events, workshops, and webinars by 10%.",
+              "dec_review": "considerable",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 4,
+              "text": "Formative Maintain and strengthen partnerships with community stakeholders and mental health providers to ensure that families and Formative students have access to the mental health resources and support they need. This supports crisis intervention policies outlined in FFB. Oct Mar June",
+              "expected_result": "Increase number of students accessing services by optimizing the caseload capacity for mental health providers by 5 %.",
+              "dec_review": "considerable",
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 2,
+          "text": "Performance Objective 2: Monitor implementation of schoolwide behavioral expectations at specific cohort campuses to strengthen procedures and discipline.",
+          "short_label": "Monitor implementation of schoolwide behavioral expectations at specific cohort campuses to strengthen procedures and discipline.",
+          "metric_label": "District-internal measure",
+          "grade": null,
+          "group": "all",
+          "category": "internal",
+          "goal": 3,
+          "goal_title": "Safe and Collaborative School Culture",
+          "section": "goal_3",
+          "subject_group": "Other Goals",
+          "tapr_mappable": false,
+          "result_basis": "district",
+          "promised": {
+            "type": "qualitative",
+            "baseline": null,
+            "target": null,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": null
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "internal",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 55,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative Provide direct support to campuses to address schoolwide, classroom, and individual student concerns through training, systems, Formative and structures. Oct Mar June",
+              "expected_result": "A reduction in Level 3 behavior notifications, demonstrating the successful implementation and impact of schoolwide support structures and problem-solving teams in promoting positive student behavior and accountability.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 1,
+          "text": "Performance Objective 1: Develop and implement a fiscally responsible budget that aligns expenditures with revenues, protects educational programs, and maintains a balanced budget.",
+          "short_label": "Develop and implement a fiscally responsible budget that aligns expenditures with revenues, protects educational programs, and maintains a balanced budget.",
+          "metric_label": "District-internal measure",
+          "grade": null,
+          "group": "all",
+          "category": "internal",
+          "goal": 4,
+          "goal_title": "Fiscal Stewardship",
+          "section": "goal_4",
+          "subject_group": "Other Goals",
+          "tapr_mappable": false,
+          "result_basis": "district",
+          "promised": {
+            "type": "qualitative",
+            "baseline": null,
+            "target": null,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": null
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "internal",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 56,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative processes and procedures to identify opportunities for improving efficiency, identifying cost savings, and generating Formative additional revenue. Oct Mar June",
+              "expected_result": "Increased efficiency and cost savings by streamlining tasks, alongside enhanced revenue growth supported by higher student attendance rates district-wide.",
+              "dec_review": "some_progress",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 2,
+              "text": "Formative Provide financial support for integration of technology in instructional and administrative programs. Formative",
+              "expected_result": "Enhanced student learning outcomes and improved operational efficiency through the effective Oct Mar June integration of technology in instructional and administrative programs",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 2,
+          "text": "Performance Objective 2: Continue to build awareness among all stakeholders of the current systems in place to fund public education in the State of Texas.",
+          "short_label": "Continue to build awareness among all stakeholders of the current systems in place to fund public education in the State of Texas.",
+          "metric_label": "District-internal measure",
+          "grade": null,
+          "group": "all",
+          "category": "internal",
+          "goal": 4,
+          "goal_title": "Fiscal Stewardship",
+          "section": "goal_4",
+          "subject_group": "Other Goals",
+          "tapr_mappable": false,
+          "result_basis": "district",
+          "promised": {
+            "type": "qualitative",
+            "baseline": null,
+            "target": null,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": null
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "internal",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 58,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative Maintain active engagement with stakeholders by providing education on school finance through district committees, meetings, Formative and collaboration with community organizations. Oct Mar June",
+              "expected_result": "Improved stakeholder understanding and support of school financial decisions, leading to increased transparency and trust.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 3,
+          "text": "Performance Objective 3: Develop a district-wide system to evaluate the effective utilization and allocation of financial resources for staffing and other district needs specifically targeted at improving district performance and student achievement.",
+          "short_label": "Develop a district-wide system to evaluate the effective utilization and allocation of financial resources for staffing and other district needs specifically targeted at improving district performance and student achievement.",
+          "metric_label": "District-internal measure",
+          "grade": null,
+          "group": "all",
+          "category": "internal",
+          "goal": 4,
+          "goal_title": "Fiscal Stewardship",
+          "section": "goal_4",
+          "subject_group": "Other Goals",
+          "tapr_mappable": false,
+          "result_basis": "district",
+          "promised": {
+            "type": "qualitative",
+            "baseline": null,
+            "target": null,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": null
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "internal",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 59,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative Implement a district-wide evaluation system to monitor and optimize the allocation of financial resources for staffing and other Formative needs, focused on enhancing district performance and student achievement. Oct Mar June",
+              "expected_result": "Develop and adopt fiscally responsible budget to meet Board and instructional goals.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 2,
+              "text": "Formative Provide essential instructional positions needed to accommodate growth in student population and to address unique campus Formative needs. Oct Mar June",
+              "expected_result": "Provide the necessary resources to allow the District to recruit and hire the most qualified candidates.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 1,
+          "text": "Performance Objective 1: Increase social media interactions (likes, shares, comments, and link clicks) on district posts by 10% over the previous year's estimate by May 2026.",
+          "short_label": "Increase social media interactions (likes, shares, comments, and link clicks) on district posts by 10% over the previous year's estimate by May 2026.",
+          "metric_label": "District-internal measure",
+          "grade": null,
+          "group": "all",
+          "category": "internal",
+          "goal": 5,
+          "goal_title": "Communication and Community Relations",
+          "section": "goal_5",
+          "subject_group": "Other Goals",
+          "tapr_mappable": false,
+          "result_basis": "district",
+          "promised": {
+            "type": "qualitative",
+            "baseline": null,
+            "target": null,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": "2026"
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "internal",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 61,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative Increase parent and community member viewership on social media video shorts and stories by 15%. Formative",
+              "expected_result": "Increased viewership and enhanced engagement with the District social media platforms. Oct Mar June",
+              "dec_review": "considerable",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 2,
+              "text": "Formative Increase parent and community member engagement with student and staff recognition posts highlighting awards, achievements, Formative and milestones by 10%. Oct Mar June",
+              "expected_result": "Increased engagement with parents and the community.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 2,
+          "text": "Performance Objective 2: Obtain 80% parent engagement with teachers and schools as measured by program metrics in Thrillshare by May 2026.",
+          "short_label": "Obtain 80% parent engagement with teachers and schools as measured by program metrics in Thrillshare by May 2026.",
+          "metric_label": "District-internal measure",
+          "grade": null,
+          "group": "all",
+          "category": "internal",
+          "goal": 5,
+          "goal_title": "Communication and Community Relations",
+          "section": "goal_5",
+          "subject_group": "Other Goals",
+          "tapr_mappable": false,
+          "result_basis": "district",
+          "promised": {
+            "type": "qualitative",
+            "baseline": null,
+            "target": null,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": "2026"
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "internal",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 63,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative Implement a structured marketing campaign around the launch of the app including materials for campuses and classrooms. Formative",
+              "expected_result": "Increased school-to-home connectivity. Oct Mar June",
+              "dec_review": "accomplished",
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 2,
+              "text": "Formative Facilitate Thrillshare app training for all campuses by October 1, 2025. Formative",
+              "expected_result": "Widespread teacher usage, which will enhance communication, collaboration, and engagement Oct Mar June within the school community.",
+              "dec_review": "accomplished",
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 3,
+          "text": "Performance Objective 3: Increase stakeholder feedback by 5% on designated events over the previous year's estimate by the end of May 2026.",
+          "short_label": "Increase stakeholder feedback by 5% on designated events over the previous year's estimate by the end of May 2026.",
+          "metric_label": "District-internal measure",
+          "grade": null,
+          "group": "all",
+          "category": "internal",
+          "goal": 5,
+          "goal_title": "Communication and Community Relations",
+          "section": "goal_5",
+          "subject_group": "Other Goals",
+          "tapr_mappable": false,
+          "result_basis": "district",
+          "promised": {
+            "type": "delta",
+            "baseline": null,
+            "target": null,
+            "delta": 5.0,
+            "threshold_dir": null,
+            "target_year": null
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "internal",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 65,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative Facilitate training on Parent and Family Engagement to all Title I, Part A campuses and district staff by October 1, 2025. Formative",
+              "expected_result": "Increased parent participation as measured by event attendance and engagement surveys Oct Mar June",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 1,
+          "text": "Performance Objective 1: The Operations Department will implement and oversee safe schools plans, including training, state audits, and internal programs, to help increase the District's overall completion and success rates from 88% to 95%.",
+          "short_label": "The Operations Department will implement and oversee safe schools plans, including training, state audits, and internal programs, to help increase the District's overall completion and success rates from 88% to 95%.",
+          "metric_label": "District-internal measure",
+          "grade": null,
+          "group": "all",
+          "category": "internal",
+          "goal": 6,
+          "goal_title": "Operations",
+          "section": "goal_6",
+          "subject_group": "Other Goals",
+          "tapr_mappable": false,
+          "result_basis": "district",
+          "promised": {
+            "type": "range",
+            "baseline": 88.0,
+            "target": 95.0,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": null
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "internal",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 66,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative Campus administrators and counselors will complete threat assessment training from the Texas School Safety Center to Formative implement with their campus teams. To reinforce this training and assist campus teams, the Director of School Safety will offer additional Oct Mar June training and support for the threat assessment process. Each school will ensure that at least one administrator and counselor attend the threat assessment training.",
+              "expected_result": "High-functioning Safe and Supportive Schools Program (SSSP) campus teams will be equipped to recognize and provide appropriate intervention.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 2,
+              "text": "Formative The Operations Department will create, implement, and maintain procedures and systems to enhance emergency response to Formative multihazard events by conducting an annual training and work session for all campuses. Each campus will , update, and approve its Oct Mar June campus-specific multihazard emergency operations plan annually.",
+              "expected_result": "Multi-hazard emergency hazard response knowledge and training for campus personnel will enhance a safe learning environment for students.",
+              "dec_review": "accomplished",
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 2,
+          "text": "Performance Objective 2: The Health Services Department will provide Professional learning for the Health Services team, where 75% of all nurses will complete at least six Professional learning opportunities during the year.",
+          "short_label": "The Health Services Department will provide Professional learning for the Health Services team, where 75% of all nurses will complete at least six Professional learning opportunities during the year.",
+          "metric_label": "District-internal measure",
+          "grade": null,
+          "group": "all",
+          "category": "internal",
+          "goal": 6,
+          "goal_title": "Operations",
+          "section": "goal_6",
+          "subject_group": "Other Goals",
+          "tapr_mappable": false,
+          "result_basis": "district",
+          "promised": {
+            "type": "qualitative",
+            "baseline": null,
+            "target": null,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": null
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "internal",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 68,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative Provide enhanced Professional learning opportunities for nursing staff to ensure nurses are prepared to provide safe and effective Formative care to all students by providing at least seven in-district and nine out-of-district opportunities for nurses. Oct Mar June",
+              "expected_result": "Students will be provided with safe and effective nursing care to meet their individual needs.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 3,
+          "text": "Performance Objective 3: The Transportation Department will improve the efficiency of bus arrival times to school and home by increasing the use of Smart Tag IDs by students to scan on and off the bus from a use rate of 77% to 82%.",
+          "short_label": "The Transportation Department will improve the efficiency of bus arrival times to school and home by increasing the use of Smart Tag IDs by students to scan on and off the bus from a use rate of 77% to 82%.",
+          "metric_label": "District-internal measure",
+          "grade": null,
+          "group": "all",
+          "category": "internal",
+          "goal": 6,
+          "goal_title": "Operations",
+          "section": "goal_6",
+          "subject_group": "Other Goals",
+          "tapr_mappable": false,
+          "result_basis": "district",
+          "promised": {
+            "type": "target_only",
+            "baseline": null,
+            "target": 82.0,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": null
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "internal",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 69,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative The Transportation Department will oversee and evaluate the data from Smart Tag scans to identify trends and pinpoint areas for Formative improvement on a weekly basis. This will ensure that the scanning process remains efficient and dependable across the school district's buses. Oct Mar June",
+              "expected_result": "The outcome of this strategy will be a streamlined and dependable scanning process throughout the school district's buses. This improvement will lead to fewer manual scans, create a safer environment for students, and assist in expediting arrival times of buses to school and home.",
+              "dec_review": null,
+              "mar_review": null,
+              "jun_review": null
+            },
+            {
+              "strategy": 2,
+              "text": "Formative The Transportation Department will share Smart Tag campus student bus loading scanning data with campuses, on a weekly Formative basis for the first six-weeks of school and then monthly thereafter so the campus Foundation Teams can use the data to take appropriate Oct Mar June action to support the scanning of Smart Tag's on and off the bus.",
+              "expected_result": "The strategy is expected to boost Smart Tag Badge usage among students both on and off the bus, while also improving student behavior during bus rides through adherence to CHAMPS strategies.",
+              "dec_review": "considerable",
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        },
+        {
+          "objective": 4,
+          "text": "Performance Objective 4: Technology Services will offer virtual and in-person professional learning, once each grading period, regarding the difference between active vs. passive screen time so instruction will center around active classroom use of District-owned devices.",
+          "short_label": "Technology Services will offer virtual and in-person professional learning, once each grading period, regarding the difference between active vs. passive screen time so instruction will center around active classroom use of District-owned devices.",
+          "metric_label": "District-internal measure",
+          "grade": null,
+          "group": "all",
+          "category": "internal",
+          "goal": 6,
+          "goal_title": "Operations",
+          "section": "goal_6",
+          "subject_group": "Other Goals",
+          "tapr_mappable": false,
+          "result_basis": "district",
+          "promised": {
+            "type": "qualitative",
+            "baseline": null,
+            "target": null,
+            "delta": null,
+            "threshold_dir": null,
+            "target_year": null
+          },
+          "claimed": "Not stated",
+          "claimed_code": "not_found",
+          "actual": null,
+          "result": "internal",
+          "divergence": false,
+          "match_quality": "no_file",
+          "source_pdf": "2025-26_District_Improvement_Plan.pdf",
+          "source_page": 71,
+          "tapr_source": null,
+          "strategies": [
+            {
+              "strategy": 1,
+              "text": "Formative Technology Services will develop, schedule, and conduct virtual and in-person professional learning each 9-week period Formative regarding the difference between active and passive screen time so that instruction centers around the active classroom use of District-owned Oct Mar June devices.",
+              "expected_result": "Virtual and in-person professional learning is prepared and available for staff on the active and passive uses of technology in the classroom.",
+              "dec_review": "some_progress",
+              "mar_review": null,
+              "jun_review": null
+            }
+          ]
+        }
+      ]
+    },
+    {
       "school_year": "2024-25",
       "source_pdf": "2024-25_District_Improvement_Plan.pdf",
       "summary": {
@@ -6257,7 +7639,7 @@
             "tapr_column": "STAAR Performance, Reading/Language Arts (Grade 3), SY 2024-25, All Students, % At Meets GL Standard or Above",
             "level_used": "Meets",
             "tapr_year": 2025,
-            "school_year": "2024–25",
+            "school_year": "2024â€“25",
             "match_quality": "strong"
           },
           "strategies": [
@@ -6479,7 +7861,7 @@
           "objective": 4,
           "text": "Performance Objective 4: Increase the performance of students served through ESL and/or SPED, to at least 60% at the Approaches grade level on the STAAR English I and English II EOC by May 2025.",
           "short_label": "Increase the performance of students served through ESL and/or SPED, to at least 60% at the Approaches grade level on the STAAR English I and English II EOC by May 2025.",
-          "metric_label": "English I EOC Reading/ELA (Approaches) — Special Education",
+          "metric_label": "English I EOC Reading/ELA (Approaches) â€” Special Education",
           "grade": "EOC-English1",
           "group": "special_ed",
           "category": "staar",
@@ -6510,7 +7892,7 @@
             "tapr_column": "STAAR Performance, EOC English I, SY 2024-25, Special Ed (Current), % At Approaches GL Standard or Above",
             "level_used": "Approaches",
             "tapr_year": 2025,
-            "school_year": "2024–25",
+            "school_year": "2024â€“25",
             "match_quality": "strong"
           },
           "strategies": [
@@ -6544,7 +7926,7 @@
           "objective": 5,
           "text": "Performance Objective 5: Increase the performance of students receiving Dyslexia services by 5% at the Meets grade level from the previous year as measured on the STAAR Reading assessment by May 2025.",
           "short_label": "Increase the performance of students receiving Dyslexia services by 5% at the Meets grade level from the previous year as measured on the STAAR Reading assessment by May 2025.",
-          "metric_label": "Reading/ELA (Meets) — Dyslexia Services",
+          "metric_label": "Reading/ELA (Meets) â€” Dyslexia Services",
           "grade": null,
           "group": "dyslexia",
           "category": "staar",
@@ -6625,7 +8007,7 @@
             "tapr_column": "STAAR Performance, Mathematics (Grade 3), SY 2024-25, All Students, % At Meets GL Standard or Above",
             "level_used": "Meets",
             "tapr_year": 2025,
-            "school_year": "2024–25",
+            "school_year": "2024â€“25",
             "match_quality": "strong"
           },
           "strategies": [
@@ -6706,7 +8088,7 @@
             "tapr_column": "STAAR Performance, Mathematics (Grade 6), SY 2024-25, All Students, % At Meets GL Standard or Above",
             "level_used": "Meets",
             "tapr_year": 2025,
-            "school_year": "2024–25",
+            "school_year": "2024â€“25",
             "match_quality": "defaulted_meets"
           },
           "strategies": [
@@ -6853,7 +8235,7 @@
             "tapr_column": "STAAR Performance, Mathematics (Grade 7), SY 2024-25, All Students, % At Meets GL Standard or Above",
             "level_used": "Meets",
             "tapr_year": 2025,
-            "school_year": "2024–25",
+            "school_year": "2024â€“25",
             "match_quality": "defaulted_meets"
           },
           "strategies": [
@@ -6887,7 +8269,7 @@
           "objective": 10,
           "text": "Performance Objective 10: Increase students served in Special Education to 58% at the Approaches grade level as measures by the Algebra I STAAR EOC assessment.",
           "short_label": "Increase students served in Special Education to 58% at the Approaches grade level as measures by the Algebra I STAAR EOC assessment.",
-          "metric_label": "Algebra I EOC Math (Approaches) — Special Education",
+          "metric_label": "Algebra I EOC Math (Approaches) â€” Special Education",
           "grade": "EOC-Algebra",
           "group": "special_ed",
           "category": "staar",
@@ -6918,7 +8300,7 @@
             "tapr_column": "STAAR Performance, EOC Algebra I, SY 2024-25, Special Ed (Current), % At Approaches GL Standard or Above",
             "level_used": "Approaches",
             "tapr_year": 2025,
-            "school_year": "2024–25",
+            "school_year": "2024â€“25",
             "match_quality": "strong"
           },
           "strategies": [
@@ -6936,7 +8318,7 @@
           "objective": 11,
           "text": "Performance Objective 11: Increase performance of Emergent Bilingual students from 45% to 48% at the Meets level as measured on the eighth grade US History STAAR by May 2025.",
           "short_label": "Increase performance of Emergent Bilingual students from 45% to 48% at the Meets level as measured on the eighth grade US History STAAR by May 2025.",
-          "metric_label": "Grade 8 Social Studies (Meets) — Emergent Bilingual",
+          "metric_label": "Grade 8 Social Studies (Meets) â€” Emergent Bilingual",
           "grade": "8",
           "group": "emergent_bilingual",
           "category": "staar",
@@ -6967,7 +8349,7 @@
             "tapr_column": "STAAR Performance, Social Studies (Grade 8), SY 2024-25, EB/EL (Current & Monitored), % At Meets GL Standard or Above",
             "level_used": "Meets",
             "tapr_year": 2025,
-            "school_year": "2024–25",
+            "school_year": "2024â€“25",
             "match_quality": "strong"
           },
           "strategies": [
@@ -7059,7 +8441,7 @@
           "objective": 13,
           "text": "Performance Objective 13: Increase performance of students served through ESL and/or Special Education, to at least 48% at the Approaches grade level on the eighth grade Social Studies STAAR assessment by May 2025.",
           "short_label": "Increase performance of students served through ESL and/or Special Education, to at least 48% at the Approaches grade level on the eighth grade Social Studies STAAR assessment by May 2025.",
-          "metric_label": "Grade 8 Social Studies (Approaches) — Special Education",
+          "metric_label": "Grade 8 Social Studies (Approaches) â€” Special Education",
           "grade": "8",
           "group": "special_ed",
           "category": "staar",
@@ -7090,7 +8472,7 @@
             "tapr_column": "STAAR Performance, Social Studies (Grade 8), SY 2024-25, Special Ed (Current), % At Approaches GL Standard or Above",
             "level_used": "Approaches",
             "tapr_year": 2025,
-            "school_year": "2024–25",
+            "school_year": "2024â€“25",
             "match_quality": "strong"
           },
           "strategies": [
@@ -7155,7 +8537,7 @@
             "tapr_column": "STAAR Performance, Science (Grade 5), SY 2024-25, All Students, % At Masters GL Standard",
             "level_used": "Masters",
             "tapr_year": 2025,
-            "school_year": "2024–25",
+            "school_year": "2024â€“25",
             "match_quality": "strong"
           },
           "strategies": [
@@ -7181,7 +8563,7 @@
           "objective": 15,
           "text": "Performance Objective 15: Increase the student performance of Economically Disadvantaged students, Emergent Bilinguals, and Special Education students achieving Meets grade level passing standard by 3% in fifth grade, eighth-grade, and Biology EOC as measured by the 2025 Science/EOC STAAR Assessment.",
           "short_label": "Increase the student performance of Economically Disadvantaged students, Emergent Bilinguals, and Special Education students achieving Meets grade level passing standard by 3% in fifth grade, eighth-grade, and Biology EOC as measured by the 2025 Science/EOC STAAR Assessment.",
-          "metric_label": "Grade 5 Science (Meets) — Econ. Disadvantaged",
+          "metric_label": "Grade 5 Science (Meets) â€” Econ. Disadvantaged",
           "grade": "5",
           "group": "econ_disadv",
           "category": "staar",
@@ -7212,7 +8594,7 @@
             "tapr_column": "STAAR Performance, Science (Grade 5), SY 2024-25, Econ Disadv, % At Meets GL Standard or Above",
             "level_used": "Meets",
             "tapr_year": 2025,
-            "school_year": "2024–25",
+            "school_year": "2024â€“25",
             "match_quality": "strong"
           },
           "strategies": [
@@ -7269,7 +8651,7 @@
             "tapr_column": "District 2024 Associated CCMR: College Ready - All Students Rate",
             "level_used": null,
             "tapr_year": 2025,
-            "school_year": "2024–25",
+            "school_year": "2024â€“25",
             "match_quality": "strong"
           },
           "strategies": [
@@ -7366,7 +8748,7 @@
             "tapr_column": "Annual Dropout Rate, Grades 09-12, SY 2023-24, All Students, Rate",
             "level_used": null,
             "tapr_year": 2025,
-            "school_year": "2024–25",
+            "school_year": "2024â€“25",
             "match_quality": "strong"
           },
           "strategies": [
@@ -7431,7 +8813,7 @@
             "tapr_column": "Longitudinal, 4-Year, Class of 2024, Grads + TxCHSE, All Students, Rate",
             "level_used": null,
             "tapr_year": 2025,
-            "school_year": "2024–25",
+            "school_year": "2024â€“25",
             "match_quality": "strong"
           },
           "strategies": [
@@ -7617,7 +8999,7 @@
             "threshold_dir": null,
             "target_year": null
           },
-          "claimed": "—",
+          "claimed": "â€”",
           "claimed_code": "unknown",
           "actual": null,
           "result": "internal",
@@ -8616,7 +9998,7 @@
             "tapr_column": "District 2024 Domain 1A: Meets Grade Level STD, Grade 3, All Students, STAAR Reading/ELA Rate",
             "level_used": "Meets",
             "tapr_year": 2024,
-            "school_year": "2023–24",
+            "school_year": "2023â€“24",
             "match_quality": "strong"
           },
           "strategies": [
@@ -8731,7 +10113,7 @@
             "tapr_column": "District 2024 Domain 1A: Meets Grade Level STD, Grade 3, All Students, STAAR Mathematics Rate",
             "level_used": "Meets",
             "tapr_year": 2024,
-            "school_year": "2023–24",
+            "school_year": "2023â€“24",
             "match_quality": "strong"
           },
           "strategies": [
@@ -8831,7 +10213,7 @@
           "objective": 6,
           "text": "Performance Objective 6: To meet or exceed our 2022-2023 goals of a 5% increase on the 8th grade U.S. History STAAR and 11th grade EOC STAAR at the Meets scores level. The categories of focus will be for: All Students, Economically Disadvantaged, and Emergent Bilinguals.",
           "short_label": "To meet or exceed our 2022-2023 goals of a 5% increase on the 8th grade U.S. History STAAR and 11th grade EOC STAAR at the Meets scores level. The categories of focus will be for: All Students, Economically Disadvantaged, and Emergent Bilinguals.",
-          "metric_label": "Grade 8 Social Studies (Meets) — Econ. Disadvantaged",
+          "metric_label": "Grade 8 Social Studies (Meets) â€” Econ. Disadvantaged",
           "grade": "8",
           "group": "econ_disadv",
           "category": "staar",
@@ -8862,7 +10244,7 @@
             "tapr_column": "District 2024 Domain 1A: Meets Grade Level STD, Grade 8, Econ Disadv, STAAR Social Studies Rate",
             "level_used": "Meets",
             "tapr_year": 2024,
-            "school_year": "2023–24",
+            "school_year": "2023â€“24",
             "match_quality": "strong"
           },
           "strategies": [
@@ -8927,7 +10309,7 @@
             "tapr_column": "District 2024 Domain 1A: Masters Grade Level STD, Grade 8, All Students, STAAR Social Studies Rate",
             "level_used": "Masters",
             "tapr_year": 2024,
-            "school_year": "2023–24",
+            "school_year": "2023â€“24",
             "match_quality": "strong"
           },
           "strategies": [
@@ -8992,7 +10374,7 @@
             "tapr_column": "District 2024 Domain 1A: Masters Grade Level STD, Grade 5, All Students, STAAR Science Rate",
             "level_used": "Masters",
             "tapr_year": 2024,
-            "school_year": "2023–24",
+            "school_year": "2023â€“24",
             "match_quality": "strong"
           },
           "strategies": [
@@ -9091,7 +10473,7 @@
             "tapr_column": "District 2023 Associated CCMR: College Ready - All Students Rate",
             "level_used": null,
             "tapr_year": 2024,
-            "school_year": "2023–24",
+            "school_year": "2023â€“24",
             "match_quality": "strong"
           },
           "strategies": [
@@ -10377,7 +11759,7 @@
           "objective": 5,
           "text": "Performance Objective 5: Meet or exceed last year's results by a 5% increase of students with dyslexia on the Reading STAAR Assessments at the Meets level.",
           "short_label": "Meet or exceed last year's results by a 5% increase of students with dyslexia on the Reading STAAR Assessments at the Meets level.",
-          "metric_label": "Reading/ELA (Meets) — Dyslexia Services",
+          "metric_label": "Reading/ELA (Meets) â€” Dyslexia Services",
           "grade": null,
           "group": "dyslexia",
           "category": "staar",
@@ -10944,7 +12326,7 @@
           "objective": 6,
           "text": "Performance Objective 6: To meet or exceed our 2022-2023 goals of a 5% increase on the 8th grade U.S. History STAAR and 11th grade EOC STAAR at the Meets scores level. The categories of focus will be for: All Students, Economically Disadvantaged, and Emergent Bilinguals.",
           "short_label": "To meet or exceed our 2022-2023 goals of a 5% increase on the 8th grade U.S. History STAAR and 11th grade EOC STAAR at the Meets scores level. The categories of focus will be for: All Students, Economically Disadvantaged, and Emergent Bilinguals.",
-          "metric_label": "Grade 8 Social Studies (Meets) — Econ. Disadvantaged",
+          "metric_label": "Grade 8 Social Studies (Meets) â€” Econ. Disadvantaged",
           "grade": "8",
           "group": "econ_disadv",
           "category": "staar",
@@ -11684,7 +13066,7 @@
             "threshold_dir": null,
             "target_year": null
           },
-          "claimed": "—",
+          "claimed": "â€”",
           "claimed_code": "unknown",
           "actual": null,
           "result": "internal",
@@ -12444,7 +13826,7 @@
           "objective": 5,
           "text": "Performance Objective 5: Meet or exceed last year's results by a 5% increase of students with dyslexia on the Reading STAAR Assessments at the Meets level.",
           "short_label": "Meet or exceed last year's results by a 5% increase of students with dyslexia on the Reading STAAR Assessments at the Meets level.",
-          "metric_label": "Reading/ELA (Meets) — Dyslexia Services",
+          "metric_label": "Reading/ELA (Meets) â€” Dyslexia Services",
           "grade": null,
           "group": "dyslexia",
           "category": "staar",
