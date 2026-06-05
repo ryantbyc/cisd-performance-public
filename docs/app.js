@@ -170,13 +170,13 @@
 
     var STATS = [
       { key:"met",     cls:"stat--met",    val:statMet,
-        label:"Goals Met",          hint:"State data confirms goal was reached" },
+        label:"Objectives Met",      hint:"State data confirms objective was reached" },
       { key:"missed",  cls:"stat--missed", val:statMissed,
-        label:"Goals Missed",       hint:"State data shows goal was not reached" },
+        label:"Objectives Missed",   hint:"State data shows objective was not reached" },
       { key:"diverge", cls:"stat--diverge",val:diverge,
-        label:"Claim vs. Data Gaps",hint:"CISD reported progress but state data shows a miss" },
+        label:"Claim vs. Data Gaps", hint:"CISD reported progress but state data shows the objective was missed" },
       { key:"no_data", cls:"stat--nodata", val:statNoData,
-        label:"Awaiting State Data", hint:"No TEA data available yet for this goal" }
+        label:"Awaiting State Data", hint:"No TEA data available yet for this objective" }
     ];
 
     STATS.forEach(function (st) {
