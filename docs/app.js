@@ -463,10 +463,50 @@
     applyFilter();
   }
 
+  // ── Placeholder year (no data yet) ───────────────────────────────────────
+  function renderPlaceholderYear(label) {
+    activeFilter = null;
+
+    // Stat strip: non-interactive dashes
+    var strip = document.getElementById("statstrip");
+    strip.innerHTML =
+      '<div class="stat stat--future stat--met">'    + '<span class="stat__val">—</span><span class="stat__label">Objectives Met</span>'    + '</div>' +
+      '<div class="stat stat--future stat--missed">' + '<span class="stat__val">—</span><span class="stat__label">Objectives Missed</span>' + '</div>' +
+      '<div class="stat stat--future stat--diverge">'+ '<span class="stat__val">—</span><span class="stat__label">Claim vs. Data Gaps</span>'+ '</div>'+
+      '<div class="stat stat--future stat--nodata">' + '<span class="stat__val">—</span><span class="stat__label">Awaiting State Data</span>'+ '</div>';
+
+    // Objectives area: red "no data" banner
+    var container = document.getElementById("objectives");
+    container.innerHTML = "";
+    var banner = el("div", "no-data-banner");
+    banner.innerHTML =
+      '<div class="no-data-banner__icon" aria-hidden="true">&#128203;</div>' +
+      '<div class="no-data-banner__body">' +
+        '<strong class="no-data-banner__title">No data available for ' + esc(label) + '</strong>' +
+        '<p class="no-data-banner__msg">The ' + esc(label) + ' District Improvement Plan has not yet been published. ' +
+        'This tab will be updated once CISD adopts its annual plan and TEA releases the corresponding accountability data.</p>' +
+      '</div>';
+    container.appendChild(banner);
+  }
+
   // ── Year tabs ────────────────────────────────────────────────────────────
   function renderTabs(data, onPick) {
     var tabs = document.getElementById("yeartabs");
     tabs.innerHTML = "";
+
+    // Prepend upcoming year as a placeholder (no data yet)
+    var futureLabel = "2025–26";
+    var futureBtn = el("button", "yeartab yeartab--future", esc(futureLabel));
+    futureBtn.setAttribute("role", "tab");
+    futureBtn.setAttribute("aria-selected", "false");
+    futureBtn.setAttribute("title", "No data available yet for " + futureLabel);
+    futureBtn.addEventListener("click", function () {
+      [].forEach.call(tabs.children, function (c) { c.setAttribute("aria-selected", "false"); });
+      futureBtn.setAttribute("aria-selected", "true");
+      renderPlaceholderYear(futureLabel);
+    });
+    tabs.appendChild(futureBtn);
+
     data.years.forEach(function (y, i) {
       var b = el("button", "yeartab", esc(y.school_year));
       b.setAttribute("role", "tab");

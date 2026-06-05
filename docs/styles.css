@@ -119,6 +119,28 @@ main { padding:var(--sp-6) 0 var(--sp-6); }
 .yeartab[aria-selected="true"] {
   color:#fff; background:var(--brand); border-color:var(--brand);
 }
+/* Future/placeholder year tab — light red */
+.yeartab--future {
+  color:var(--bad); background:var(--bad-50); border-color:var(--bad-100);
+}
+.yeartab--future:hover { border-color:var(--bad); }
+.yeartab--future[aria-selected="true"] {
+  color:#fff; background:var(--bad); border-color:var(--bad);
+}
+
+/* ── No-data banner (shown when future year tab is selected) ──────── */
+.no-data-banner {
+  display:flex; align-items:flex-start; gap:var(--sp-4);
+  background:var(--bad-50); border:1px solid var(--bad-100);
+  border-left:4px solid var(--bad); border-radius:var(--r-md);
+  padding:var(--sp-5); margin-top:var(--sp-4);
+}
+.no-data-banner__icon { font-size:28px; flex-shrink:0; line-height:1; }
+.no-data-banner__title { display:block; font-size:17px; color:var(--bad); margin-bottom:var(--sp-2); }
+.no-data-banner__msg { margin:0; font-size:14px; color:var(--ink-2); line-height:1.55; }
+
+/* Future stat placeholder — non-interactive, dimmed */
+.stat.stat--future { pointer-events:none; opacity:.45; cursor:default; }
 
 /* ── Stat strip — doubles as filter buttons ─────────────────────── */
 .statstrip {
