@@ -424,9 +424,116 @@
     return list;
   }
 
+  // ── TEA Metric Card ───────────────────────────────────────────────────────
+  function renderMetricCard(m) {
+    var card = el("div", "metric-card");
+    var allVal = m.all != null ? (m.lower_is_better ? m.all + "%" : m.all + "%") : "—";
+
+    // Colour the headline: green if high (and not lower_is_better), red if low (heuristic)
+    var valCls = "metric-card__val";
+    if (m.all != null) {
+      if (m.lower_is_better) {
+        valCls += m.all <= 1 ? " metric-val--good" : m.all <= 3 ? " metric-val--warn" : " metric-val--bad";
+      } else {
+        valCls += m.all >= 80 ? " metric-val--good" : m.all >= 60 ? " metric-val--warn" : " metric-val--bad";
+      }
+    }
+
+    var sgHtml = "";
+    if (m.subgroups && m.subgroups.length) {
+      sgHtml = '<div class="metric-card__subgroups">';
+      m.subgroups.forEach(function(sg) {
+        if (sg.value == null) return;
+        sgHtml +=
+          '<div class="metric-sg">' +
+            '<span class="metric-sg__label">' + esc(sg.label) + '</span>' +
+            '<span class="metric-sg__val">' + sg.value + '%</span>' +
+          '</div>';
+      });
+      sgHtml += '</div>';
+    }
+
+    card.innerHTML =
+      '<div class="metric-card__title">' + esc(m.title) + '</div>' +
+      '<div class="metric-card__sub">' + esc(m.subtitle || "") + '</div>' +
+      '<div class="' + valCls + '">' + esc(allVal) + '</div>' +
+      sgHtml +
+      (m.source_file
+        ? '<div class="metric-card__src">Source: ' + esc(m.source_file.replace(/\.csv$/i,"")) + '</div>'
+        : '');
+    return card;
+  }
+
+  // ── TEA Section renderer ──────────────────────────────────────────────────
+  function renderTeaSection(schoolYear, teaMetrics) {
+    var container = document.getElementById("tea-section");
+    if (!container) return;
+    container.innerHTML = "";
+
+    var districtData = (teaMetrics && teaMetrics.district && teaMetrics.district[schoolYear])
+      ? teaMetrics.district[schoolYear] : null;
+
+    // Section header + scope badge
+    var hdr = el("div", "page-section__hdr");
+    hdr.innerHTML =
+      '<div class="page-section__title-row">' +
+        '<h2 class="page-section__title">Texas Education Agency Data</h2>' +
+        '<span class="scope-badge">&#128205; District</span>' +
+        '<span class="scope-badge scope-badge--future" title="Campus-level data coming in a future update">Campus view — coming soon</span>' +
+      '</div>' +
+      '<p class="page-section__desc">Official TEA accountability data for Conroe ISD as a district. ' +
+        'Sub-group breakdowns are shown where available.</p>';
+    container.appendChild(hdr);
+
+    if (!districtData) {
+      container.appendChild(el("p", "loading", "No TEA data available for " + esc(schoolYear) + "."));
+      return;
+    }
+
+    // Accountability grade card
+    if (districtData.accountability && districtData.accountability.grade) {
+      var acc = districtData.accountability;
+      var gradeGroup = el("div", "metric-group");
+      gradeGroup.appendChild(el("div", "metric-group__label", "Accountability"));
+      var accCard = el("div", "metric-card metric-card--grade");
+      accCard.innerHTML =
+        '<div class="metric-card__title">TEA Accountability Rating</div>' +
+        '<div class="metric-card__sub">Texas Education Agency · ' + esc(acc.tapr_year) + ' rating</div>' +
+        '<div class="metric-card__grade grade-letter--' + esc(acc.grade) + '">' + esc(acc.grade) + '</div>' +
+        '<div class="metric-card__src">Source: ' + esc((acc.source_file||"").replace(/\.csv$/i,"")) + '</div>';
+      gradeGroup.appendChild(accCard);
+      container.appendChild(gradeGroup);
+    }
+
+    // Academic performance
+    if (districtData.academic_performance && districtData.academic_performance.length) {
+      var acGroup = el("div", "metric-group");
+      acGroup.appendChild(el("div", "metric-group__label", "Student Academic Performance"));
+      var grid = el("div", "metric-grid");
+      districtData.academic_performance.forEach(function(m) {
+        grid.appendChild(renderMetricCard(m));
+      });
+      acGroup.appendChild(grid);
+      container.appendChild(acGroup);
+    }
+
+    // Graduation & post-secondary
+    if (districtData.graduation_postsec && districtData.graduation_postsec.length) {
+      var gpGroup = el("div", "metric-group");
+      gpGroup.appendChild(el("div", "metric-group__label", "Graduation & Post-Secondary Readiness"));
+      var grid2 = el("div", "metric-grid");
+      districtData.graduation_postsec.forEach(function(m) {
+        grid2.appendChild(renderMetricCard(m));
+      });
+      gpGroup.appendChild(grid2);
+      container.appendChild(gpGroup);
+    }
+  }
+
   // ── Year renderer ─────────────────────────────────────────────────────────
-  function renderYear(year) {
+  function renderYear(year, teaMetrics) {
     activeFilter = null;
+    renderTeaSection(year.school_year, teaMetrics);
     renderStatStrip(year);
 
     var container = document.getElementById("objectives");
@@ -466,6 +573,10 @@
   // ── Placeholder year (no data yet) ───────────────────────────────────────
   function renderPlaceholderYear(label) {
     activeFilter = null;
+
+    // Clear TEA section
+    var teaSec = document.getElementById("tea-section");
+    if (teaSec) teaSec.innerHTML = "";
 
     // Stat strip: non-interactive dashes
     var strip = document.getElementById("statstrip");
@@ -540,8 +651,9 @@
         document.getElementById("freshness").hidden = false;
       }
 
-      renderTabs(data, function(yr) { SECTIONS = buildSections(data); renderYear(yr); });
-      renderYear(data.years[0]);
+      var teaMetrics = data.tea_metrics || null;
+      renderTabs(data, function(yr) { SECTIONS = buildSections(data); renderYear(yr, teaMetrics); });
+      renderYear(data.years[0], teaMetrics);
 
       document.getElementById("foot-prov").textContent =
         data.provenance || "An independent project — not affiliated with Conroe ISD.";
