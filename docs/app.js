@@ -302,9 +302,35 @@
       body.appendChild(d);
     }
 
+    // ── TEA source citation ───────────────────────────────────────────────────
+    if (o.tapr_source && o.tapr_source.tapr_column) {
+      var src = o.tapr_source;
+      var taprYr  = src.tapr_year || "2025";
+      var taprUrl = "https://rptsvr1.tea.texas.gov/perfreport/tapr/" + taprYr + "/district/d170902.html";
+      var mq      = src.match_quality || "";
+      var mqCls   = mq === "strong" ? "match--strong" : mq === "partial" ? "match--partial" : "match--unknown";
+      var mqLabel = mq.charAt(0).toUpperCase() + mq.slice(1);
+
+      var srcDiv = el("div", "tea-source");
+      srcDiv.innerHTML =
+        '<div class="tea-source__head">TEA Source Data' +
+          (mq ? ' <span class="tea-source__match ' + esc(mqCls) + '">' + esc(mqLabel) + ' match</span>' : '') +
+        '</div>' +
+        '<dl class="tea-source__dl">' +
+          '<dt>Report</dt>' +
+          '<dd>' + esc(src.report || "—") + '</dd>' +
+          '<dt>Column</dt>' +
+          '<dd class="tea-source__col">' + esc(src.tapr_column) + '</dd>' +
+        '</dl>' +
+        '<a class="tea-source__link" href="' + esc(taprUrl) + '" target="_blank" rel="noopener noreferrer">' +
+          'View Conroe ISD on TEA TAPR (' + esc(String(taprYr)) + ') ↗' +
+        '</a>';
+      body.appendChild(srcDiv);
+    }
+
     if (o.source_pdf) {
       body.appendChild(el("div", "obj__prov",
-        "Source: " + esc(o.source_pdf) + (o.source_page ? ", p. " + esc(o.source_page) : "")));
+        "DIP Source: " + esc(o.source_pdf) + (o.source_page ? ", p. " + esc(o.source_page) : "")));
     }
 
     // ── Strategies section ────────────────────────────────────────────────────

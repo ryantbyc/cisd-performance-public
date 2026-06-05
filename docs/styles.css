@@ -284,6 +284,49 @@ details.obj[open] > summary .obj__chev { transform:rotate(180deg); }
 }
 .diverge strong { color:#5e3606; }
 
+/* ── TEA Source Citation ────────────────────────────────────────── */
+.tea-source {
+  margin-top:var(--sp-4);
+  background:var(--surface-2); border:1px solid var(--line);
+  border-left:3px solid var(--brand); border-radius:var(--r-sm);
+  padding:var(--sp-3) var(--sp-4);
+}
+.tea-source__head {
+  font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--brand-700); margin-bottom:var(--sp-3);
+  display:flex; align-items:center; gap:var(--sp-2);
+}
+.tea-source__match {
+  font-size:10px; font-weight:600; letter-spacing:.04em;
+  padding:1px 7px; border-radius:999px; text-transform:none;
+}
+.match--strong  { background:var(--good-100);  color:var(--good); }
+.match--partial { background:var(--warn-50);   color:var(--warn); }
+.match--unknown { background:var(--neutral-50); color:var(--neutral); }
+
+.tea-source__dl {
+  margin:0 0 var(--sp-3); padding:0;
+  display:grid; grid-template-columns:auto 1fr; gap:2px var(--sp-3);
+  align-items:baseline;
+}
+.tea-source__dl dt {
+  font-size:11px; font-weight:700; color:var(--ink-3);
+  text-transform:uppercase; letter-spacing:.05em; white-space:nowrap;
+  padding-top:2px;
+}
+.tea-source__dl dd {
+  font-size:12px; color:var(--ink); margin:0; line-height:1.45;
+}
+.tea-source__col {
+  font-family:monospace; font-size:11px; color:var(--ink-2);
+  word-break:break-word;
+}
+.tea-source__link {
+  display:inline-block; font-size:12px; font-weight:600;
+  color:var(--brand); text-decoration:none;
+}
+.tea-source__link:hover { text-decoration:underline; }
+
 /* ── Provenance ─────────────────────────────────────────────────── */
 .obj__prov { margin-top:var(--sp-3); font-size:12px; color:var(--ink-3); }
 
