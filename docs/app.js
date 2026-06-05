@@ -306,6 +306,61 @@
       body.appendChild(el("div", "obj__prov",
         "Source: " + esc(o.source_pdf) + (o.source_page ? ", p. " + esc(o.source_page) : "")));
     }
+
+    // ── Strategies section ────────────────────────────────────────────────────
+    if (o.strategies && o.strategies.length) {
+      var REVIEW_LABEL = {
+        no_progress:    "No Progress",
+        some_progress:  "Some Progress",
+        considerable:   "Considerable",
+        accomplished:   "Accomplished",
+        continue_modify:"Continue/Modify",
+        discontinue:    "Discontinue"
+      };
+      var REVIEW_CLS = {
+        no_progress:    "rev--none",
+        some_progress:  "rev--some",
+        considerable:   "rev--considerable",
+        accomplished:   "rev--accomplished",
+        continue_modify:"rev--continue",
+        discontinue:    "rev--discontinue"
+      };
+
+      var stratWrap = el("div", "strategies");
+      stratWrap.appendChild(el("div", "strategies__head",
+        "Strategies (" + o.strategies.length + ")"));
+
+      o.strategies.forEach(function(s) {
+        var sEl = el("div", "strategy");
+        var periods = [
+          { label:"Dec", key:"dec_review" },
+          { label:"Mar", key:"mar_review" },
+          { label:"Jun", key:"jun_review" }
+        ];
+        var reviewHtml = periods.map(function(p) {
+          var val = s[p.key];
+          var cls = val ? (REVIEW_CLS[val] || "rev--none") : "rev--empty";
+          var disp = val ? (REVIEW_LABEL[val] || val) : "—";
+          return '<div class="rev-cell">' +
+            '<div class="rev-cell__period">' + esc(p.label) + '</div>' +
+            '<div class="rev-cell__val ' + esc(cls) + '">' + esc(disp) + '</div>' +
+          '</div>';
+        }).join("");
+
+        sEl.innerHTML =
+          '<div class="strategy__hdr">Strategy ' + s.strategy + '</div>' +
+          '<div class="strategy__text">' + esc(s.text || "") + '</div>' +
+          (s.expected_result
+            ? '<div class="strategy__impact"><span class="strategy__impact-k">Expected result: </span>' + esc(s.expected_result) + '</div>'
+            : '') +
+          '<div class="strategy__reviews">' + reviewHtml + '</div>';
+
+        stratWrap.appendChild(sEl);
+      });
+
+      body.appendChild(stratWrap);
+    }
+
     row.appendChild(body);
     return row;
   }

@@ -287,6 +287,50 @@ details.obj[open] > summary .obj__chev { transform:rotate(180deg); }
 /* ── Provenance ─────────────────────────────────────────────────── */
 .obj__prov { margin-top:var(--sp-3); font-size:12px; color:var(--ink-3); }
 
+/* ── Strategies section ─────────────────────────────────────────── */
+.strategies { margin-top:var(--sp-5); }
+.strategies__head {
+  font-size:11px; font-weight:700; letter-spacing:.06em; text-transform:uppercase;
+  color:var(--ink-3); margin-bottom:var(--sp-3);
+  padding-bottom:var(--sp-2); border-bottom:1px solid var(--line);
+}
+
+.strategy {
+  border:1px solid var(--line); border-radius:var(--r-sm);
+  padding:var(--sp-3) var(--sp-4); margin-bottom:var(--sp-2);
+  background:var(--bg);
+}
+.strategy__hdr {
+  font-size:11px; font-weight:700; letter-spacing:.05em; text-transform:uppercase;
+  color:var(--brand); margin-bottom:var(--sp-2);
+}
+.strategy__text {
+  font-size:13px; color:var(--ink); line-height:1.5; margin-bottom:var(--sp-2);
+}
+.strategy__impact {
+  font-size:12px; color:var(--ink-2); line-height:1.45; margin-bottom:var(--sp-3);
+}
+.strategy__impact-k { font-weight:600; color:var(--ink); }
+
+/* Dec / Mar / Jun review row */
+.strategy__reviews { display:flex; gap:var(--sp-3); flex-wrap:wrap; }
+.rev-cell { text-align:center; min-width:80px; }
+.rev-cell__period {
+  font-size:10px; font-weight:700; letter-spacing:.07em; text-transform:uppercase;
+  color:var(--ink-3); margin-bottom:3px;
+}
+.rev-cell__val {
+  font-size:11px; font-weight:600; padding:3px 10px; border-radius:999px;
+  display:inline-block; white-space:nowrap;
+}
+.rev--none         { background:var(--bad-50);      color:var(--bad); }
+.rev--some         { background:var(--warn-50);     color:var(--warn); }
+.rev--considerable { background:var(--brand-50);    color:var(--brand-700); }
+.rev--accomplished { background:var(--good-50);     color:var(--good); }
+.rev--continue     { background:var(--context-50);  color:var(--context); }
+.rev--discontinue  { background:var(--neutral-50);  color:var(--neutral); }
+.rev--empty        { background:var(--surface-2);   color:var(--ink-3); }
+
 /* ── Footer ─────────────────────────────────────────────────────── */
 .foot { border-top:1px solid var(--line); margin-top:var(--sp-6); padding:var(--sp-5) 0 var(--sp-7); }
 .foot__note { margin:0; font-size:13px; color:var(--ink-3); text-align:center; }
