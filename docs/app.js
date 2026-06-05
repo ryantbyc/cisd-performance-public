@@ -546,6 +546,14 @@
     wrap.appendChild(typeBar);
     renderGrid();
     wrap.appendChild(campusGrid);
+
+    // Bottom back link
+    var bottomBack = el("button", "campus-back-btn", "← District view");
+    bottomBack.style.marginTop = "var(--sp-5)";
+    bottomBack.style.display = "block";
+    bottomBack.addEventListener("click", onBack);
+    wrap.appendChild(bottomBack);
+
     container.appendChild(wrap);
   }
 
@@ -591,12 +599,12 @@
     gradeGroup.appendChild(accCard);
     container.appendChild(gradeGroup);
 
-    // Distinctions (compact — just tags, not a full metric group)
+    // Distinctions
     var distKeys = Object.keys(campus.distinctions || {}).filter(function(k) {
       return campus.distinctions[k];
     });
     if (distKeys.length) {
-      var distWrap = el("div", "");
+      var distWrap = el("div", "campus-detail");
       distWrap.style.marginBottom = "var(--sp-5)";
       var distLabel = el("div", "metric-group__label", "Distinctions");
       distLabel.style.marginBottom = "var(--sp-2)";
@@ -632,6 +640,15 @@
       psGroup.appendChild(psGrid);
       container.appendChild(psGroup);
     }
+
+    // Bottom back link
+    var bottomBackDetail = el("button", "campus-back-btn", "← All Campuses");
+    bottomBackDetail.style.marginTop = "var(--sp-5)";
+    bottomBackDetail.style.display = "block";
+    bottomBackDetail.addEventListener("click", function() {
+      renderCampusSelector(schoolYear, teaMetrics, onBack);
+    });
+    container.appendChild(bottomBackDetail);
   }
 
   // ── TEA Section renderer ──────────────────────────────────────────────────

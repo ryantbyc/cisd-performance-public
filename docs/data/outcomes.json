@@ -1,7 +1,7 @@
 {
   "district": "Conroe ISD",
   "district_cdn": "170902",
-  "generated_at": "2026-06-05T19:36:53.998046+00:00",
+  "generated_at": "2026-06-05T19:50:30.230073+00:00",
   "latest_year": "2024-25",
   "data_as_of": {
     "dip": "2024–25 School Year",
@@ -510,7 +510,7 @@
         {
           "campus_id": "170902101",
           "name": "ANDERSON EL",
-          "short_name": "Anderson Elem",
+          "short_name": "Anderson Elementary",
           "type": "E",
           "grade_span": "EE - 04",
           "overall_grade": "B",
@@ -580,7 +580,7 @@
         {
           "campus_id": "170902107",
           "name": "ARMSTRONG EL",
-          "short_name": "Armstrong Elem",
+          "short_name": "Armstrong Elementary",
           "type": "E",
           "grade_span": "EE - 04",
           "overall_grade": "C",
@@ -650,7 +650,7 @@
         {
           "campus_id": "170902102",
           "name": "AUSTIN EL",
-          "short_name": "Austin Elem",
+          "short_name": "Austin Elementary",
           "type": "E",
           "grade_span": "PK - 04",
           "overall_grade": "D",
@@ -720,7 +720,7 @@
         {
           "campus_id": "170902137",
           "name": "BARTLETT EL",
-          "short_name": "Bartlett Elem",
+          "short_name": "Bartlett Elementary",
           "type": "E",
           "grade_span": "PK - 04",
           "overall_grade": "C",
@@ -790,7 +790,7 @@
         {
           "campus_id": "170902129",
           "name": "BIRNHAM WOODS EL",
-          "short_name": "Birnham Woods Elem",
+          "short_name": "Birnham Woods Elementary",
           "type": "E",
           "grade_span": "EE - 04",
           "overall_grade": "B",
@@ -860,7 +860,7 @@
         {
           "campus_id": "170902002",
           "name": "BOOKER T WASHINGTON H S",
-          "short_name": "Booker T Washington Hs",
+          "short_name": "Booker T. Washington HS",
           "type": "S",
           "grade_span": "09 - 12",
           "overall_grade": "B",
@@ -1013,7 +1013,7 @@
         {
           "campus_id": "170902078",
           "name": "BOZMAN INT",
-          "short_name": "Bozman Int",
+          "short_name": "Bozman Intermediate",
           "type": "M",
           "grade_span": "05 - 06",
           "overall_grade": "B",
@@ -1108,7 +1108,7 @@
         {
           "campus_id": "170902132",
           "name": "BRADLEY EL",
-          "short_name": "Bradley Elem",
+          "short_name": "Bradley Elementary",
           "type": "E",
           "grade_span": "EE - 04",
           "overall_grade": "B",
@@ -1178,7 +1178,7 @@
         {
           "campus_id": "170902127",
           "name": "BROADWAY EL",
-          "short_name": "Broadway Elem",
+          "short_name": "Broadway Elementary",
           "type": "E",
           "grade_span": "KG - 04",
           "overall_grade": "A",
@@ -1248,7 +1248,7 @@
         {
           "campus_id": "170902123",
           "name": "BUCKALEW EL",
-          "short_name": "Buckalew Elem",
+          "short_name": "Buckalew Elementary",
           "type": "E",
           "grade_span": "KG - 04",
           "overall_grade": "A",
@@ -1318,7 +1318,7 @@
         {
           "campus_id": "170902121",
           "name": "BUSH EL",
-          "short_name": "Bush Elem",
+          "short_name": "Bush Elementary",
           "type": "E",
           "grade_span": "KG - 04",
           "overall_grade": "A",
@@ -1388,7 +1388,7 @@
         {
           "campus_id": "170902011",
           "name": "CANEY CREEK H S",
-          "short_name": "Caney Creek Hs",
+          "short_name": "Caney Creek HS",
           "type": "S",
           "grade_span": "09 - 12",
           "overall_grade": "B",
@@ -1541,7 +1541,7 @@
         {
           "campus_id": "170902080",
           "name": "CLARK INT",
-          "short_name": "Clark Int",
+          "short_name": "Clark Intermediate",
           "type": "M",
           "grade_span": "05 - 06",
           "overall_grade": "A",
@@ -1636,7 +1636,7 @@
         {
           "campus_id": "170902014",
           "name": "COLLEGE PARK H S",
-          "short_name": "College Park Hs",
+          "short_name": "College Park HS",
           "type": "S",
           "grade_span": "09 - 12",
           "overall_grade": "A",
@@ -1789,7 +1789,7 @@
         {
           "campus_id": "170902050",
           "name": "COLLINS INT",
-          "short_name": "Collins Int",
+          "short_name": "Collins Intermediate",
           "type": "M",
           "grade_span": "05 - 06",
           "overall_grade": "A",
@@ -1884,7 +1884,7 @@
         {
           "campus_id": "170902001",
           "name": "CONROE H S",
-          "short_name": "Conroe Hs",
+          "short_name": "Conroe HS",
           "type": "S",
           "grade_span": "09 - 12",
           "overall_grade": "C",
@@ -2132,7 +2132,7 @@
         {
           "campus_id": "170902077",
           "name": "COX INT",
-          "short_name": "Cox Int",
+          "short_name": "Cox Intermediate",
           "type": "M",
           "grade_span": "05 - 06",
           "overall_grade": "A",
@@ -2227,7 +2227,7 @@
         {
           "campus_id": "170902106",
           "name": "CREIGHTON EL",
-          "short_name": "Creighton Elem",
+          "short_name": "Creighton Elementary",
           "type": "E",
           "grade_span": "PK - 04",
           "overall_grade": "B",
@@ -2297,7 +2297,7 @@
         {
           "campus_id": "170902073",
           "name": "CRYAR INT",
-          "short_name": "Cryar Int",
+          "short_name": "Cryar Intermediate",
           "type": "M",
           "grade_span": "05 - 06",
           "overall_grade": "B",
@@ -2392,7 +2392,7 @@
         {
           "campus_id": "170902118",
           "name": "DAVID EL",
-          "short_name": "David Elem",
+          "short_name": "David Elementary",
           "type": "E",
           "grade_span": "KG - 04",
           "overall_grade": "A",
@@ -2462,7 +2462,7 @@
         {
           "campus_id": "170902074",
           "name": "DERETCHIN EL",
-          "short_name": "Deretchin Elem",
+          "short_name": "Deretchin Elementary",
           "type": "E",
           "grade_span": "EE - 06",
           "overall_grade": "A",
@@ -2557,7 +2557,7 @@
         {
           "campus_id": "170902055",
           "name": "DONALD J STOCKTON JH",
-          "short_name": "Donald J Stockton Jh",
+          "short_name": "Donald J. Stockton JH",
           "type": "M",
           "grade_span": "07 - 08",
           "overall_grade": "B",
@@ -2652,7 +2652,7 @@
         {
           "campus_id": "170902112",
           "name": "FORD EL",
-          "short_name": "Ford Elem",
+          "short_name": "Ford Elementary",
           "type": "E",
           "grade_span": "EE - 04",
           "overall_grade": "B",
@@ -2722,7 +2722,7 @@
         {
           "campus_id": "170902120",
           "name": "GALATAS EL",
-          "short_name": "Galatas Elem",
+          "short_name": "Galatas Elementary",
           "type": "E",
           "grade_span": "KG - 04",
           "overall_grade": "A",
@@ -2792,7 +2792,7 @@
         {
           "campus_id": "170902119",
           "name": "GIESINGER EL",
-          "short_name": "Giesinger Elem",
+          "short_name": "Giesinger Elementary",
           "type": "E",
           "grade_span": "PK - 04",
           "overall_grade": "C",
@@ -2862,7 +2862,7 @@
         {
           "campus_id": "170902116",
           "name": "GLEN LOCH EL",
-          "short_name": "Glen Loch Elem",
+          "short_name": "Glen Loch Elementary",
           "type": "E",
           "grade_span": "EE - 04",
           "overall_grade": "A",
@@ -2932,7 +2932,7 @@
         {
           "campus_id": "170902135",
           "name": "GORDON-REED EL",
-          "short_name": "Gordon-Reed Elem",
+          "short_name": "Gordon-Reed Elementary",
           "type": "E",
           "grade_span": "EE - 06",
           "overall_grade": "B",
@@ -3027,7 +3027,7 @@
         {
           "campus_id": "170902016",
           "name": "GRAND OAKS H S",
-          "short_name": "Grand Oaks Hs",
+          "short_name": "Grand Oaks HS",
           "type": "S",
           "grade_span": "09 - 12",
           "overall_grade": "B",
@@ -3180,7 +3180,7 @@
         {
           "campus_id": "170902068",
           "name": "GRANGERLAND INT",
-          "short_name": "Grangerland Int",
+          "short_name": "Grangerland Intermediate",
           "type": "M",
           "grade_span": "05 - 06",
           "overall_grade": "C",
@@ -3275,7 +3275,7 @@
         {
           "campus_id": "170902113",
           "name": "HAILEY EL",
-          "short_name": "Hailey Elem",
+          "short_name": "Hailey Elementary",
           "type": "E",
           "grade_span": "PK - 04",
           "overall_grade": "A",
@@ -3345,7 +3345,7 @@
         {
           "campus_id": "170902136",
           "name": "HINES EL",
-          "short_name": "Hines Elem",
+          "short_name": "Hines Elementary",
           "type": "E",
           "grade_span": "KG - 04",
           "overall_grade": "A",
@@ -3415,7 +3415,7 @@
         {
           "campus_id": "170902134",
           "name": "HOPE EL",
-          "short_name": "Hope Elem",
+          "short_name": "Hope Elementary",
           "type": "E",
           "grade_span": "PK - 04",
           "overall_grade": "C",
@@ -3485,7 +3485,7 @@
         {
           "campus_id": "170902111",
           "name": "HOUSER EL",
-          "short_name": "Houser Elem",
+          "short_name": "Houser Elementary",
           "type": "E",
           "grade_span": "EE - 04",
           "overall_grade": "A",
@@ -3555,7 +3555,7 @@
         {
           "campus_id": "170902104",
           "name": "HOUSTON EL",
-          "short_name": "Houston Elem",
+          "short_name": "Houston Elementary",
           "type": "E",
           "grade_span": "PK - 04",
           "overall_grade": "B",
@@ -3625,7 +3625,7 @@
         {
           "campus_id": "170902054",
           "name": "IRONS J H",
-          "short_name": "Irons Jh",
+          "short_name": "Irons JH",
           "type": "M",
           "grade_span": "07 - 08",
           "overall_grade": "B",
@@ -3758,7 +3758,7 @@
         {
           "campus_id": "170902125",
           "name": "KAUFMAN EL",
-          "short_name": "Kaufman Elem",
+          "short_name": "Kaufman Elementary",
           "type": "E",
           "grade_span": "KG - 04",
           "overall_grade": "A",
@@ -3828,7 +3828,7 @@
         {
           "campus_id": "170902046",
           "name": "KNOX J H",
-          "short_name": "Knox Jh",
+          "short_name": "Knox JH",
           "type": "M",
           "grade_span": "07 - 08",
           "overall_grade": "A",
@@ -3923,7 +3923,7 @@
         {
           "campus_id": "170902108",
           "name": "LAMAR EL",
-          "short_name": "Lamar Elem",
+          "short_name": "Lamar Elementary",
           "type": "E",
           "grade_span": "EE - 04",
           "overall_grade": "B",
@@ -3993,7 +3993,7 @@
         {
           "campus_id": "170902053",
           "name": "MCCULLOUGH J H",
-          "short_name": "Mccullough Jh",
+          "short_name": "McCullough JH",
           "type": "M",
           "grade_span": "07 - 08",
           "overall_grade": "A",
@@ -4088,7 +4088,7 @@
         {
           "campus_id": "170902105",
           "name": "MILAM EL",
-          "short_name": "Milam Elem",
+          "short_name": "Milam Elementary",
           "type": "E",
           "grade_span": "EE - 04",
           "overall_grade": "C",
@@ -4158,7 +4158,7 @@
         {
           "campus_id": "170902067",
           "name": "MITCHELL INT",
-          "short_name": "Mitchell Int",
+          "short_name": "Mitchell Intermediate",
           "type": "M",
           "grade_span": "05 - 06",
           "overall_grade": "A",
@@ -4253,7 +4253,7 @@
         {
           "campus_id": "170902051",
           "name": "MOORHEAD J H",
-          "short_name": "Moorhead Jh",
+          "short_name": "Moorhead JH",
           "type": "M",
           "grade_span": "07 - 08",
           "overall_grade": "D",
@@ -4348,7 +4348,7 @@
         {
           "campus_id": "170902109",
           "name": "OAK RIDGE EL",
-          "short_name": "Oak Ridge Elem",
+          "short_name": "Oak Ridge Elementary",
           "type": "E",
           "grade_span": "PK - 04",
           "overall_grade": "B",
@@ -4418,7 +4418,7 @@
         {
           "campus_id": "170902005",
           "name": "OAK RIDGE H S",
-          "short_name": "Oak Ridge Hs",
+          "short_name": "Oak Ridge HS",
           "type": "S",
           "grade_span": "09 - 12",
           "overall_grade": "B",
@@ -4571,7 +4571,7 @@
         {
           "campus_id": "170902128",
           "name": "PATTERSON EL",
-          "short_name": "Patterson Elem",
+          "short_name": "Patterson Elementary",
           "type": "E",
           "grade_span": "EE - 04",
           "overall_grade": "B",
@@ -4641,7 +4641,7 @@
         {
           "campus_id": "170902041",
           "name": "PEET J H",
-          "short_name": "Peet Jh",
+          "short_name": "Peet JH",
           "type": "M",
           "grade_span": "07 - 08",
           "overall_grade": "C",
@@ -4736,7 +4736,7 @@
         {
           "campus_id": "170902122",
           "name": "POWELL EL",
-          "short_name": "Powell Elem",
+          "short_name": "Powell Elementary",
           "type": "E",
           "grade_span": "KG - 04",
           "overall_grade": "A",
@@ -4806,7 +4806,7 @@
         {
           "campus_id": "170902124",
           "name": "REAVES EL",
-          "short_name": "Reaves Elem",
+          "short_name": "Reaves Elementary",
           "type": "E",
           "grade_span": "EE - 04",
           "overall_grade": "B",
@@ -4876,7 +4876,7 @@
         {
           "campus_id": "170902114",
           "name": "RICE EL",
-          "short_name": "Rice Elem",
+          "short_name": "Rice Elementary",
           "type": "E",
           "grade_span": "PK - 04",
           "overall_grade": "B",
@@ -4946,7 +4946,7 @@
         {
           "campus_id": "170902117",
           "name": "RIDE EL",
-          "short_name": "Ride Elem",
+          "short_name": "Ride Elementary",
           "type": "E",
           "grade_span": "EE - 04",
           "overall_grade": "A",
@@ -5016,7 +5016,7 @@
         {
           "campus_id": "170902103",
           "name": "RUNYAN EL",
-          "short_name": "Runyan Elem",
+          "short_name": "Runyan Elementary",
           "type": "E",
           "grade_span": "PK - 04",
           "overall_grade": "B",
@@ -5086,7 +5086,7 @@
         {
           "campus_id": "170902115",
           "name": "SAN JACINTO EL",
-          "short_name": "San Jacinto Elem",
+          "short_name": "San Jacinto Elementary",
           "type": "E",
           "grade_span": "EE - 04",
           "overall_grade": "C",
@@ -5156,7 +5156,7 @@
         {
           "campus_id": "170902131",
           "name": "SNYDER EL",
-          "short_name": "Snyder Elem",
+          "short_name": "Snyder Elementary",
           "type": "E",
           "grade_span": "EE - 04",
           "overall_grade": "A",
@@ -5226,7 +5226,7 @@
         {
           "campus_id": "170902130",
           "name": "STEWART EL",
-          "short_name": "Stewart Elem",
+          "short_name": "Stewart Elementary",
           "type": "E",
           "grade_span": "KG - 06",
           "overall_grade": "A",
@@ -5321,7 +5321,7 @@
         {
           "campus_id": "170902133",
           "name": "SUCHMA EL",
-          "short_name": "Suchma Elem",
+          "short_name": "Suchma Elementary",
           "type": "E",
           "grade_span": "KG - 06",
           "overall_grade": "A",
@@ -5416,7 +5416,7 @@
         {
           "campus_id": "170902003",
           "name": "THE WOODLANDS H S",
-          "short_name": "The Woodlands Hs",
+          "short_name": "The Woodlands HS",
           "type": "S",
           "grade_span": "09 - 12",
           "overall_grade": "A",
@@ -5569,7 +5569,7 @@
         {
           "campus_id": "170902071",
           "name": "TOUGH EL",
-          "short_name": "Tough Elem",
+          "short_name": "Tough Elementary",
           "type": "E",
           "grade_span": "KG - 06",
           "overall_grade": "A",
@@ -5664,7 +5664,7 @@
         {
           "campus_id": "170902070",
           "name": "TRAVIS INT",
-          "short_name": "Travis Int",
+          "short_name": "Travis Intermediate",
           "type": "M",
           "grade_span": "05 - 06",
           "overall_grade": "D",
@@ -5759,7 +5759,7 @@
         {
           "campus_id": "170902056",
           "name": "VETERANS MEMORIAL INT",
-          "short_name": "Veterans Memorial Int",
+          "short_name": "Veterans Memorial Intermediate",
           "type": "M",
           "grade_span": "05 - 06",
           "overall_grade": "B",
@@ -5854,7 +5854,7 @@
         {
           "campus_id": "170902069",
           "name": "VOGEL INT",
-          "short_name": "Vogel Int",
+          "short_name": "Vogel Intermediate",
           "type": "M",
           "grade_span": "05 - 06",
           "overall_grade": "B",
@@ -5949,7 +5949,7 @@
         {
           "campus_id": "170902045",
           "name": "WILKERSON INT",
-          "short_name": "Wilkerson Int",
+          "short_name": "Wilkerson Intermediate",
           "type": "M",
           "grade_span": "05 - 06",
           "overall_grade": "B",
@@ -6044,7 +6044,7 @@
         {
           "campus_id": "170902126",
           "name": "WILKINSON EL",
-          "short_name": "Wilkinson Elem",
+          "short_name": "Wilkinson Elementary",
           "type": "E",
           "grade_span": "EE - 04",
           "overall_grade": "B",
@@ -6114,7 +6114,7 @@
         {
           "campus_id": "170902049",
           "name": "YORK J H",
-          "short_name": "York Jh",
+          "short_name": "York JH",
           "type": "M",
           "grade_span": "07 - 08",
           "overall_grade": "A",

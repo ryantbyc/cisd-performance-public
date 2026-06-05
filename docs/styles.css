@@ -146,15 +146,22 @@ main { padding:var(--sp-6) 0 var(--sp-6); }
 }
 .page-section__hdr {
   margin-bottom:var(--sp-5);
+  padding:var(--sp-5) var(--sp-5) var(--sp-4);
+  background:var(--surface);
+  border:1px solid var(--line);
+  border-top:4px solid var(--brand);
+  border-radius:0 0 var(--r-md) var(--r-md);
 }
 .page-section__title-row {
   display:flex; align-items:center; gap:var(--sp-3); flex-wrap:wrap;
   margin-bottom:var(--sp-2);
 }
 .page-section__title {
-  margin:0; font-size:22px; font-weight:700; letter-spacing:-.015em; color:var(--ink);
+  margin:0; font-size:24px; font-weight:800; letter-spacing:-.02em; color:var(--ink);
 }
-.page-section--tea .page-section__title { color:var(--ink); }
+.page-section--tea .page-section__title  { color:var(--ink); }
+.page-section--dip .page-section__hdr   { border-top-color:var(--brand); }
+.page-section--cip .page-section__hdr   { border-top-color:#5a4b8a; }  /* purple accent for CIP */
 .page-section__desc {
   margin:0; font-size:14px; color:var(--ink-2); line-height:1.55; max-width:72ch;
 }
@@ -230,10 +237,14 @@ main { padding:var(--sp-6) 0 var(--sp-6); }
   white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
 }
 .campus-card__meta { font-size:11px; color:var(--ink-3); margin-top:2px; }
-.campus-card__dists { display:flex; flex-wrap:wrap; gap:3px; margin-top:5px; }
+.campus-card__dists { display:flex; flex-wrap:wrap; gap:4px; margin-top:5px; }
 .dist-tag {
-  font-size:10px; font-weight:600; padding:1px 6px; border-radius:999px;
+  font-size:11px; font-weight:600; padding:2px 8px; border-radius:999px;
   background:var(--brand-50); color:var(--brand-700);
+}
+/* Larger tags inside campus detail panel */
+.campus-detail .dist-tag {
+  font-size:13px; padding:4px 12px;
 }
 
 /* Campus detail panel (inside the TEA section, replaces district metrics) */
