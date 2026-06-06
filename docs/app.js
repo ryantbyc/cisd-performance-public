@@ -38,6 +38,10 @@
   // (see buildSections() below)
   var SECTIONS = [];
 
+  // Module-level refs set at boot so renderPlaceholderYear can update the CIP section
+  var _appData    = null;
+  var _teaMetrics = null;
+
   var activeFilter = null;
 
   // ── CISD claim display ───────────────────────────────────────────────────
@@ -240,7 +244,7 @@
           ? '<span class="' + actualCls + '">' + esc(pct(o.actual)) + '</span>'
           : (!o.tapr_mappable
              ? '<span class="obj__actual obj__actual--na">N/A</span>'
-             : '')) +
+             : '<span class="obj__actual obj__actual--missed">No data</span>')) +
         '<span class="obj__chev" aria-hidden="true">&#9660;</span>' +
       '</div>';
     row.appendChild(summary);
@@ -264,7 +268,7 @@
       '<div class="cell__note">Self-reported by CISD at year-end (qualitative — no percentage)</div>';
     trip.appendChild(c2);
 
-    var c3 = el("div", "cell cell--actual" + (o.result==="met"?" is-met":o.result==="missed"?" is-missed":""));
+    var c3 = el("div", "cell cell--actual" + (o.result==="met"?" is-met":(o.result==="missed"||(o.result==="no_data"&&o.tapr_mappable))?" is-missed":""));
     c3.innerHTML =
       '<div class="cell__k">State Data (TEA)</div>' +
       '<div class="cell__v">' + esc(actualStr) + '</div>' +
@@ -819,6 +823,9 @@
         'This tab will be updated once CISD adopts its annual plan and TEA releases the corresponding accountability data.</p>' +
       '</div>';
     container.appendChild(banner);
+
+    // Sync CIP section to show "no data" for this year as well
+    if (_appData) renderCipForYear(label, _appData, _teaMetrics);
   }
 
   // ── Year tabs ────────────────────────────────────────────────────────────
@@ -827,7 +834,7 @@
     tabs.innerHTML = "";
 
     // Prepend upcoming year as a placeholder (no data yet)
-    var futureLabel = "2025–26";
+    var futureLabel = "2026–27";
     var futureBtn = el("button", "yeartab yeartab--future", esc(futureLabel));
     futureBtn.setAttribute("role", "tab");
     futureBtn.setAttribute("aria-selected", "false");
@@ -853,14 +860,13 @@
   }
 
   // ── CIP Section (Campus Improvement Plans) ───────────────────────────────
-  // Mirrors the DIP section exactly: campus header card, year tabs,
-  // stat strip with filters, and section/objective rendering.
+  // Year selection is driven by the top-level DIP year tabs — no separate CIP
+  // year tabs.  renderCipForYear() finds all campuses that have CIP data for
+  // the chosen year and renders them; if none exist it shows a "no data" banner.
 
   var cipActiveFilter = null;
-  var CIP_SECTIONS    = [];
 
-  function renderCipStatStrip(year) {
-    var objs       = year.objectives || [];
+  function renderCipStatStrip(objs) {
     var statMet    = objs.filter(function(o){ return o.result === "met"    && o.tapr_mappable; }).length;
     var statMissed = objs.filter(function(o){ return o.result === "missed" && o.tapr_mappable; }).length;
     var diverge    = objs.filter(function(o){ return o.divergence; }).length;
@@ -915,104 +921,106 @@
     });
   }
 
-  function renderCipYear(year, campus) {
+  function renderCipForYear(schoolYear, data, teaMetrics) {
     cipActiveFilter = null;
-    renderCipStatStrip(year);
 
-    var container = document.getElementById("cip-objectives");
-    if (!container) return;
-    container.innerHTML = "";
-
-    // Reuse buildSections with the campus's goals metadata
-    CIP_SECTIONS = buildSections({ goals: campus.goals || [], years: [year] });
-
-    var bySection = {};
-    (year.objectives || []).forEach(function(o) {
-      (bySection[o.section || "other"] = bySection[o.section || "other"] || []).push(o);
-    });
-
-    CIP_SECTIONS.forEach(function(sec) {
-      var list = bySection[sec.key];
-      if (!list || !list.length) return;
-      var details = document.createElement("details");
-      details.className = "section";
-      var summary = document.createElement("summary");
-      summary.innerHTML =
-        '<span class="section__head">' + esc(sec.title) + '</span>' +
-        '<span class="section__count">' + list.length + ' objective' + (list.length !== 1 ? 's' : '') + '</span>' +
-        '<span class="section__chev" aria-hidden="true">&#9660;</span>';
-      details.appendChild(summary);
-      details.appendChild(el("p", "section__desc", esc(sec.desc)));
-      sortObjectives(list).forEach(function(o) { details.appendChild(renderObjective(o)); });
-      container.appendChild(details);
-    });
-
-    applyCipFilter();
-  }
-
-  function renderCipTabs(campus) {
-    var tabs = document.getElementById("cip-yeartabs");
-    if (!tabs) return;
-    tabs.innerHTML = "";
-    (campus.years || []).forEach(function(y, i) {
-      var b = el("button", "yeartab", esc(y.school_year));
-      b.setAttribute("role", "tab");
-      b.setAttribute("aria-selected", i === 0 ? "true" : "false");
-      b.addEventListener("click", function() {
-        [].forEach.call(tabs.children, function(c) { c.setAttribute("aria-selected", "false"); });
-        b.setAttribute("aria-selected", "true");
-        renderCipYear(y, campus);
-      });
-      tabs.appendChild(b);
-    });
-  }
-
-  function initCip(data, teaMetrics) {
     var hdrEl  = document.getElementById("cip-campus-hdr");
+    var tabsEl = document.getElementById("cip-yeartabs");
     var strip  = document.getElementById("cip-statstrip");
     var objEl  = document.getElementById("cip-objectives");
 
-    if (!data.cip || !data.cip.campuses || !data.cip.campuses.length) {
-      if (strip) strip.innerHTML = '<p class="loading">Campus Improvement Plan data coming soon — starting with Anderson Elementary.</p>';
+    // Top-level year tabs drive selection; clear the CIP-specific tab row
+    if (tabsEl) tabsEl.innerHTML = "";
+
+    if (!data || !data.cip || !data.cip.campuses || !data.cip.campuses.length) {
+      if (hdrEl) hdrEl.innerHTML = "";
+      if (strip) strip.innerHTML = '<p class="loading">Campus Improvement Plan data coming soon.</p>';
       if (objEl) objEl.innerHTML = "";
       return;
     }
 
-    // For now render the first campus (Anderson Elementary)
-    var campus = data.cip.campuses[0];
+    // Find every campus that has a year matching the selected school year
+    var pairs = [];
+    data.cip.campuses.forEach(function(campus) {
+      var yr = (campus.years || []).filter(function(y) { return y.school_year === schoolYear; })[0];
+      if (yr) pairs.push({ campus: campus, year: yr });
+    });
 
-    // Campus identity card — mirrors district grade card style
+    if (!pairs.length) {
+      if (hdrEl) hdrEl.innerHTML = "";
+      if (strip) strip.innerHTML = "";
+      if (objEl) {
+        objEl.innerHTML = "";
+        var banner = el("div", "no-data-banner");
+        banner.innerHTML =
+          '<div class="no-data-banner__icon" aria-hidden="true">&#128203;</div>' +
+          '<div class="no-data-banner__body">' +
+            '<strong class="no-data-banner__title">No campus improvement plan data for ' + esc(schoolYear) + '</strong>' +
+            '<p class="no-data-banner__msg">Campus Improvement Plans for ' + esc(schoolYear) + ' have not yet been added to this site.</p>' +
+          '</div>';
+        objEl.appendChild(banner);
+      }
+      return;
+    }
+
+    // Campus identity cards (one per matching campus)
     if (hdrEl) {
-      // Try to get accountability grade from campus TEA data
-      var campusList = (teaMetrics && teaMetrics.campuses && teaMetrics.campuses["2024-25"]) || [];
-      var campusTea  = campusList.filter(function(c) { return c.campus_id === campus.campus_id; })[0];
-      var grade      = (campusTea && campusTea.overall_grade) || "—";
-      var gradeLetter = (grade.length === 1 && "ABCDF".indexOf(grade) >= 0) ? grade : "—";
-      hdrEl.innerHTML =
-        '<div class="district-grade" style="margin-bottom:var(--sp-5)">' +
+      var campusTeaList = (teaMetrics && teaMetrics.campuses && teaMetrics.campuses["2024-25"]) || [];
+      hdrEl.innerHTML = pairs.map(function(p) {
+        var campusTea   = campusTeaList.filter(function(c) { return c.campus_id === p.campus.campus_id; })[0];
+        var grade       = (campusTea && campusTea.overall_grade) || "—";
+        var gradeLetter = (grade.length === 1 && "ABCDF".indexOf(grade) >= 0) ? grade : "—";
+        return '<div class="district-grade" style="margin-bottom:var(--sp-3)">' +
           '<div class="grade-letter grade-letter--' + esc(gradeLetter) + '">' + esc(gradeLetter) + '</div>' +
           '<div class="grade-info">' +
             '<div class="grade-info__label">Campus</div>' +
-            '<div class="grade-info__title">' + esc(campus.short_name || campus.campus_name) + '</div>' +
+            '<div class="grade-info__title">' + esc(p.campus.short_name || p.campus.campus_name) + '</div>' +
             '<div class="grade-info__note">TEA 2024–25 Accountability Rating: <strong>' + esc(grade) + '</strong>' +
               (campusTea && campusTea.grade_span ? ' · Grades ' + esc(campusTea.grade_span) : '') + '</div>' +
           '</div>' +
         '</div>';
+      }).join("");
     }
 
-    // Year tabs
-    renderCipTabs(campus);
+    // Aggregate stat strip across all matching campuses
+    var allObjs = [];
+    pairs.forEach(function(p) { allObjs = allObjs.concat(p.year.objectives || []); });
+    renderCipStatStrip(allObjs);
 
-    // Render most recent year, or placeholder
-    if (campus.years && campus.years.length) {
-      renderCipYear(campus.years[0], campus);
-    } else {
-      if (strip) strip.innerHTML =
-        '<p class="loading">Campus Improvement Plan objectives for ' +
-        esc(campus.short_name || campus.campus_name) +
-        ' are being loaded. Check back soon.</p>';
-      if (objEl) objEl.innerHTML = "";
+    // Render objectives per campus
+    if (objEl) {
+      objEl.innerHTML = "";
+      pairs.forEach(function(p) {
+        // Divider heading when more than one campus is shown
+        if (pairs.length > 1) {
+          var div = el("div", "metric-group__label", esc(p.campus.short_name || p.campus.campus_name));
+          div.style.margin = "var(--sp-5) 0 var(--sp-3)";
+          objEl.appendChild(div);
+        }
+        var cipSections = buildSections({ goals: p.campus.goals || [], years: [p.year] });
+        var bySection = {};
+        (p.year.objectives || []).forEach(function(o) {
+          (bySection[o.section || "other"] = bySection[o.section || "other"] || []).push(o);
+        });
+        cipSections.forEach(function(sec) {
+          var list = bySection[sec.key];
+          if (!list || !list.length) return;
+          var details = document.createElement("details");
+          details.className = "section";
+          var summary = document.createElement("summary");
+          summary.innerHTML =
+            '<span class="section__head">' + esc(sec.title) + '</span>' +
+            '<span class="section__count">' + list.length + ' objective' + (list.length !== 1 ? 's' : '') + '</span>' +
+            '<span class="section__chev" aria-hidden="true">&#9660;</span>';
+          details.appendChild(summary);
+          details.appendChild(el("p", "section__desc", esc(sec.desc)));
+          sortObjectives(list).forEach(function(o) { details.appendChild(renderObjective(o)); });
+          objEl.appendChild(details);
+        });
+      });
     }
+
+    applyCipFilter();
   }
 
   // ── Boot ─────────────────────────────────────────────────────────────────
@@ -1027,12 +1035,18 @@
       // Build section list from goals metadata (replaces hardcoded SECTIONS)
       SECTIONS = buildSections(data);
 
+      // Store module-level refs so renderPlaceholderYear can reach them
+      _appData    = data;
+      _teaMetrics = data.tea_metrics || null;
+      var teaMetrics = _teaMetrics;
 
-
-      var teaMetrics = data.tea_metrics || null;
-      renderTabs(data, function(yr) { SECTIONS = buildSections(data); renderYear(yr, teaMetrics); });
+      renderTabs(data, function(yr) {
+        SECTIONS = buildSections(data);
+        renderYear(yr, teaMetrics);
+        renderCipForYear(yr.school_year, data, teaMetrics);
+      });
       renderYear(data.years[0], teaMetrics);
-      initCip(data, teaMetrics);
+      renderCipForYear(data.years[0].school_year, data, teaMetrics);
 
       document.getElementById("foot-prov").textContent =
         data.provenance || "An independent project — not affiliated with Conroe ISD.";
