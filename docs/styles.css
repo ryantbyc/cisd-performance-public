@@ -328,6 +328,26 @@ main { padding:var(--sp-6) 0 var(--sp-6); }
 
 /* ── Year tabs ──────────────────────────────────────────────────── */
 .yeartabs { display:flex; gap:var(--sp-2); flex-wrap:wrap; margin-bottom:var(--sp-4); }
+
+/* Mobile: collapse the year tab row into a single dropdown — hidden on desktop */
+.yearselect-wrap {
+  display:none; align-items:center; gap:var(--sp-3);
+  margin-bottom:var(--sp-4);
+}
+.yearselect-label {
+  font-size:13px; font-weight:600; letter-spacing:.03em; text-transform:uppercase; color:var(--ink-3);
+}
+.yearselect {
+  flex:1; max-width:220px; font:inherit; font-size:15px; font-weight:600;
+  color:var(--ink); background:var(--surface); border:1px solid var(--line);
+  border-radius:var(--r-sm); padding:var(--sp-2) var(--sp-3);
+  cursor:pointer;
+}
+.yearselect:focus-visible { outline:2px solid var(--brand); outline-offset:1px; }
+@media (max-width:600px) {
+  .yeartabs { display:none; }
+  .yearselect-wrap { display:flex; }
+}
 .yeartab {
   padding:var(--sp-2) var(--sp-4); font:inherit; font-size:15px; font-weight:600;
   color:var(--ink-2); background:var(--surface); border:1px solid var(--line);

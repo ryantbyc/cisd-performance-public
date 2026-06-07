@@ -725,7 +725,16 @@
     container.appendChild(hdr);
 
     if (!districtData) {
-      container.appendChild(el("p", "loading", "No TEA district data available for " + esc(schoolYear) + "."));
+      var noTea = el("div", "no-data-banner");
+      noTea.innerHTML =
+        '<div class="no-data-banner__icon" aria-hidden="true">&#128203;</div>' +
+        '<div class="no-data-banner__body">' +
+          '<strong class="no-data-banner__title">No TEA data available for ' + esc(schoolYear) + '</strong>' +
+          '<p class="no-data-banner__msg">The Texas Education Agency has not yet released accountability ratings and ' +
+          'performance metrics for the ' + esc(schoolYear) + ' school year. This section will be updated as soon as TEA ' +
+          'publishes the corresponding TAPR data.</p>' +
+        '</div>';
+      container.appendChild(noTea);
       return;
     }
 
@@ -850,31 +859,70 @@
   function renderTabs(data, onPick) {
     var tabs = document.getElementById("yeartabs");
     tabs.innerHTML = "";
+    var select = document.getElementById("yearselect");
+    if (select) select.innerHTML = "";
 
     // Prepend upcoming year as a placeholder (no data yet)
     var futureLabel = "2026–27";
+
+    function markSelected(label) {
+      [].forEach.call(tabs.children, function (c) {
+        c.setAttribute("aria-selected", c.textContent === label ? "true" : "false");
+      });
+      if (select) select.value = label;
+    }
+
     var futureBtn = el("button", "yeartab yeartab--future", esc(futureLabel));
     futureBtn.setAttribute("role", "tab");
     futureBtn.setAttribute("aria-selected", "false");
     futureBtn.setAttribute("title", "No data available yet for " + futureLabel);
     futureBtn.addEventListener("click", function () {
-      [].forEach.call(tabs.children, function (c) { c.setAttribute("aria-selected", "false"); });
-      futureBtn.setAttribute("aria-selected", "true");
+      markSelected(futureLabel);
       renderPlaceholderYear(futureLabel);
     });
     tabs.appendChild(futureBtn);
+    if (select) {
+      var futureOpt = document.createElement("option");
+      futureOpt.value = futureLabel;
+      futureOpt.textContent = futureLabel + " — no data yet";
+      select.appendChild(futureOpt);
+    }
 
     data.years.forEach(function (y, i) {
       var b = el("button", "yeartab", esc(y.school_year));
       b.setAttribute("role", "tab");
       b.setAttribute("aria-selected", i === 0 ? "true" : "false");
       b.addEventListener("click", function () {
-        [].forEach.call(tabs.children, function (c) { c.setAttribute("aria-selected", "false"); });
-        b.setAttribute("aria-selected", "true");
+        markSelected(y.school_year);
         onPick(y);
       });
       tabs.appendChild(b);
+
+      if (select) {
+        var opt = document.createElement("option");
+        opt.value = y.school_year;
+        opt.textContent = y.school_year;
+        if (i === 0) opt.selected = true; // default to the current school year
+        select.appendChild(opt);
+      }
     });
+
+    // Mobile dropdown drives the same selection logic as the desktop tabs
+    if (select) {
+      select.addEventListener("change", function () {
+        var val = select.value;
+        if (val === futureLabel) {
+          markSelected(futureLabel);
+          renderPlaceholderYear(futureLabel);
+          return;
+        }
+        var match = data.years.filter(function (y) { return y.school_year === val; })[0];
+        if (match) {
+          markSelected(val);
+          onPick(match);
+        }
+      });
+    }
   }
 
   // ── CIP Section (Campus Improvement Plans) ───────────────────────────────

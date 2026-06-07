@@ -14,7 +14,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
   <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
   <link rel="manifest" href="site.webmanifest">
-  <link rel="stylesheet" href="styles.css?v=20260606b" />
+  <link rel="stylesheet" href="styles.css?v=20260607a" />
 </head>
 <body>
   <a class="skip-link" href="#content">Skip to content</a>
@@ -76,8 +76,12 @@
       </div>
     </details>
 
-    <!-- Year selector -->
+    <!-- Year selector — pill tabs on desktop, single dropdown on narrow viewports -->
     <div class="yeartabs" id="yeartabs" role="tablist" aria-label="School year"></div>
+    <label class="yearselect-wrap" for="yearselect">
+      <span class="yearselect-label">School year</span>
+      <select class="yearselect" id="yearselect" aria-label="Select school year"></select>
+    </label>
 
     <!-- TEA Data Section -->
     <div class="page-section page-section--tea" id="tea-section" aria-label="TEA district data"></div>
@@ -132,6 +136,6 @@
     </div>
   </footer>
 
-  <script src="app.js?v=20260606b"></script>
+  <script src="app.js?v=20260607a"></script>
 </body>
 </html>
