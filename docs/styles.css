@@ -59,10 +59,10 @@ a { color:var(--brand); }
   text-transform:uppercase; color:rgba(180,255,220,.9);
 }
 .hero h1 {
-  margin:0 0 var(--sp-4); font-size:clamp(28px,4.5vw,44px); line-height:1.1;
+  margin:0 0 var(--sp-4); font-size:clamp(26px,3.4vw,36px); line-height:1.15;
   font-weight:700; letter-spacing:-.015em; color:#fff; max-width:20ch;
 }
-.lede { margin:0; max-width:64ch; color:rgba(255,255,255,.82); font-size:clamp(15px,2vw,18px); line-height:1.55; }
+.lede { margin:0; max-width:64ch; color:rgba(255,255,255,.82); font-size:clamp(15px,1.6vw,17px); line-height:1.55; }
 .lede strong { color:#fff; font-weight:600; }
 .lede em { color:rgba(255,255,255,.95); font-style:italic; }
 
