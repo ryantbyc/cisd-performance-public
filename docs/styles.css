@@ -60,7 +60,7 @@ a { color:var(--brand); }
 }
 .hero h1 {
   margin:0 0 var(--sp-4); font-size:clamp(26px,3.4vw,36px); line-height:1.15;
-  font-weight:700; letter-spacing:-.015em; color:#fff; max-width:20ch;
+  font-weight:700; letter-spacing:-.015em; color:#fff;
 }
 .lede { margin:0; max-width:64ch; color:rgba(255,255,255,.82); font-size:clamp(15px,1.6vw,17px); line-height:1.55; }
 .lede strong { color:#fff; font-weight:600; }
