@@ -1118,8 +1118,8 @@
         data.provenance || "An independent project — not affiliated with Conroe ISD.";
       if (data.generated_at) {
         document.getElementById("foot-gen").textContent =
-          "Last updated " + new Date(data.generated_at).toLocaleDateString("en-US",
-            { year:"numeric", month:"long", day:"numeric" });
+          "Data refreshed " + new Date(data.generated_at).toLocaleDateString("en-US",
+            { month:"short", day:"numeric", year:"numeric" });
       }
     })
     .catch(function (e) {
