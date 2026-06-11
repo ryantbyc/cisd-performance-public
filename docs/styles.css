@@ -669,6 +669,10 @@ details.obj[open] > summary .obj__chev { transform:rotate(180deg); }
   .sitenav[data-open] .sitenav__chip { justify-content:center; padding:9px var(--sp-3); font-size:13px; }
 }
 
+/* ── Disclaimer ──────────────────────────────────────────────────── */
+.disclaimer { background:rgba(0,0,0,.04); border-bottom:1px solid var(--line); padding:var(--sp-2) 0; }
+.disclaimer .wrap { font-size:13px; font-style:italic; color:var(--ink-2); }
+
 /* ── Footer ─────────────────────────────────────────────────────── */
 .foot { border-top:1px solid var(--line); margin-top:var(--sp-6); padding:var(--sp-5) 0 var(--sp-7); }
 .foot__note { margin:0; font-size:13px; color:var(--ink-3); text-align:center; }
