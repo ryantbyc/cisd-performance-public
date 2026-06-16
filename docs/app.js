@@ -33,6 +33,13 @@
   }
   function pct(n) { return (n == null || isNaN(n)) ? "—" : Math.round(n) + "%"; }
 
+  function prevYearKey(schoolYear) {
+    var m = /^(\d{4})-(\d{2})$/.exec(schoolYear);
+    if (!m) return null;
+    var yr = parseInt(m[1], 10);
+    return (yr - 1) + "-" + String(yr).slice(-2);
+  }
+
   var RESULT_BADGE = {
     met:      "Met",
     missed:   "Missed",
@@ -432,7 +439,7 @@
   }
 
   // ── TEA Metric Card ───────────────────────────────────────────────────────
-  function renderMetricCard(m) {
+  function renderMetricCard(m, prevVal) {
     var card = el("div", "metric-card");
     var isPending = m.pending_release && m.all == null;
     var allVal = m.all != null ? m.all + "%" : (isPending ? "Pending Release" : "—");
@@ -470,10 +477,26 @@
       }
     }
 
+    var trendHtml = "";
+    if (m.all != null && prevVal != null) {
+      var delta = Math.round((m.all - prevVal) * 10) / 10;
+      var lib = !!m.lower_is_better;
+      var better = lib ? delta < 0 : delta > 0;
+      var worse  = lib ? delta > 0 : delta < 0;
+      var arrow  = delta > 0 ? "↑" : "↓";
+      var trendCls = better ? "metric-trend--up" : worse ? "metric-trend--down" : "metric-trend--neutral";
+      var sign = delta > 0 ? "+" : "";
+      if (Math.abs(delta) >= 0.1) {
+        trendHtml = '<div class="metric-trend ' + trendCls + '">' +
+          sign + delta.toFixed(1) + ' pp ' + arrow + ' vs prior year</div>';
+      }
+    }
+
     card.innerHTML =
       '<div class="metric-card__title">' + esc(m.title) + '</div>' +
       '<div class="metric-card__sub">' + esc(m.subtitle || "") + '</div>' +
       '<div class="' + valCls + '">' + esc(allVal) + '</div>' +
+      trendHtml +
       sgHtml +
       (m.source_file
         ? '<div class="metric-card__src">Source: ' + esc(m.source_file.replace(/\.csv$/i,"")) + '</div>'
@@ -686,6 +709,94 @@
     container.appendChild(bottomBackDetail);
   }
 
+  // ── Demographics Section ──────────────────────────────────────────────────
+  function buildDemoRow(label, pct, delta) {
+    var row = el("div", "demo-row");
+    var pctStr = (Math.round(pct * 10) / 10).toFixed(1) + "%";
+    var changeHtml = "";
+    if (delta != null) {
+      if (Math.abs(delta) >= 0.1) {
+        var sign = delta > 0 ? "+" : "";
+        var cls  = delta > 0 ? "demo-change--up" : "demo-change--down";
+        changeHtml = '<span class="demo-change ' + cls + '">' + sign + delta.toFixed(1) + ' pp</span>';
+      } else {
+        changeHtml = '<span class="demo-change demo-change--neutral">—</span>';
+      }
+    }
+    row.innerHTML =
+      '<span class="demo-row__label">' + esc(label) + '</span>' +
+      '<span class="demo-row__right">' +
+        '<span class="demo-row__val">' + esc(pctStr) + '</span>' +
+        changeHtml +
+      '</span>';
+    return row;
+  }
+
+  function renderDemographics(schoolYear) {
+    var container = document.getElementById("demo-section");
+    if (!container) return;
+    container.innerHTML = "";
+    var demographics = _appData && _appData.demographics;
+    if (!demographics) return;
+
+    // Use requested year's data; fall back to most recent available year
+    var displayYear = schoolYear;
+    var current = demographics[schoolYear];
+    if (!current) {
+      var availYears = Object.keys(demographics).sort().reverse();
+      if (!availYears.length) return;
+      displayYear = availYears[0];
+      current = demographics[displayYear];
+    }
+
+    var prevKey = prevYearKey(displayYear);
+    var prev = prevKey ? demographics[prevKey] : null;
+    var prevRaceMap = {}, prevPopMap = {};
+    if (prev) {
+      (prev.race_ethnicity || []).forEach(function(r) { prevRaceMap[r.key] = r.pct; });
+      (prev.populations   || []).forEach(function(p) { prevPopMap[p.key]  = p.pct; });
+    }
+
+    var hdr = el("div", "page-section__hdr");
+    var enrollStr = current.enrollment
+      ? " · " + Number(current.enrollment).toLocaleString("en-US") + " students enrolled"
+      : "";
+    var latestNote = (displayYear !== schoolYear)
+      ? ' Most recent PEIMS data available.' : '';
+    hdr.innerHTML =
+      '<div class="page-section__title-row"><h2 class="page-section__title">Student Demographics</h2></div>' +
+      '<p class="page-section__desc">Student population for ' + esc(displayYear) + enrollStr +
+      '. Source: ' + esc(current.source || "TEA PEIMS") +
+      (prev ? ' · Change shown vs ' + esc(prevKey) + '.' : '.') +
+      (latestNote ? ' ' + esc(latestNote.trim()) : '') + '</p>';
+    container.appendChild(hdr);
+
+    var grid = el("div", "demo-grid");
+
+    // Race / Ethnicity column
+    var col1 = el("div", "demo-col");
+    col1.appendChild(el("div", "demo-col__label", "Race / Ethnicity"));
+    (current.race_ethnicity || []).forEach(function(r) {
+      if (r.pct < 0.25) return;
+      var delta = (prev && prevRaceMap[r.key] != null)
+        ? Math.round((r.pct - prevRaceMap[r.key]) * 10) / 10 : null;
+      col1.appendChild(buildDemoRow(r.label, r.pct, delta));
+    });
+    grid.appendChild(col1);
+
+    // Special populations column
+    var col2 = el("div", "demo-col");
+    col2.appendChild(el("div", "demo-col__label", "Student Populations"));
+    (current.populations || []).forEach(function(p) {
+      var delta = (prev && prevPopMap[p.key] != null)
+        ? Math.round((p.pct - prevPopMap[p.key]) * 10) / 10 : null;
+      col2.appendChild(buildDemoRow(p.label, p.pct, delta));
+    });
+    grid.appendChild(col2);
+
+    container.appendChild(grid);
+  }
+
   // ── TEA Section renderer ──────────────────────────────────────────────────
   function renderTeaSection(schoolYear, teaMetrics) {
     var container = document.getElementById("tea-section");
@@ -778,13 +889,29 @@
       container.appendChild(gradeGroup);
     }
 
+    // Build previous-year lookup map for trend indicators
+    var prevKey = prevYearKey(schoolYear);
+    var prevDist = prevKey && teaMetrics && teaMetrics.district && teaMetrics.district[prevKey];
+    var prevMap = {};
+    if (prevDist && prevDist.academic_performance) {
+      prevDist.academic_performance.forEach(function(pm) {
+        if (pm.id && pm.all != null) prevMap[pm.id] = pm.all;
+      });
+    }
+    var prevGradMap = {};
+    if (prevDist && prevDist.graduation_postsec) {
+      prevDist.graduation_postsec.forEach(function(pm) {
+        if (pm.id && pm.all != null) prevGradMap[pm.id] = pm.all;
+      });
+    }
+
     // Academic performance
     if (districtData.academic_performance && districtData.academic_performance.length) {
       var acGroup = el("div", "metric-group");
       acGroup.appendChild(el("div", "metric-group__label", "Student Academic Performance"));
       var grid = el("div", "metric-grid");
       districtData.academic_performance.forEach(function(m) {
-        grid.appendChild(renderMetricCard(m));
+        grid.appendChild(renderMetricCard(m, prevMap[m.id]));
       });
       acGroup.appendChild(grid);
       container.appendChild(acGroup);
@@ -796,7 +923,7 @@
       gpGroup.appendChild(el("div", "metric-group__label", "Graduation & Post-Secondary Readiness"));
       var grid2 = el("div", "metric-grid");
       districtData.graduation_postsec.forEach(function(m) {
-        grid2.appendChild(renderMetricCard(m));
+        grid2.appendChild(renderMetricCard(m, prevGradMap[m.id]));
       });
       gpGroup.appendChild(grid2);
       container.appendChild(gpGroup);
@@ -807,6 +934,7 @@
   function renderYear(year, teaMetrics) {
     activeFilter = null;
     renderTeaSection(year.school_year, teaMetrics);
+    renderDemographics(year.school_year);
     renderStatStrip(year);
 
     var container = document.getElementById("objectives");
@@ -846,9 +974,11 @@
   function renderPlaceholderYear(label) {
     activeFilter = null;
 
-    // Clear TEA section
+    // Clear TEA and demographics sections
     var teaSec = document.getElementById("tea-section");
     if (teaSec) teaSec.innerHTML = "";
+    var demoSec = document.getElementById("demo-section");
+    if (demoSec) demoSec.innerHTML = "";
 
     // Stat strip: non-interactive dashes
     var strip = document.getElementById("statstrip");

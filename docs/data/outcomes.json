@@ -15573,5 +15573,123 @@
       }
     ]
   },
-  "provenance": "DIP targets from CISD District Improvement Plans; actuals from TEA TAPR."
+  "provenance": "DIP targets from CISD District Improvement Plans; actuals from TEA TAPR.",
+  "demographics": {
+    "2024-25": {
+      "source": "TEA PEIMS 2024-25",
+      "enrollment": 72327,
+      "race_ethnicity": [
+        {
+          "key": "hispanic",
+          "label": "Hispanic / Latino",
+          "pct": 40.7
+        },
+        {
+          "key": "white",
+          "label": "White",
+          "pct": 38.3
+        },
+        {
+          "key": "african_american",
+          "label": "African American",
+          "pct": 10.4
+        },
+        {
+          "key": "asian",
+          "label": "Asian",
+          "pct": 5.6
+        },
+        {
+          "key": "two_or_more",
+          "label": "Two or more races",
+          "pct": 4.5
+        },
+        {
+          "key": "american_indian",
+          "label": "American Indian",
+          "pct": 0.3
+        },
+        {
+          "key": "pacific_islander",
+          "label": "Pacific Islander",
+          "pct": 0.2
+        }
+      ],
+      "populations": [
+        {
+          "key": "econ_disadv",
+          "label": "Economically Disadvantaged",
+          "pct": 43.8
+        },
+        {
+          "key": "el",
+          "label": "English Language Learners",
+          "pct": 20.7
+        },
+        {
+          "key": "special_ed",
+          "label": "Special Education",
+          "pct": 13.5
+        }
+      ]
+    },
+    "2023-24": {
+      "source": "TEA PEIMS 2023-24",
+      "enrollment": 71729,
+      "race_ethnicity": [
+        {
+          "key": "hispanic",
+          "label": "Hispanic / Latino",
+          "pct": 40.1
+        },
+        {
+          "key": "white",
+          "label": "White",
+          "pct": 39.8
+        },
+        {
+          "key": "african_american",
+          "label": "African American",
+          "pct": 9.9
+        },
+        {
+          "key": "asian",
+          "label": "Asian",
+          "pct": 5.5
+        },
+        {
+          "key": "two_or_more",
+          "label": "Two or more races",
+          "pct": 4.2
+        },
+        {
+          "key": "american_indian",
+          "label": "American Indian",
+          "pct": 0.4
+        },
+        {
+          "key": "pacific_islander",
+          "label": "Pacific Islander",
+          "pct": 0.2
+        }
+      ],
+      "populations": [
+        {
+          "key": "econ_disadv",
+          "label": "Economically Disadvantaged",
+          "pct": 44.5
+        },
+        {
+          "key": "el",
+          "label": "English Language Learners",
+          "pct": 20.8
+        },
+        {
+          "key": "special_ed",
+          "label": "Special Education",
+          "pct": 11.4
+        }
+      ]
+    }
+  }
 }

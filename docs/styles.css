@@ -300,6 +300,43 @@ main { padding:var(--sp-6) 0 var(--sp-6); }
 .metric-card__subgroups--pending { padding-top:var(--sp-2); }
 .metric-sg__pending { font-size:11px; color:var(--ink-3); font-style:italic; }
 
+/* Year-over-year trend indicator on metric cards */
+.metric-trend {
+  display:inline-block; margin-top:var(--sp-2); margin-bottom:var(--sp-1);
+  font-size:11px; font-weight:600; letter-spacing:.02em;
+  padding:2px 8px; border-radius:999px;
+}
+.metric-trend--up      { background:var(--good-50); color:var(--good); }
+.metric-trend--down    { background:var(--bad-50);  color:var(--bad);  }
+.metric-trend--neutral { background:var(--neutral-50); color:var(--neutral); }
+
+/* Demographics section */
+.page-section--demo { margin-bottom:var(--sp-7); }
+.demo-grid {
+  display:grid; grid-template-columns:1fr 1fr; gap:var(--sp-5);
+  margin-top:var(--sp-4);
+}
+@media (max-width:600px) { .demo-grid { grid-template-columns:1fr; } }
+.demo-col__label {
+  font-size:11px; font-weight:700; letter-spacing:.08em; text-transform:uppercase;
+  color:var(--ink-3); margin-bottom:var(--sp-3);
+}
+.demo-row {
+  display:flex; align-items:center; justify-content:space-between;
+  padding:var(--sp-2) 0; border-bottom:1px solid var(--line);
+  gap:var(--sp-3);
+}
+.demo-row:last-child { border-bottom:none; }
+.demo-row__label { font-size:14px; color:var(--ink-2); flex:1; }
+.demo-row__right { display:flex; align-items:center; gap:var(--sp-2); flex-shrink:0; }
+.demo-row__val   { font-size:15px; font-weight:700; color:var(--ink); min-width:38px; text-align:right; }
+.demo-change {
+  font-size:11px; font-weight:600; padding:2px 6px; border-radius:999px; white-space:nowrap;
+}
+.demo-change--up      { background:#e8eef8; color:#1e4f8f; }
+.demo-change--down    { background:#e8eef8; color:#1e4f8f; }
+.demo-change--neutral { background:var(--neutral-50); color:var(--ink-3); }
+
 /* Grade letter inside a metric card */
 .metric-card__grade {
   font-size:52px; font-weight:900; line-height:1;
