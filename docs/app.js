@@ -741,17 +741,10 @@
     var demographics = _appData && _appData.demographics;
     if (!demographics) return;
 
-    // Use requested year's data; fall back to most recent available year
-    var displayYear = schoolYear;
     var current = demographics[schoolYear];
-    if (!current) {
-      var availYears = Object.keys(demographics).sort().reverse();
-      if (!availYears.length) return;
-      displayYear = availYears[0];
-      current = demographics[displayYear];
-    }
+    if (!current) return;
 
-    var prevKey = prevYearKey(displayYear);
+    var prevKey = prevYearKey(schoolYear);
     var prev = prevKey ? demographics[prevKey] : null;
     var prevRaceMap = {}, prevPopMap = {};
     if (prev) {
@@ -763,14 +756,11 @@
     var enrollStr = current.enrollment
       ? " · " + Number(current.enrollment).toLocaleString("en-US") + " students enrolled"
       : "";
-    var latestNote = (displayYear !== schoolYear)
-      ? ' Most recent PEIMS data available.' : '';
     hdr.innerHTML =
       '<div class="page-section__title-row"><h2 class="page-section__title">Student Demographics</h2></div>' +
-      '<p class="page-section__desc">Student population for ' + esc(displayYear) + enrollStr +
+      '<p class="page-section__desc">Student population for ' + esc(schoolYear) + enrollStr +
       '. Source: ' + esc(current.source || "TEA PEIMS") +
-      (prev ? ' · Change shown vs ' + esc(prevKey) + '.' : '.') +
-      (latestNote ? ' ' + esc(latestNote.trim()) : '') + '</p>';
+      (prev ? ' · Change shown vs ' + esc(prevKey) + '.' : '.') + '</p>';
     container.appendChild(hdr);
 
     var grid = el("div", "demo-grid");
