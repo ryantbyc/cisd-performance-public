@@ -483,10 +483,12 @@
       var lib = !!m.lower_is_better;
       var better = lib ? delta < 0 : delta > 0;
       var worse  = lib ? delta > 0 : delta < 0;
-      var arrow  = delta > 0 ? "↑" : "↓";
       var trendCls = better ? "metric-trend--up" : worse ? "metric-trend--down" : "metric-trend--neutral";
-      var sign = delta > 0 ? "+" : "";
-      if (Math.abs(delta) >= 0.1) {
+      if (Math.abs(delta) < 0.1) {
+        trendHtml = '<div class="metric-trend metric-trend--neutral">No change vs prior year</div>';
+      } else {
+        var arrow = delta > 0 ? "↑" : "↓";
+        var sign  = delta > 0 ? "+" : "";
         trendHtml = '<div class="metric-trend ' + trendCls + '">' +
           sign + delta.toFixed(1) + ' pp ' + arrow + ' vs prior year</div>';
       }
