@@ -296,6 +296,9 @@ main { padding:var(--sp-6) 0 var(--sp-6); }
 .metric-val--good { color:var(--good); }
 .metric-val--warn { color:var(--warn); }
 .metric-val--bad  { color:var(--bad);  }
+.metric-val--pending { font-size:14px; font-weight:600; color:var(--ink-3); letter-spacing:0; }
+.metric-card__subgroups--pending { padding-top:var(--sp-2); }
+.metric-sg__pending { font-size:11px; color:var(--ink-3); font-style:italic; }
 
 /* Grade letter inside a metric card */
 .metric-card__grade {

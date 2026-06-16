@@ -434,7 +434,8 @@
   // ── TEA Metric Card ───────────────────────────────────────────────────────
   function renderMetricCard(m) {
     var card = el("div", "metric-card");
-    var allVal = m.all != null ? (m.lower_is_better ? m.all + "%" : m.all + "%") : "—";
+    var isPending = m.pending_release && m.all == null;
+    var allVal = m.all != null ? m.all + "%" : (isPending ? "Pending Release" : "—");
 
     // Colour the headline: green if high (and not lower_is_better), red if low (heuristic)
     var valCls = "metric-card__val";
@@ -444,20 +445,29 @@
       } else {
         valCls += m.all >= 80 ? " metric-val--good" : m.all >= 60 ? " metric-val--warn" : " metric-val--bad";
       }
+    } else if (isPending) {
+      valCls += " metric-val--pending";
     }
 
     var sgHtml = "";
     if (m.subgroups && m.subgroups.length) {
-      sgHtml = '<div class="metric-card__subgroups">';
-      m.subgroups.forEach(function(sg) {
-        if (sg.value == null) return;
-        sgHtml +=
-          '<div class="metric-sg">' +
-            '<span class="metric-sg__label">' + esc(sg.label) + '</span>' +
-            '<span class="metric-sg__val">' + sg.value + '%</span>' +
+      var visibleSgs = m.subgroups.filter(function(sg) { return sg.value != null; });
+      var pendingSgs = m.subgroups.filter(function(sg) { return sg.value == null && sg.pending_release; });
+      if (visibleSgs.length) {
+        sgHtml = '<div class="metric-card__subgroups">';
+        visibleSgs.forEach(function(sg) {
+          sgHtml +=
+            '<div class="metric-sg">' +
+              '<span class="metric-sg__label">' + esc(sg.label) + '</span>' +
+              '<span class="metric-sg__val">' + sg.value + '%</span>' +
+            '</div>';
+        });
+        sgHtml += '</div>';
+      } else if (pendingSgs.length) {
+        sgHtml = '<div class="metric-card__subgroups metric-card__subgroups--pending">' +
+          '<span class="metric-sg__pending">Subgroup data pending release</span>' +
           '</div>';
-      });
-      sgHtml += '</div>';
+      }
     }
 
     card.innerHTML =
@@ -739,22 +749,32 @@
     }
 
     // Accountability grade card — uses the district-grade widget layout
-    if (districtData.accountability && districtData.accountability.grade) {
+    if (districtData.accountability) {
       var acc = districtData.accountability;
-      var taprYr = acc.tapr_year || "";
-      var schoolYr = taprYr ? (parseInt(taprYr) - 1) + "–" + String(taprYr).slice(-2) : "";
       var gradeGroup = el("div", "metric-group");
       gradeGroup.appendChild(el("div", "metric-group__label", "Accountability"));
-      var accCard = el("div", "district-grade");
-      accCard.innerHTML =
-        '<div class="grade-letter grade-letter--' + esc(acc.grade) + '">' + esc(acc.grade) + '</div>' +
-        '<div class="grade-info">' +
-          '<div class="grade-info__label">TEA Accountability Rating</div>' +
-          '<div class="grade-info__title">Conroe ISD received a <strong>' + esc(acc.grade) + '</strong> from the Texas Education Agency</div>' +
-          '<div class="grade-info__note">Based on student achievement, school progress, and closing performance gaps' +
-            (schoolYr ? ' · ' + esc(schoolYr) + ' school year' : '') + '</div>' +
-        '</div>';
-      gradeGroup.appendChild(accCard);
+      if (acc.grade) {
+        var taprYr = acc.tapr_year || "";
+        var schoolYr = taprYr ? (parseInt(taprYr) - 1) + "–" + String(taprYr).slice(-2) : "";
+        var accCard = el("div", "district-grade");
+        accCard.innerHTML =
+          '<div class="grade-letter grade-letter--' + esc(acc.grade) + '">' + esc(acc.grade) + '</div>' +
+          '<div class="grade-info">' +
+            '<div class="grade-info__label">TEA Accountability Rating</div>' +
+            '<div class="grade-info__title">Conroe ISD received a <strong>' + esc(acc.grade) + '</strong> from the Texas Education Agency</div>' +
+            '<div class="grade-info__note">Based on student achievement, school progress, and closing performance gaps' +
+              (schoolYr ? ' · ' + esc(schoolYr) + ' school year' : '') + '</div>' +
+          '</div>';
+        gradeGroup.appendChild(accCard);
+      } else if (acc.pending_release) {
+        var pendCard = el("div", "metric-card");
+        pendCard.innerHTML =
+          '<div class="metric-card__title">Accountability Rating</div>' +
+          '<div class="metric-card__sub">Overall TEA Accountability Grade</div>' +
+          '<div class="metric-card__val metric-val--pending">Pending Release</div>' +
+          '<div class="metric-card__src">TEA releases accountability ratings in summer/fall</div>';
+        gradeGroup.appendChild(pendCard);
+      }
       container.appendChild(gradeGroup);
     }
 

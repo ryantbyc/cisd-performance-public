@@ -508,6 +508,196 @@
             "source_file": "2023 District Attendance Absenteeism Dropout.csv"
           }
         ]
+      },
+      "2025-26": {
+        "tapr_year": "2026",
+        "accountability": {
+          "grade": null,
+          "pending_release": true,
+          "source_file": "2026 District Reference.csv"
+        },
+        "academic_performance": [
+          {
+            "id": "staar_reading_gr38",
+            "title": "STAAR Reading",
+            "subtitle": "Grades 3–8 · % At Meets Grade Level or Above",
+            "all": 63.0,
+            "state_all": 55.0,
+            "all_col": "Calculated from 2026 District STAAR Group Summary Grades 3-8.csv (weighted, English-language tests)",
+            "subgroups": [
+              {
+                "key": "econ_disadv",
+                "label": "Econ. Disadvantaged",
+                "value": null,
+                "pending_release": true
+              },
+              {
+                "key": "emergent_bilingual",
+                "label": "Emergent Bilingual / ELL",
+                "value": null,
+                "pending_release": true
+              },
+              {
+                "key": "special_ed",
+                "label": "Special Education",
+                "value": null,
+                "pending_release": true
+              }
+            ],
+            "lower_is_better": false,
+            "source_file": "2026 District STAAR Group Summary Grades 3-8.csv"
+          },
+          {
+            "id": "staar_math_gr38",
+            "title": "STAAR Math",
+            "subtitle": "Grades 3–8 · % At Meets Grade Level or Above",
+            "all": 56.0,
+            "state_all": 43.0,
+            "all_col": "Calculated from 2026 District STAAR Group Summary Grades 3-8.csv (weighted, English-language tests)",
+            "subgroups": [
+              {
+                "key": "econ_disadv",
+                "label": "Econ. Disadvantaged",
+                "value": null,
+                "pending_release": true
+              },
+              {
+                "key": "emergent_bilingual",
+                "label": "Emergent Bilingual / ELL",
+                "value": null,
+                "pending_release": true
+              },
+              {
+                "key": "special_ed",
+                "label": "Special Education",
+                "value": null,
+                "pending_release": true
+              }
+            ],
+            "lower_is_better": false,
+            "source_file": "2026 District STAAR Group Summary Grades 3-8.csv"
+          },
+          {
+            "id": "eoc_english1",
+            "title": "EOC English I",
+            "subtitle": "EOC · % At Approaches Grade Level or Above",
+            "all": 77.0,
+            "state_all": 71.0,
+            "all_col": "STAAR Performance, EOC English I, SY 2025-26, All Students, % At Approaches GL Standard or Above",
+            "subgroups": [
+              {
+                "key": "econ_disadv",
+                "label": "Econ. Disadvantaged",
+                "value": null,
+                "pending_release": true
+              },
+              {
+                "key": "emergent_bilingual",
+                "label": "Emergent Bilingual / ELL",
+                "value": null,
+                "pending_release": true
+              },
+              {
+                "key": "special_ed",
+                "label": "Special Education",
+                "value": null,
+                "pending_release": true
+              }
+            ],
+            "lower_is_better": false,
+            "source_file": "2026 District STAAR EOC All Subjects.csv"
+          },
+          {
+            "id": "eoc_english2",
+            "title": "EOC English II",
+            "subtitle": "EOC · % At Approaches Grade Level or Above",
+            "all": 78.0,
+            "state_all": 72.0,
+            "all_col": "STAAR Performance, EOC English II, SY 2025-26, All Students, % At Approaches GL Standard or Above",
+            "subgroups": [
+              {
+                "key": "econ_disadv",
+                "label": "Econ. Disadvantaged",
+                "value": null,
+                "pending_release": true
+              },
+              {
+                "key": "emergent_bilingual",
+                "label": "Emergent Bilingual / ELL",
+                "value": null,
+                "pending_release": true
+              },
+              {
+                "key": "special_ed",
+                "label": "Special Education",
+                "value": null,
+                "pending_release": true
+              }
+            ],
+            "lower_is_better": false,
+            "source_file": "2026 District STAAR EOC All Subjects.csv"
+          },
+          {
+            "id": "eoc_algebra1",
+            "title": "EOC Algebra I",
+            "subtitle": "EOC · % At Approaches Grade Level or Above",
+            "all": 85.0,
+            "state_all": 82.0,
+            "all_col": "STAAR Performance, EOC Algebra I, SY 2025-26, All Students, % At Approaches GL Standard or Above",
+            "subgroups": [
+              {
+                "key": "econ_disadv",
+                "label": "Econ. Disadvantaged",
+                "value": null,
+                "pending_release": true
+              },
+              {
+                "key": "emergent_bilingual",
+                "label": "Emergent Bilingual / ELL",
+                "value": null,
+                "pending_release": true
+              },
+              {
+                "key": "special_ed",
+                "label": "Special Education",
+                "value": null,
+                "pending_release": true
+              }
+            ],
+            "lower_is_better": false,
+            "source_file": "2026 District STAAR EOC All Subjects.csv"
+          }
+        ],
+        "graduation_postsec": [
+          {
+            "id": "graduation_4yr",
+            "title": "4-Year Graduation Rate",
+            "subtitle": "Graduates + TxCHSE (Class of 2025)",
+            "all": null,
+            "pending_release": true,
+            "subgroups": [],
+            "source_file": "2026 District 4 Year Longitudinal Rate.csv"
+          },
+          {
+            "id": "ccmr",
+            "title": "College, Career & Military Readiness",
+            "subtitle": "% of Graduates who are College, Career, or Military Ready",
+            "all": null,
+            "pending_release": true,
+            "subgroups": [],
+            "source_file": "2026 District CCMR College Ready TSI Annual Graduates.csv"
+          },
+          {
+            "id": "dropout_9_12",
+            "title": "Annual Dropout Rate",
+            "subtitle": "Grades 9–12",
+            "all": null,
+            "pending_release": true,
+            "lower_is_better": true,
+            "subgroups": [],
+            "source_file": "2026 District Attendance Absenteeism Dropout.csv"
+          }
+        ]
       }
     },
     "campuses": {
