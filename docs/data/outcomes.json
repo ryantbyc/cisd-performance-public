@@ -404,7 +404,8 @@
             "id": "staar_reading_gr38",
             "title": "STAAR Reading",
             "subtitle": "Grades 3–8 · % At Meets Grade Level or Above",
-            "all": 65.0,
+            "all": 65,
+            "all_precise": 65.0,
             "subgroups": [
               {
                 "key": "econ_disadv",
@@ -429,7 +430,8 @@
             "id": "staar_math_gr38",
             "title": "STAAR Math",
             "subtitle": "Grades 3–8 · % At Meets Grade Level or Above",
-            "all": 60.1,
+            "all": 60,
+            "all_precise": 60.1,
             "subgroups": [
               {
                 "key": "econ_disadv",
