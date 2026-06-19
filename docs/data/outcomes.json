@@ -276,60 +276,62 @@
           {
             "id": "staar_reading_gr38",
             "title": "STAAR Reading",
-            "subtitle": "All Grades · % At Meets Grade Level or Above",
-            "all": 64.0,
-            "all_col": "STAAR Performance, Reading/Language Arts, SY 2023-24, All Students, % At Meets GL Standard or Above",
+            "subtitle": "Grades 3–8 · % At Meets Grade Level or Above",
+            "all": 64,
+            "all_precise": 64.2,
+            "all_col": "Computed: sum(Domain 1A Meets Numerator)/sum(Domain 1A Denominator), Grades 3-8, subject = 'Reading/ELA' (EOC excluded)",
             "subgroups": [
               {
                 "key": "econ_disadv",
                 "label": "Econ. Disadvantaged",
-                "value": 47.0,
-                "tapr_column": "STAAR Performance, Reading/Language Arts, SY 2023-24, Econ Disadv, % At Meets GL Standard or Above"
+                "value": 46.5,
+                "tapr_column": "Domain 1A, Reading/ELA (Grade 3-8, weighted, EOC excluded), Econ Disadv"
               },
               {
                 "key": "emergent_bilingual",
                 "label": "Emergent Bilingual / ELL",
-                "value": 38.0,
-                "tapr_column": "STAAR Performance, Reading/Language Arts, SY 2023-24, EB/EL (Current), % At Meets GL Standard or Above"
+                "value": 42.4,
+                "tapr_column": "Domain 1A, Reading/ELA (Grade 3-8, weighted, EOC excluded), EB/EL"
               },
               {
                 "key": "special_ed",
                 "label": "Special Education",
-                "value": 26.0,
-                "tapr_column": "STAAR Performance, Reading/Language Arts, SY 2023-24, Special Ed (Current), % At Meets GL Standard or Above"
+                "value": 27.3,
+                "tapr_column": "Domain 1A, Reading/ELA (Grade 3-8, weighted, EOC excluded), Special Ed"
               }
             ],
             "lower_is_better": false,
-            "source_file": "2024 District STAAR All Grades.csv"
+            "source_file": "2024 District STAAR Grade 3.csv .. Grade 8.csv (Domain 1A columns, per-grade files)"
           },
           {
             "id": "staar_math_gr38",
             "title": "STAAR Math",
-            "subtitle": "All Grades · % At Meets Grade Level or Above",
-            "all": 57.0,
-            "all_col": "STAAR Performance, Mathematics, SY 2023-24, All Students, % At Meets GL Standard or Above",
+            "subtitle": "Grades 3–8 · % At Meets Grade Level or Above",
+            "all": 57,
+            "all_precise": 57.3,
+            "all_col": "Computed: sum(Domain 1A Meets Numerator)/sum(Domain 1A Denominator), Grades 3-8, subject = 'Mathematics' (EOC excluded)",
             "subgroups": [
               {
                 "key": "econ_disadv",
                 "label": "Econ. Disadvantaged",
-                "value": 39.0,
-                "tapr_column": "STAAR Performance, Mathematics, SY 2023-24, Econ Disadv, % At Meets GL Standard or Above"
+                "value": 40.0,
+                "tapr_column": "Domain 1A, Mathematics (Grade 3-8, weighted, EOC excluded), Econ Disadv"
               },
               {
                 "key": "emergent_bilingual",
                 "label": "Emergent Bilingual / ELL",
-                "value": 39.0,
-                "tapr_column": "STAAR Performance, Mathematics, SY 2023-24, EB/EL (Current), % At Meets GL Standard or Above"
+                "value": 41.9,
+                "tapr_column": "Domain 1A, Mathematics (Grade 3-8, weighted, EOC excluded), EB/EL"
               },
               {
                 "key": "special_ed",
                 "label": "Special Education",
-                "value": 28.0,
-                "tapr_column": "STAAR Performance, Mathematics, SY 2023-24, Special Ed (Current), % At Meets GL Standard or Above"
+                "value": 28.6,
+                "tapr_column": "Domain 1A, Mathematics (Grade 3-8, weighted, EOC excluded), Special Ed"
               }
             ],
             "lower_is_better": false,
-            "source_file": "2024 District STAAR All Grades.csv"
+            "source_file": "2024 District STAAR Grade 3.csv .. Grade 8.csv (Domain 1A columns, per-grade files)"
           }
         ],
         "graduation_postsec": [
