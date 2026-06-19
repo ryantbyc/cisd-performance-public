@@ -478,8 +478,16 @@
     }
 
     var trendHtml = "";
-    if (m.all != null && prevVal != null) {
-      var delta = Math.round((m.all - prevVal) * 10) / 10;
+    // Delta is computed from "all_precise" (1-decimal, derived from raw
+    // Meets-count/Tests-taken sums) when available, not from the whole-number
+    // "all" headline value — two whole-number roundings can land on the same
+    // delta even when the underlying figures differ (e.g. Reading vs Math
+    // both rounding to "-2"). Falls back to "all" for metrics that don't
+    // carry a precise value (e.g. EOC tiles, which TEA already publishes as
+    // whole percentages). Always displayed to exactly 1 decimal via toFixed(1).
+    var curPrecise = m.all_precise != null ? m.all_precise : m.all;
+    if (curPrecise != null && prevVal != null) {
+      var delta = Math.round((curPrecise - prevVal) * 10) / 10;
       var lib = !!m.lower_is_better;
       var better = lib ? delta < 0 : delta > 0;
       var worse  = lib ? delta > 0 : delta < 0;
@@ -887,7 +895,8 @@
     var prevMap = {};
     if (prevDist && prevDist.academic_performance) {
       prevDist.academic_performance.forEach(function(pm) {
-        if (pm.id && pm.all != null) prevMap[pm.id] = pm.all;
+        // Prefer all_precise (1-decimal, raw-count-derived) for delta math; see renderMetricCard.
+        if (pm.id && pm.all != null) prevMap[pm.id] = pm.all_precise != null ? pm.all_precise : pm.all;
       });
     }
     var prevGradMap = {};

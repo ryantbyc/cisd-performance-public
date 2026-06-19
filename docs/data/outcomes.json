@@ -57,60 +57,62 @@
           {
             "id": "staar_reading_gr38",
             "title": "STAAR Reading",
-            "subtitle": "Grades 3–8 + EOC · % At Meets Grade Level or Above",
-            "all": 65.0,
-            "all_col": "STAAR Performance, Reading Including EOC (Grade 3-8), SY 2024-25, All Students, % At Meets GL Standard or Above",
+            "subtitle": "Grades 3–8 · % At Meets Grade Level or Above",
+            "all": 65,
+            "all_precise": 65.2,
+            "all_col": "Computed: sum(# At Meets GL)/sum(# of Tests), Grades 3-8, subject = 'Reading/Language Arts' (EOC excluded)",
             "subgroups": [
               {
                 "key": "econ_disadv",
                 "label": "Econ. Disadvantaged",
-                "value": 47.0,
-                "tapr_column": "STAAR Performance, Reading Including EOC (Grade 3-8), SY 2024-25, Econ Disadv, % At Meets GL Standard or Above"
+                "value": 47.1,
+                "tapr_column": "Reading/Language Arts (Grade 3-8, weighted, EOC excluded), Econ Disadv"
               },
               {
                 "key": "emergent_bilingual",
                 "label": "Emergent Bilingual / ELL",
-                "value": 41.0,
-                "tapr_column": "STAAR Performance, Reading Including EOC (Grade 3-8), SY 2024-25, EB/EL (Current), % At Meets GL Standard or Above"
+                "value": 40.7,
+                "tapr_column": "Reading/Language Arts (Grade 3-8, weighted, EOC excluded), EB/EL (Current)"
               },
               {
                 "key": "special_ed",
                 "label": "Special Education",
-                "value": 27.0,
-                "tapr_column": "STAAR Performance, Reading Including EOC (Grade 3-8), SY 2024-25, Special Ed (Current), % At Meets GL Standard or Above"
+                "value": 27.3,
+                "tapr_column": "Reading/Language Arts (Grade 3-8, weighted, EOC excluded), Special Ed (Current)"
               }
             ],
             "lower_is_better": false,
-            "source_file": "2025 District STAAR Grades 3-8.csv"
+            "source_file": "2025 District STAAR Grade 3.csv .. Grade 8.csv (per-grade files)"
           },
           {
             "id": "staar_math_gr38",
             "title": "STAAR Math",
-            "subtitle": "Grades 3–8 + EOC · % At Meets Grade Level or Above",
-            "all": 60.0,
-            "all_col": "STAAR Performance, Math Including EOC (Grade 3-8), SY 2024-25, All Students, % At Meets GL Standard or Above",
+            "subtitle": "Grades 3–8 · % At Meets Grade Level or Above",
+            "all": 57,
+            "all_precise": 57.5,
+            "all_col": "Computed: sum(# At Meets GL)/sum(# of Tests), Grades 3-8, subject = 'Mathematics' (EOC excluded)",
             "subgroups": [
               {
                 "key": "econ_disadv",
                 "label": "Econ. Disadvantaged",
-                "value": 41.0,
-                "tapr_column": "STAAR Performance, Math Including EOC (Grade 3-8), SY 2024-25, Econ Disadv, % At Meets GL Standard or Above"
+                "value": 39.3,
+                "tapr_column": "Mathematics (Grade 3-8, weighted, EOC excluded), Econ Disadv"
               },
               {
                 "key": "emergent_bilingual",
                 "label": "Emergent Bilingual / ELL",
-                "value": 40.0,
-                "tapr_column": "STAAR Performance, Math Including EOC (Grade 3-8), SY 2024-25, EB/EL (Current), % At Meets GL Standard or Above"
+                "value": 39.2,
+                "tapr_column": "Mathematics (Grade 3-8, weighted, EOC excluded), EB/EL (Current)"
               },
               {
                 "key": "special_ed",
                 "label": "Special Education",
-                "value": 29.0,
-                "tapr_column": "STAAR Performance, Math Including EOC (Grade 3-8), SY 2024-25, Special Ed (Current), % At Meets GL Standard or Above"
+                "value": 28.4,
+                "tapr_column": "Mathematics (Grade 3-8, weighted, EOC excluded), Special Ed (Current)"
               }
             ],
             "lower_is_better": false,
-            "source_file": "2025 District STAAR Grades 3-8.csv"
+            "source_file": "2025 District STAAR Grade 3.csv .. Grade 8.csv (per-grade files)"
           },
           {
             "id": "eoc_english1",
@@ -545,7 +547,8 @@
               }
             ],
             "lower_is_better": false,
-            "source_file": "2026 District STAAR Group Summary Grades 3-8.csv"
+            "source_file": "2026 District STAAR Group Summary Grades 3-8.csv",
+            "all_precise": 62.9
           },
           {
             "id": "staar_math_gr38",
@@ -575,7 +578,8 @@
               }
             ],
             "lower_is_better": false,
-            "source_file": "2026 District STAAR Group Summary Grades 3-8.csv"
+            "source_file": "2026 District STAAR Group Summary Grades 3-8.csv",
+            "all_precise": 55.6
           },
           {
             "id": "eoc_english1",
